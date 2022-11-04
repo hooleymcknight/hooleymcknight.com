@@ -1,0 +1,136 @@
+.index {
+    padding-top: 50px;
+}
+
+.resume-content {
+    width: 95%;
+    max-width: 800px;
+    margin: auto;
+    padding-bottom: 60px;
+}
+
+/* intro section */
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.intro-section img {
+  width: 150px;
+}
+
+.intro-section h2 {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.intro-section a {
+    display: block;
+}
+
+/* work experience */
+.work-experience {
+    margin-top: 0;
+}
+
+.work-experience h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.work-experience .work-entry {
+    margin: 15px 0 15px 15px;
+}
+
+.work-experience .work-entry p {
+    margin: 0;
+}
+
+.work-experience .work-entry ul {
+    margin-top: 5px;
+}
+
+/* skills */
+.skills-section h3 {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.skills-section .skill-line {
+    display: flex;
+    margin-left: 15px;
+}
+
+.skills-section .skill-line .skill-level {
+    width: 160px;
+    max-width: 160px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.skills-section .skill-line .skills {
+    flex-grow: 0;
+    flex-shrink: 1;
+}
+
+@media (max-width: 767px) {
+  .skills-section .skill-line {
+      flex-direction: column;
+  }
+  .skills-section .skill-line .skill-level {
+      margin: 10px 0 5px -10px;
+  }
+  .skills-section .skill-line .skills {
+      margin-top: 0;
+  }
+}
+
+/* education */
+.education-certifications h3 {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.education-certifications p {
+    margin: 0 0 5px 15px;
+}
+
+/* floating download */
+.floating-download {
+    position: fixed;
+    top: 100px;
+    right: 60px;
+    width: 170px;
+    text-align: center;
+    background: #bebebe;
+    padding: 5px 10px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 5px 0px rgb(0 0 0 / 60%);
+}
+
+.floating-download a {
+    text-decoration: none;
+    color: #000 !important;
+}
+
+.floating-download:hover {
+  background: #d2d2d2;
+}
+
+.floating-download a:hover {
+    color: #000;
+}
+
+.floating-download i {
+    margin-right: 6px;
+}
+
+@media (max-width: 1023px) {
+  .floating-download {
+    bottom: 16px;
+    top: auto;
+    left: calc(50% - 85px);
+    right: auto;
+  }
+}

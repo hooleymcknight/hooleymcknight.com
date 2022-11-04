@@ -1,0 +1,124 @@
+<!DOTYPE html>
+<html>
+
+<head>
+    <style>html {display: none;}</style>
+    <title>Sig's Letter #16</title>
+    <link rel="stylesheet" href="/styles.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="shortcut icon" href="/favicon.ico" >
+    <link href="https://fonts.googleapis.com/css2?family=Asap" rel="stylesheet">
+    <link href="/fontawesome/css/all.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/slick-1.8.1/slick/slick-theme.css"/>
+
+</head>
+
+<body id="body" class="letter">
+    <div class="navbar">
+        <a href="/" class="name">Hooley McKnight</a>
+        <div class="empty"></div>
+        <div class="social-media">
+            <a href="https://twitch.tv/hooleymcknight" target="_blank" class="twitch"><i class="fab fa-twitch"></i></a>
+            <a href="https://instagram.com/hooleymcknight" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/c/hooleymcknight" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com/hooleymcknight" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://discord.gg/8MYDjz5" target="_blank" class="discord"><i class="fab fa-discord"></i></a>
+            <a href="https://open.spotify.com/user/qyo65dvm8jmh1ondfmx69pa0n?si=QuQbe8kKS1Kke2tRJk1auA" target="_blank" class="spotify"><i class="fab fa-spotify"></i></a>
+        </div>
+    </div>
+
+    <div class="subnav read-nav shown">
+    </div>
+
+    <main id="dnd" class="dnd subnav-shown">
+
+        <h1>Sig's Letter #16</h1>
+
+        <p class="reading">
+            Adrie,
+            <br><br>
+            I… I can’t believe I hit you. I can’t even begin to cover my remorse. Adrie, I am so sorry. I know we talked about it, but I just feel awful still. I will for a while.
+            <br><br>
+            You are...so incredible though. After all that happened, you...think my powers are cool. Great One, are you mind-blowing. I love you so much. Fuck, I’ve missed you. Sitting on your lap today, holding onto you, being held by you… I can’t ever imagine going back to any life without you. I never will. I’ll always stay here, with you.
+            <br><br>
+            You’re asleep now, next to me. I just can’t put the image of you hurt out of my head. What a day, and not in a good way. I’m glad it was smooth getting Otto, but damn is he annoying.
+            <br><br>
+            And then seeing Maeve completely decimate a wolf was wild. I hated that. I would have talked to her about it, but Dearg was so upset about Buddy going down. I didn’t want Dearg to hurt more than he already did. Thank the Great One, Buddy’s okay now. I really wish we could’ve avoided that fight entirely. I know you do, too.
+            <br><br>
+            Valus getting hurt by that trap in the stream was also surprising. And weird. I wonder what that whole goblin and stream situation was about. But, I did feel like I needed to kill him, for the group’s safety.
+            <br><br>
+            And...I guess I need to talk to you about some other stuff. We’ll have to find some time to talk soon.
+            <br><br>
+            I know we still have the world to catch up on, though, and the rest of our lives together to do it. I love you, babe. I hope you’re sleeping well.
+            <br><br>
+            -Sig
+        </p>
+
+        <div class="bottom-navigation">
+            <div class="prev">
+                <a href="/dnd/letter-15"><< Sig's Letter #15</a>
+            </div>
+            <div class="next">
+                <a href="/dnd/letter-17">Sig's Letter #17 >></a>
+            </div>
+        </div>
+
+        <div id="reading-toolbar">
+            <div class="size-down"><i class="fas fa-font large"></i><i class="fas fa-font small"></i><i class="fas fa-minus"></i></div>
+            <div class="size-up"><i class="fas fa-font large"></i><i class="fas fa-font small"></i><i class="fas fa-plus"></i></div>
+            <div class="serif-style"><p class="serif active">S</p><p class="sans-serif">S</p></div>
+        </div>
+
+        <div id="theme-toggle" class="theme-toggle">
+            <div class="toggle-switch"></div>
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </div>
+
+    </main>
+
+    <script>
+        var serif_style = sessionStorage.getItem('serif_style');
+        if(serif_style == 'serif') {
+            document.getElementById('dnd').className = `dnd ${serif_style}`;
+        }
+        else {
+            sessionStorage.setItem('serif_style', 'sans-serif');
+            serif_style = 'sans-serif';
+        }
+    </script>
+
+    <script>
+        var reading_size = sessionStorage.getItem('reading_size');
+        if(reading_size == null) {
+            sessionStorage.setItem('reading_size', 'default');
+            for(i=0; i < document.getElementsByClassName('reading').length; i++) {
+                document.getElementsByClassName('reading')[i].className = 'reading default';
+            }
+        }
+        else {
+            for(i=0; i < document.getElementsByClassName('reading').length; i++) {
+                document.getElementsByClassName('reading')[i].className = `reading ${reading_size}`;
+            }
+            if(reading_size == 'plus-two') {
+                // disable up button
+                document.getElementsByClassName('size-up')[0].className = 'size-up disabled';
+            }
+            else if(reading_size == 'minus-two') {
+                // disable down button
+                document.getElementsByClassName('size-down')[0].className = 'size-down disabled';
+            }
+        }
+    </script>
+
+    <script type="text/javascript" src="/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="/app.js"></script>
+
+</body>
+
+</html>

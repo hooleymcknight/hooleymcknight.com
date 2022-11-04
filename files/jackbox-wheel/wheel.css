@@ -1,0 +1,178 @@
+main.wheel {
+    padding-top: 100px;
+    height: 120vh;
+}
+
+.wheel-of-game {
+  position: relative;
+}
+
+.spinner {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: calc(50% - 60px);
+  left: calc(50% - 60px);
+  background: #4f1665;
+  font-family: Poppins;
+  font-size: 28px;
+  color: #fff;
+  z-index: 3;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px -2px 44px 7px #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: font-size 0.3s ease;
+}
+@media (min-width: 768px) {
+  .spinner:hover {
+    font-size: 40px;
+  }
+}
+
+.spinner::before {
+  display: block;
+  content: '';
+  width: 45px;
+  height: 25px;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  position: absolute;
+  top: -16px;
+  left: calc(50% - 22px);
+  background: #4f1665;
+}
+
+.spinner.spinning {
+  pointer-events: none;
+  cursor: default;
+  font-size: 20px;
+  background: #6c4f78;
+}
+.spinner.spinning::before {
+  background: #6c4f78;
+}
+
+/* spinner mobile */
+
+@media (max-width: 767px) {
+  .spinner {
+    width: 60px;
+    height: 60px;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    font-size: 16px;
+    box-shadow: 0px -2px 24px 7px #fff;
+  }
+  .spinner::before {
+    width: 23px;
+    height: 12.5px;
+    top: -8px;
+    left: calc(50% - 11px);
+  }
+}
+
+@media (max-width: 420px) {
+  .spinner {
+    width: 30px;
+    height: 30px;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    font-size: 12px;
+  }
+  .spinner::before {
+    width: 11px;
+    height: 6px;
+    top: -4px;
+    left: calc(50% - 5px);
+  }
+}
+
+/* the wheel innards and such */
+
+#wheelContainer {
+  margin: 0 auto;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 3s ease;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 20px 5px #2d2d2d;
+  width: 700px;
+  height: 700px;
+}
+
+@media (max-width: 767px) {
+  #wheelContainer {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 420px) {
+  #wheelContainer {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.game-slice {
+  --halfHeight: calc(var(--sliceHeight) / 2);
+  --centerPad: 50px;
+  background-size: cover;
+  background-position: center center;
+  padding-left: var(--centerPad);
+  position: absolute;
+  top: calc(50% - (var(--halfHeight)));
+  left: 50%;
+  transform: rotate(var(--rotation));
+  transform-origin: center left;
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  width: calc(50% - var(--centerPad));
+  white-space: nowrap;
+  height: var(--sliceHeight);
+  display: flex;
+  align-items: center;
+}
+
+.game-slice span {
+  font-family: Poppins;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding-right: 13px;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 0px 8px 0px #000;
+}
+
+@media (max-width: 767px) {
+  .game-slice {
+    --centerPad: 30px;
+  }
+  .game-slice span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .game-slice {
+    --centerPad: 15px;
+  }
+}
+
+/* winner selected */
+#wheelContainer.winner .game-slice:not(.winner) {
+  filter: opacity(0.5);
+}
+
+.winner-title {
+  text-align: center;
+  padding-top: 20px;
+  font-family: Poppins;
+}
