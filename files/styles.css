@@ -24,7 +24,7 @@ html.overlay-active {
     transition: background 0.2s linear;
 }
 
-p, h1, h2, h3, h4, h5, li, a, th, td {
+p, h1, h2, h3, h4, h5, li, a, th, td, input, label, button, select, option {
     font-family: Titillium Web;
 }
 

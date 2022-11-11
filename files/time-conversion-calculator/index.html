@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>html {display: none;}</style>
+    <title>Time Conversion Calculator</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="./time-calc.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="shortcut icon" href="/favicon.ico" >
+    <link href="https://fonts.googleapis.com/css2?family=Asap" rel="stylesheet">
+    <link href="/fontawesome/css/all.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body id="body">
+    <div class="overlay"></div>
+    <div class="navbar">
+        <a class="name homepage">Hooley McKnight</a>
+        <div class="empty"></div>
+        <div class="social-media">
+            <a href="https://twitch.tv/hooleymcknight" target="_blank" class="twitch"><i class="fab fa-twitch"></i></a>
+            <a href="https://instagram.com/hooleymcknight" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/c/hooleymcknight" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+            <a href="https://twitter.com/hooleymcknight" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://discord.gg/8MYDjz5" target="_blank" class="discord"><i class="fab fa-discord"></i></a>
+            <a href="https://open.spotify.com/user/qyo65dvm8jmh1ondfmx69pa0n?si=QuQbe8kKS1Kke2tRJk1auA" target="_blank" class="spotify"><i class="fab fa-spotify"></i></a>
+        </div>
+    </div>
+
+    <main class="time-conversion-calculator">
+
+      <h1>Time Conversion Calculator</h1>
+
+      <p>This app was built originally for use in scheduling tests for clients through CRO A/B testing apps. The use of this calculator may seem confusing here. This is only just a display of a tool I built.</p>
+
+      <form id="time-conversion">
+        <div class="form-section">
+
+          <div class="select-wrapper">
+            <label for="month">month</label>
+            <select id="month" name="month" onfocus="this.parentElement.classList.add('focus')" onblur="this.parentElement.classList.remove('focus')">
+              <option disabled selected>Select Month</option>
+              <option value="Jan">01 - Jan</option>
+              <option value="Feb">02 - Feb</option>
+              <option value="Mar">03 - Mar</option>
+              <option value="Apr">04 - Apr</option>
+              <option value="May">05 - May</option>
+              <option value="Jun">06 - Jun</option>
+              <option value="Jul">07 - Jul</option>
+              <option value="Aug">08 - Aug</option>
+              <option value="Sep">09 - Sep</option>
+              <option value="Oct">10 - Oct</option>
+              <option value="Nov">11 - Nov</option>
+              <option value="Dec">12 - Dec</option>
+            </select>
+          </div>
+
+          <div class="select-wrapper">
+            <label for="day">day</label>
+            <select id="day" name="day" onfocus="this.parentElement.classList.add('focus')" onblur="this.parentElement.classList.remove('focus')">
+              <option disabled selected>Select Day</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <div class="input-wrapper">
+            <label for="time">time</label>
+            <input id="time" type="time">
+          </div>
+
+          <div class="select-wrapper">
+            <label for="timezone">timezone</label>
+            <select id="timezone" name="timezone" onfocus="this.parentElement.classList.add('focus')" onblur="this.parentElement.classList.remove('focus')">
+              <option selected value="P">Pacific Time</option>
+              <option value="M">Mountain Time</option>
+              <option value="C">Central Time</option>
+              <option value="E">Eastern Time</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-section btn-section">
+          <div class="select-wrapper offset-wrapper">
+            <label for="site-offset">output timezone offset</label>
+            <select id="site-offset" name="site-offset" onfocus="this.parentElement.classList.add('focus')" onblur="this.parentElement.classList.remove('focus')">
+              <option value="-8">-8</option>
+              <option value="-7">-7</option>
+              <option selected value="-6">-6</option>
+              <option value="-5">-5</option>
+              <option value="-4">-4</option>
+            </select>
+          </div>
+
+          <button type="submit" id="get-time">Get Output Time</button>
+        </div>
+      </form>
+
+      <p class="results">The time to set in the scheduler is: <span></span></p>
+
+      <br/>
+      <br/>
+
+        <div id="theme-toggle" class="theme-toggle">
+            <div class="toggle-switch"></div>
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+        </div>
+
+    </main>
+
+    <script src="/app.js"></script>
+    <script src="./time-calc.js"></script>
+
+</body>
+
+</html>
