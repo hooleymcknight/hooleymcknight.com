@@ -215,6 +215,26 @@ function addEvents() {
         }
     });
 
+    $('.copyable').on('click', function(e) {
+      const target = e.target.closest('.copyable')
+      const copyText = target.innerText
+      if ($('.copied')) {
+        $('.copied').remove()
+      }
+      var sampleTextarea = document.createElement("textarea")
+      document.body.appendChild(sampleTextarea)
+      sampleTextarea.value = copyText
+      sampleTextarea.select()
+      document.execCommand("copy")
+      document.body.removeChild(sampleTextarea)
+
+      // pop-up saying "copied!"
+      target.insertAdjacentHTML('beforeend', '<span class="copied">Copied!</span>')
+      setTimeout(function() {
+        $('.copied').addClass('fading')
+      }, 1200)
+    })
+
     $('#reading-toolbar .size-down').on('click', function() {
         var current_size = $('main.dnd p')[0].className;
         switch (current_size) {
