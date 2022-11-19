@@ -10,7 +10,7 @@ function createMarkup(input) {
 
 const Project = (props) => {
   const data = props.data
-// /images/projects/
+
   return (
     <div className="project" data-title={props.name}>
       <Hexagon />
