@@ -1,0 +1,123 @@
+/* hero section */ 
+.index-hero {
+  background-image: url('https://hooleymcknight.com/images/lax_hero.jpg');
+  background-position: 50% 60%;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  max-height: 700px;
+}
+
+/* subnav bar */ 
+.subnav {
+  position: sticky;
+  top: 49px;
+  z-index: 4;
+  border-top: 3px solid var(--primary-light);
+  box-shadow: 0 1px 7px 2px var(--primary-light);
+  background-color: var(--dark-purple);
+  padding: 5px 10%;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+
+    a {
+      padding: 5px 10px;
+      display: block;
+
+      &:hover {
+        color: var(--light-purple);
+      }
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+/* summary section */
+.summary-section {
+  background: var(--light-purple);
+  border: 4px solid var(--dark-purple);
+
+  border-radius: 8px;
+  margin: 40px auto;
+  display: grid;
+  width: fit-content;
+  width: -moz-fit-content;
+  max-width: 95%;
+  grid-template-columns: 0.8fr auto;
+  grid-template-areas: "summaryProfile summaryTitles"
+    "contactInfo contactInfo";
+
+  [class="summary-profile"] {
+    grid-area: summaryProfile;
+    min-width: 185px;
+    max-width: 300px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  [class="summary-titles"] {
+    grid-area: summaryTitles;
+    padding: 10px;
+    width: fit-content;
+    width: -moz-fit-content;
+
+    h1 {
+      margin: 0;
+      padding-right: 40px;
+    }
+
+    ul {
+      list-style: none;
+      width: fit-content;
+      width: -moz-fit-content;
+
+      svg {
+        margin-left: -20px;
+        margin-right: 12px;
+      }
+    }
+  }
+
+  [class="contact-info"] {
+    grid-area: contactInfo;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: 10px auto;
+
+    p {
+      margin: 0 0 5px 0;
+      font-size: 18px;
+
+      b {
+        margin-right: 5px;
+      }
+
+      a {
+        text-decoration: underline;
+
+        &:hover {
+          color: var(--dark-purple);
+        }
+      }
+    }
+  }
+}
+
+/*
+    code portfolio section css is in:
+    ./styles/Portfolio.module.scss
+*/ 

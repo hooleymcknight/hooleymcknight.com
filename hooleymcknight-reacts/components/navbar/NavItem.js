@@ -15,8 +15,8 @@ const NavItem = (props) => {
 
   return (
     <li role="menuitem" className='nav-item'>
-      <Link href={props.link} alt={props.name}>
-        <FontAwesomeIcon icon={medias[props.name]} />
+      <Link href={props.link}>
+        <a alt={props.name} tabIndex="0" target="_blank"> <FontAwesomeIcon icon={medias[props.name]} /> </a>
       </Link>
     </li>
   )

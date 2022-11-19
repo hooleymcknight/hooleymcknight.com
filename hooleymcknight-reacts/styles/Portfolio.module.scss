@@ -1,0 +1,141 @@
+.portfolio {
+  margin: 40px auto;
+  width: 730px;
+  text-align: center;
+
+  [class="projects-section"] {
+    margin-top: calc(25% + 40px);
+  }
+
+  [class="project"] {
+    position: relative;
+    width: 350px;
+    height: calc(350px * 0.855);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    transition: margin-top 0.1s linear, width 0.2s linear, height 0.2s linear;
+
+    &:nth-child(2n + 1) {
+      margin: -25% auto 40px 56px;
+    }
+    &:nth-child(2n) {
+      margin: -25% 56px 40px auto;
+    }
+
+    [class="project-hexagon"] {
+      position: absolute;
+      width: 100%;
+      height: auto;
+    }
+
+    [class="close-x"] {
+      display: none;
+    }
+
+    a {
+      text-decoration: underline;
+      &:hover {
+        color: var(--dark-purple);
+      }
+    }
+
+    [class="project-inner"] {
+      margin: auto;
+      z-index: 2;
+      width: 100%;
+
+      h3 {
+        margin: 0 auto;
+        font-size: 20px;
+        width: 92%;
+      }
+
+      h5 {
+        margin: 0 auto;
+        font-size: 18px;
+      }
+
+      [class="project-content"] {
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+        transition: visibility 0.1s, max-height 0.1s, opacity 0.1s linear;
+  
+        img {
+          max-width: 300px;
+          width: 100%;
+          margin-top: 15px;
+        }
+
+        [class="blurb"] {
+          max-width: 70%;
+          margin: 15px auto;
+          font-size: 20px;
+
+          [class="copyable"] {
+            position: relative;
+            cursor: copy;
+            border: 1px solid #222;
+            padding: 0 6px;
+            font-size: 14px;
+          }
+        }
+
+        [class="project-link"] {
+          font-size: 18px;
+        }
+      }
+    }
+
+    &[project-active="true"] {
+      width: 730px;
+      height: calc(730px * 0.855);
+      margin: -3% auto 27%;
+
+      &:first-child {
+        margin-top: -20%;
+      }
+
+      [class="close-x"] {
+        display: block;
+        cursor: pointer;
+        color: #000;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 50px;
+        line-height: 1;
+        z-index: 3;
+        padding: 0 10px;
+        margin: 0;
+        transition: color 0.2s linear;
+        border: none;
+        background: transparent;
+
+        &:hover {
+          color: var(--dark-purple);
+        }
+      }
+
+      [class="project-content"] {
+        visibility: visible;
+        width: 100%;
+        height: calc(100% - 110px);
+        max-height: 600px;
+        margin-bottom: 25px;
+        opacity: 1;
+      }
+    }
+
+    &[data-title="Why Is My Cat So Jacked"] {
+      [class="project-content"] img {
+        max-height: 230px;
+        width: auto;
+        margin-bottom: -15px;
+      }
+    }
+  }
+}

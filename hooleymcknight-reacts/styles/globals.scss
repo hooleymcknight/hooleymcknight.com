@@ -1,6 +1,10 @@
 html {
   overflow-x: hidden;
   overflow-y: auto;
+  --dark-purple: #4f1665;
+  --light-purple: #ddabed;
+  --primary-light: #f2f2f2;
+  --primary-dark: #2d2d2d;
 }
 
 html,
@@ -11,11 +15,14 @@ body {
   position: relative;
   font-family: Titillium Web;
   transition: background-color 0.2s linear;
+
+  background: var(--primary-light);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  transition: color 0.2s linear;
 }
 
 * {
@@ -29,5 +36,56 @@ a {
   body {
     color: white;
     background: black;
+  }
+}
+
+nav#main-nav {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--dark-purple);
+  padding: 15px;
+  color: #fff;
+
+  a {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1;
+
+    &:hover {
+      color: var(--light-purple);
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: 0 3px;
+
+    a {
+      padding: 0 2px;
+    }
+  }
+}
+
+/* mobile/desktop only stuff */
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none;
   }
 }
