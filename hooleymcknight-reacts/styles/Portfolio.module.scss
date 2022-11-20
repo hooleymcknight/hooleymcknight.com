@@ -35,6 +35,44 @@
       display: none;
     }
 
+    [class*="project-clickable"] {
+      position: absolute;
+      background: transparent;
+      width: 170px;
+      height: 300px;
+      z-index: 2;
+      cursor: pointer;
+
+      &[class*="one"] {
+        top: 0;
+        left: 90px;
+      }
+      &[class*="two"] {
+        top: 0;
+        left: 90px;
+        transform: rotate(60deg);
+      }
+      &[class*="three"] {
+        bottom: 0;
+        left: 90px;
+        transform: rotate(-60deg);
+      }
+    }
+
+    /* overall project hover effects */
+    /* because of the structure, we have to mouseoveron this one :( */
+    /* will look into better solutions in the future */
+    &:not([project-active])[focused] {
+      [class*="project-clickable"] {
+        background: var(--dark-purple);
+
+        ~ [class="project-inner"] {
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+
     a {
       text-decoration: underline;
       &:hover {
@@ -63,7 +101,7 @@
         opacity: 0;
         max-height: 0;
         transition: visibility 0.1s, max-height 0.1s, opacity 0.1s linear;
-  
+
         img {
           max-width: 300px;
           width: 100%;
@@ -90,7 +128,7 @@
       }
     }
 
-    &[project-active="true"] {
+    &[project-active] {
       width: 730px;
       height: calc(730px * 0.855);
       margin: -3% auto 27%;
