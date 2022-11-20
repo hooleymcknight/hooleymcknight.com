@@ -121,3 +121,31 @@
     code portfolio section css is in:
     ./styles/Portfolio.module.scss
 */ 
+
+/* resume section */ 
+.resume {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin: auto;
+  text-align: center;
+
+  a {
+    margin: 0 auto 10px;
+    max-width: 200px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+    }
+
+    &:hover {
+      color: var(--dark-purple);
+    }
+  }
+}

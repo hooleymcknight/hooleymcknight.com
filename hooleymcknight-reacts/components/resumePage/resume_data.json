@@ -1,0 +1,100 @@
+{
+  "Work Experience": [
+    {
+      "job title": "Front-End Engineer",
+      "company": "surefoot",
+      "location": "Seattle, Washington",
+      "start date": "March 2022",
+      "end date": "November 2022",
+      "impact": [
+        "Developed tests for a handful of clients and shared code with the team using Git",
+        "Assisted with processes improvements and documentation of work tools",
+        "Reduced team stress and confusion by creating and maintaining a detailed wiki for all things related to the company"
+      ]
+    },
+    {
+      "job title": "Lead Developer",
+      "company": "Conversion Fanatics",
+      "location": "Austin, Texas",
+      "start date": "September 2021",
+      "end date": "March 2022",
+      "impact": [
+        "Installed A/B testing code and revenue tracking scripts for all incoming clients",
+        "Improved developer throughput by training and advising a team of 7 developers",
+        "Personalized the testing plan for 40+ clients by leading strategy sessions with the UI/UX design team"
+      ]
+    }
+    ,
+    {
+      "job title": "Front-End JavaScript & jQuery A/B Test Developer",
+      "company": "Conversion Fanatics",
+      "location": "Austin, Texas",
+      "start date": "October 2019",
+      "end date": "September 2021",
+      "impact": [
+        "Improved website usability by building tests with JavaScript, jQuery, and CSS",
+        "Analyzed test data to determine how to best improve client revenue",
+        "Communicated all aspects of the CRO process to 17+ clients"
+      ]
+    }
+    ,
+    {
+      "job title": "President & Founder, Board of Directors",
+      "company": "Guild of Geeks",
+      "location": "Austin, Texas",
+      "start date": "September 2015",
+      "end date": "August 2020",
+      "impact": [
+        "Managed all technology for the online community (website front-end & back-end)",
+        "Increased engagement in Discord servers by building Discord chat bots to manage role distribution, host an interactive text-based adventure game, and post awesome memes",
+        "Exemplified core principles of the Discord Partner Program by managing a unique, kind, and active non-profit organization",
+        "Engaged community of over 170 members by building and maintaining organization's website"
+      ]
+    }
+    ,
+    {
+      "job title": "Curbside Shopper",
+      "company": "H-E-B",
+      "location": "Austin, Texas",
+      "start date": "January 2019",
+      "end date": "August 2019",
+      "impact": [
+        "Selected quality products for customer orders and made appropriate product substitutions when necessary",
+        "Built and delivered orders to dozens of curbside customers per shift",
+        "Increased customer satisfaction inside the store by helping shoppers locate items and navigate the store"
+      ]
+    }
+    ,
+    {
+      "job title": "Developer Support",
+      "company": "Gaming Corps",
+      "location": "Austin, Texas",
+      "start date": "February 2018",
+      "end date": "November 2018",
+      "impact": [
+        {"<u>Voyage of the Dead</u> (released in 2019)": [
+          "Relieved pressure on devs by implementing game logic and fixing bugs using Unreal Engine 4 / C++",
+          "Kept developer priorities in order by leading QA team's bug tracking and reporting for over 500 bugs"
+        ]},
+        "<u>American Ninja Warrior Challenge</u> (released in 2019): ensured game quality by automating build scripts in Unity, C#, and Jenkins, and by testing all aspects of the product and discovering new bugs"
+      ]
+    }
+  ],
+  "Skills": {
+    "Proficient in": [
+      "!NodeJS", "!HTML", "!CSS", "!ReactJS", "!jQuery", "!REST API", "WordPress", "Shopify Liquid",
+      "!MySQL", "!Git", "Nginx", "!Amazon Web Services", "!Asana", "Trello", "ClickUp", "JIRA", "Bitbucket",
+      "!GitHub", "G Suite", "Microsoft Office", "!Windows 10", "!Linux", "Mac",
+      "CRO Apps: Convert", "Dynamic Yield", "Google Optimize", "Optimizely", "VWO", "AB Tasty", "Monetate"
+    ],
+    "Practicing": [
+      "!React Native", "!Python", "MongoDB", "C#", "C++", "Oracle SQL", "Java", "PHP", "Apache", "Jenkins", "Magento"
+    ]
+  },
+  "Education & Certifications": [
+    "<b>Bachelor of Science</b> in Mathematics, <b>University of North Texas,</b> 2015",
+    "<b>Associate of Applied Science</b> in Air Traffic Control, <b>Texas State Technical College,</b> 2017",
+    "<b>W3schools Certified JavaScript Developer,</b> 2019 (<a href='https://certification.w3schools.com/w3certified.asp?id=10936182' target='_blank' alt='W3schools JS certification'>online link</a>)",
+    "<b>AB Tasty User (Essentials),</b> 2022 (<a href='https://abtasty.360learning.com/api/certification/5641133834076958' target='_blank' alt='AB Tasty Essentials certification'>online link</a>)"
+  ]
+}

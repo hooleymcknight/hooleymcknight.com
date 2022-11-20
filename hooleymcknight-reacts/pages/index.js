@@ -2,9 +2,10 @@ import Head from 'next/head'
 import styles from '../styles/Index.module.scss'
 import Layout, { siteTitle } from '../components/layout'
 
-import Subnav from '../components/subnav/subnav'
-import SummaryCard from '../components/profileSummary'
-import Portfolio from '../components/portfolio/portfolio'
+import Subnav from '../components/index/subnav/subnav'
+import SummaryCard from '../components/index/profileSummary'
+import Portfolio from '../components/index/portfolio/portfolio'
+import ResumeSection from '../components/index/resumeSection'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Subnav className={styles.subnav} />
       <SummaryCard className={styles['summary-section']} />
       <Portfolio />
+      <ResumeSection className={styles.resume} />
 
     </Layout>
   )

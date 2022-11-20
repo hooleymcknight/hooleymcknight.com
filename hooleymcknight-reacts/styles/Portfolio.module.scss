@@ -16,6 +16,7 @@
     background-size: contain;
     display: flex;
     align-items: center;
+    overflow: hidden;
     transition: margin-top 0.1s linear, width 0.2s linear, height 0.2s linear;
 
     &:nth-child(2n + 1) {
@@ -27,8 +28,8 @@
 
     [class="project-hexagon"] {
       position: absolute;
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 100%;
     }
 
     [class="close-x"] {
@@ -62,7 +63,7 @@
     /* overall project hover effects */
     /* because of the structure, we have to mouseoveron this one :( */
     /* will look into better solutions in the future */
-    &:not([project-active])[focused] {
+    &:not([project-active])[focused], &:not([project-active]):focus-visible {
       [class*="project-clickable"] {
         background: var(--dark-purple);
 
@@ -117,8 +118,26 @@
             position: relative;
             cursor: copy;
             border: 1px solid #222;
-            padding: 0 6px;
+            padding: 3px 6px;
             font-size: 14px;
+            font-family: monospace;
+
+            [class*="copied"] {
+              position: absolute;
+              top: calc(100% - 3px);
+              right: -25px;
+              background: #fafafa;
+              padding: 0px 4px;
+              border: 1px solid #777;
+              font-family: Titillium Web;
+
+              &[class*="fading"] {
+                opacity: 0;
+                transition-duration: 3s;
+                -moz-transition-duration: 3s;
+                -webkit-transition-duration: 3s;
+              }
+            }
           }
         }
 
@@ -165,6 +184,10 @@
         max-height: 600px;
         margin-bottom: 25px;
         opacity: 1;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
 

@@ -7,7 +7,7 @@ const Subnavbar = (props) => {
       <ul id="subnav-menu" role="menubar">
         <SubnavItem link="#summary" name="Summary" />
         <SubnavItem link="#portfolio" name="Portfolio" />
-        <SubnavItem link="#resume" name="Resume" />
+        <SubnavItem link="#resume" name="Résumé" />
         <SubnavItem link="#videos" name="Videos" />
         <SubnavItem link="#photos" name="Photos" />
       </ul>
