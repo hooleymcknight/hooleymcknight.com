@@ -15,7 +15,7 @@ const VideoSlider = (props) => {
   }
 
   return (
-    <Carousel className="videos-slider" showArrows={true} useKeyboardArrows={true} tabIndex="0" infiniteLoop={true} autoPlay={true} showStatus={false}>
+    <Carousel className="videos-slider" showThumbs={false} showArrows={true} useKeyboardArrows={true} tabIndex="0" infiniteLoop={true} autoPlay={true} showStatus={false}>
       {videoData.map((x, index) => 
         <div key={index} className="video-wrapper" data-source={`${x.source}`} onClick={(e) => setVideoToActive(e)}>
           <video loop muted playsInline preload="true" className="cover" data-src={`https://hooleymcknight.com${x.source}`}>

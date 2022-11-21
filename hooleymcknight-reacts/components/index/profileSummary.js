@@ -9,7 +9,7 @@ const SummaryCard = (props) => {
     <div className={props.className} id="summary">
       <div className="summary-profile">
           <h1 className="mobile-only">Holly M. Phillips</h1>
-          <Image className="summary-img" src="https://hooleymcknight.com/images/pkmn.jpg" width="185" height="185" alt="Holly wearing a Pokemon t-shirt standing in front of a fence with an open smile" />
+          <img className="summary-img" src="https://hooleymcknight.com/images/pkmn.jpg" alt="Holly wearing a Pokemon t-shirt standing in front of a fence with an open smile" />
       </div>
       <div className="summary-titles">
           <h1 className="desktop-only">Holly M. Phillips</h1>

@@ -6,7 +6,13 @@ const toggleProject = (e) => {
 
   if (minimizedProjectTarget && !closeBtn) {
     const minimizedProject = minimizedProjectTarget.closest('.project')
-    minimizedProject.parentElement.querySelector('[project-active]')?.removeAttribute('project-active')
+    
+    const prevProject = minimizedProject.parentElement.querySelector('[project-active]')
+    if (prevProject) {
+      prevProject.removeAttribute('project-active')
+      prevProject.setAttribute('tabIndex', '0')
+    }
+    
     minimizedProject.setAttribute('project-active', '')
     minimizedProject.setAttribute('tabIndex', '-1')
 

@@ -5,7 +5,7 @@ import { faIdCard, faCode, faFileAlt, faVideo, faImages } from '@fortawesome/fre
 const icons = {
   "Summary": faIdCard,
   "Portfolio": faCode,
-  "Resume": faFileAlt,
+  "Résumé": faFileAlt,
   "Videos": faVideo,
   "Photos": faImages
 }

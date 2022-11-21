@@ -3,6 +3,10 @@
   width: 730px;
   text-align: center;
 
+  @media (max-width: 767px) {
+    width: 95vw;
+  }
+
   h2 {
     color: var(--primary-text);
   }
@@ -28,6 +32,18 @@
     }
     &:nth-child(2n) {
       margin: -25% 56px 40px auto;
+    }
+
+    @media (max-width: 767px) {
+      width: 45vw;
+      height: calc(45vw * 0.855);
+
+      &:nth-child(2n + 1) {
+        margin: -25% auto 5.3vw 7.4vw;
+      }
+      &:nth-child(2n) {
+        margin: -25% 7.4vw 5.3vw auto;
+      }
     }
 
     [class="project-hexagon"] {
@@ -66,20 +82,28 @@
         left: 90px;
         transform: rotate(-60deg);
       }
+
+      @media (max-width: 767px) {
+        width: 21.8vw;
+        height: 38.5vw;
+        left: 12vw !important;
+      }
     }
 
     /* overall project hover effects */
-    /* because of the structure, we have to mouseoveron this one :( */
+    /* because of the structure, we have to mouseover on this one :( */
     /* will look into better solutions in the future */
-    &:not([project-active])[focused], &:not([project-active]):focus-visible {
-      [class*="project-clickable"] {
-        background: var(--primary-purple);
-
-        ~ [class="project-inner"] {
-          cursor: pointer;
-
-          h5, h3 {
-            color: var(--alt-text);
+    @media (min-width: 768px) {
+      &:not([project-active])[focused], &:not([project-active]):focus-visible {
+        [class*="project-clickable"] {
+          background: var(--primary-purple);
+  
+          ~ [class="project-inner"] {
+            cursor: pointer;
+  
+            h5, h3 {
+              color: var(--alt-text);
+            }
           }
         }
       }
@@ -102,12 +126,21 @@
         font-size: 20px;
         width: 92%;
         color: var(--primary-text);
+
+        @media (max-width: 767px) {
+          font-size: 3vw;
+          width: 80%;
+        }
       }
 
       h5 {
         margin: 0 auto;
         font-size: 18px;
         color: var(--primary-text);
+
+        @media (max-width: 767px) {
+          font-size: 2.4vw;
+        }
       }
 
       [class="project-content"] {
@@ -120,6 +153,15 @@
           max-width: 300px;
           width: 100%;
           margin-top: 15px;
+
+          @media (max-width: 767px) {
+            width: auto;
+            max-width: 50%;
+          }
+
+          @media (max-width: 450px) {
+            display: none;
+          }
         }
 
         [class="blurb"] {
@@ -128,6 +170,12 @@
           font-size: 20px;
           color: var(--primary-text);
 
+          @media (max-width: 767px) {
+            font-size: 2.4vw;
+            max-width: 60%;
+            margin: 10px auto 4px;
+          }
+
           [class="copyable"] {
             position: relative;
             cursor: copy;
@@ -135,6 +183,10 @@
             padding: 3px 6px;
             font-size: 14px;
             font-family: monospace;
+
+            @media (max-width: 767px) {
+              font-size: 11px;
+            }
 
             [class*="copied"] {
               position: absolute;
@@ -158,6 +210,10 @@
         [class="project-link"] {
           font-size: 18px;
           color: var(--primary-text);
+
+          @media (max-width: 767px) {
+            font-size: 12px;
+          }
         }
       }
     }
@@ -166,6 +222,12 @@
       width: 730px;
       height: calc(730px * 0.855);
       margin: -3% auto 27%;
+
+      @media (max-width: 767px) {
+        width: 95vw;
+        height: calc(95vw * 0.855);
+        margin: -3% auto 26vw;
+      }
 
       &:first-child {
         margin-top: -20%;
@@ -199,6 +261,10 @@
         max-height: 600px;
         margin-bottom: 25px;
         opacity: 1;
+
+        @media (max-width: 767px) {
+          margin-bottom: 0;
+        }
       }
 
       &:last-child {
@@ -211,6 +277,10 @@
         max-height: 230px;
         width: auto;
         margin-bottom: -15px;
+
+        @media (max-width: 600px) {
+          max-height: 150px;
+        }
       }
     }
   }

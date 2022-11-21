@@ -57,6 +57,10 @@ body {
   background: var(--primary-background);
 }
 
+html[scroll-locked] {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -83,12 +87,15 @@ nav#main-nav {
   z-index: 5;
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   width: 100%;
   background-color: var(--dark-purple);
   padding: 15px;
   color: var(--light-text);
 
   a {
+    display: flex;
+    align-items: center;
     font-weight: 900;
     font-size: 20px;
     line-height: 1;
@@ -98,15 +105,32 @@ nav#main-nav {
     }
   }
 
+  @media (max-width: 389px) {
+    padding: 16px 10px;
+
+    a {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 346px) {
+    padding: 7px 10px;
+  }
+
   ul {
     list-style: none;
     display: flex;
+    align-items: center;
     padding: 0;
     margin: 0;
   }
 
   li {
     margin: 0 3px;
+
+    &:last-child {
+      margin-right: 0;
+    }
 
     a {
       padding: 0 2px;

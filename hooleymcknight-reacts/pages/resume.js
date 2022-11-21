@@ -9,7 +9,7 @@ export default function Resume() {
   return (
     <Layout page='resume'>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{siteTitle} || Résumé</title>
       </Head>
 
       <ResumeContent className={styles.resume} />

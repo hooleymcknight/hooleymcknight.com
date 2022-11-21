@@ -7,6 +7,7 @@ import SummaryCard from '../components/index/profileSummary'
 import Portfolio from '../components/index/portfolio/portfolio'
 import ResumeSection from '../components/index/resumeSection'
 import Videos from '../components/index/photos-videos/videos'
+import Photos from '../components/index/photos-videos/photos'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <Portfolio />
       <ResumeSection className={styles.resume} />
       <Videos className={styles.videos} />
+      <Photos className={styles.photos} />
 
     </Layout>
   )
