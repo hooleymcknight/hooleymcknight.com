@@ -3,8 +3,46 @@ html {
   overflow-y: auto;
   --dark-purple: #4f1665;
   --light-purple: #ddabed;
-  --primary-light: #f2f2f2;
-  --primary-dark: #2d2d2d;
+
+  --dark-bg: #2d2d2d;
+  --light-bg: #f2f2f2;
+
+  --dark-text: #222;
+  --light-text: #fff;
+
+  --off-light: #ccc;
+  --off-dark: #4d4d4d;
+
+  scroll-behavior: smooth;
+}
+
+html[data-theme="light"] {
+  --primary-purple: var(--dark-purple);
+  --primary-background: var(--light-bg);
+  --alt-purple: var(--light-purple);
+  --primary-text: var(--dark-text);
+  --alt-text: var(--light-text);
+
+  --toggle-main: var(--off-light);
+  --toggle-alt: var(--off-dark);
+
+  .toggle-switch {
+    margin-left: -1px;
+  }
+}
+html[data-theme="dark"] {
+  --primary-purple: var(--light-purple);
+  --primary-background: var(--dark-bg);
+  --alt-purple: var(--dark-purple);
+  --primary-text: var(--light-text);
+  --alt-text: var(--dark-text);
+
+  --toggle-main: var(--off-dark);
+  --toggle-alt: var(--off-light);
+
+  .toggle-switch {
+    margin-left: 24px;
+  }
 }
 
 html,
@@ -14,9 +52,9 @@ body {
   width: 100%;
   position: relative;
   font-family: Titillium Web;
-  transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear, color 0.2s linear;
 
-  background: var(--primary-light);
+  background: var(--primary-background);
 }
 
 a {
@@ -48,7 +86,7 @@ nav#main-nav {
   width: 100%;
   background-color: var(--dark-purple);
   padding: 15px;
-  color: #fff;
+  color: var(--light-text);
 
   a {
     font-weight: 900;
@@ -78,6 +116,49 @@ nav#main-nav {
 
 main {
   padding-top: 50px;
+}
+
+/* theme toggler */ 
+.theme-toggle {
+  background: var(--toggle-alt);
+  border: 2px solid var(--toggle-main);
+  transition: background-color 0.2s linear;
+
+  position: fixed;
+  height: 32px;
+  width: 58px;
+  right: 20px;
+  bottom: 15px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  padding: 0 3px;
+  z-index: 500;
+  cursor: pointer;
+
+  .toggle-switch {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    z-index: 2;
+    background: var(--toggle-main);
+    transition: margin-left 0.2s, background-color 0.2s linear;
+  }
+
+  svg[data-icon="sun"] {
+    position: absolute;
+    left: 8px;
+    color: var(--dark-text);
+    height: 15px;
+  }
+
+  svg[data-icon="moon"] {
+    position: absolute;
+    right: 8px;
+    color: var(--alt-text);
+    height: 15px;
+  }
 }
 
 /* mobile/desktop only stuff */

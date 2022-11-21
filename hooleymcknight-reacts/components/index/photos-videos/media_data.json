@@ -1,0 +1,96 @@
+{
+  "videos": [
+    {
+      "short": "/videos/shorts/Kiva_short.mp4",
+      "source": "/videos/KivaBoatDay_16-9.mp4",
+      "title": "Kiva Birthday Boat Day",
+      "link": "https://youtu.be/hXZHWgAcjVA"
+    },
+    {
+      "short": "/videos/shorts/AmongUs_short.mp4",
+      "source": "/videos/amongus_thesacrifice.mp4",
+      "title": "Among Us: The Sacrifice",
+      "link": "https://youtu.be/z5ArjSdj2SE"
+    },
+    {
+      "short": "/videos/shorts/OW_Reaper_short.mp4",
+      "source": "/videos/ow_reaper_potg.mp4",
+      "title": "Best Reaper POTGs by Hooley, Pt. I",
+      "link": "https://youtu.be/68VlNNIBHYk"
+    },
+    {
+      "short": "/videos/shorts/pax2018_short.mp4",
+      "source": "/videos/pax_south_2018.mp4",
+      "title": "PAX South 2018 Compilation",
+      "link": "https://youtu.be/MDjFizu3YP4"
+    },
+    {
+      "short": "/videos/shorts/Phasmo_short.mp4",
+      "source": "/videos/phasmaphobia_genuineterror.mp4",
+      "title": "Phasmaphobia: Genuine Terror",
+      "link": "https://youtu.be/3C7OJ6-ANNg"
+    }
+  ],
+  "photos": [
+    {
+      "tile": "/images/photos-section/thumbnails/unt_grad_300.jpg",
+      "alt": "graduation photo from University of North Texas, green graduation gown & cap, holding diploma",
+      "source": "/images/photos-section/unt_grad.jpg"
+    },
+    {
+      "tile": "/images/photos-section/thumbnails/tstc_grad_300.jpg",
+      "alt": "TSTC graduation photo, black graduation gown & cap, holding diploma, wearing medal and cords",
+      "source": "/images/photos-section/tstc_grad.jpg"
+    },
+    {
+      "tile": "/images/photos-section/thumbnails/nyc_300.jpg",
+      "alt": "Holly in Central Park, New York, with a thumbs up in winter clothes",
+      "source": "/images/photos-section/nyc.jpg"
+    },
+    {
+      "tile": "/images/photos-section/thumbnails/minnesota_300.jpg",
+      "alt": "Holly in front of Lake Michigan in winter clothes with a thumbs up and a Pokemon hat",
+      "source": "/images/photos-section/minnesota.jpg"
+    },
+    {
+      "tile": "/images/photos-section/thumbnails/lax_300.jpg",
+      "alt": "Holly in front of the Hollywood sign in Los Angeles, California, in summer clothes with thumbs up",
+      "source": "/images/photos-section/lax.jpg"
+    },
+    {
+      "tile": "/images/photos-section/thumbnails/disney_300.jpeg",
+      "alt": "Holly in Disney World with Donald Duck",
+      "source": "/images/photos-section/disney.jpeg"
+    },
+    {
+      "tile": "/images/photos-section/thumbnails/dc_300.jpg",
+      "alt": "Holly in front of the Washington Monument in Washington, D.C., with thumbs up",
+      "source": "/images/photos-section/dc.jpg"
+    },
+    {
+      "tile": "/images/photos-section/thumbnails/climbing_300.jpg",
+      "alt": "Holly in climbing gear inside a climbing gym, with a thumbs up",
+      "source": "/images/photos-section/climbing.jpg"
+    },
+    {
+      "tile": "/images/photos-section/thumbnails/yang_300.jpg",
+      "alt": "Holly in Yang (from RWBY) cosplay in front of a cardboard cutout of the same character",
+      "source": "/images/photos-section/yang.jpg"
+    },
+    {
+      "tile": "/images/photos-section/thumbnails/sappho_300.jpg",
+      "alt": "Holly in fall clothes standing in front of a highway sign that reads 'Entering Sappho'",
+      "source": "/images/photos-section/sappho.jpg"
+    },
+    {
+      "tile": "/images/photos-section/thumbnails/blanket_fort_300.jpg",
+      "alt": "Holly playing guitar with a Santa hat inside of a blanket fort",
+      "source": "/images/photos-section/blanket_fort.jpg"
+    },
+    {
+      "tile": "/images/photos-section/thumbnails/hytrekwedding_300.jpg",
+      "alt": "Holly and her girlfriend, Blake, in formal attire outside of a wedding venue",
+      "source": "/images/photos-section/hytrekwedding.jpg"
+    }
+  ]
+}
