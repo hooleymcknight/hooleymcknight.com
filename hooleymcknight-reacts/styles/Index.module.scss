@@ -70,6 +70,10 @@
       "contactInfo";
   }
 
+  @media (max-width: 450px) {
+    width: 100%;
+  }
+
   [class="summary-profile"] {
     grid-area: summaryProfile;
     min-width: 185px;
@@ -81,6 +85,10 @@
     img {
       border-radius: 8px;
       width: 100%;
+
+      @media (max-width: 450px) {
+        max-width: unset;
+      }
     }
 
     @media (max-width: 767px) {
@@ -107,6 +115,14 @@
       svg {
         margin-left: -20px;
         margin-right: 12px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+
+      ul {
+        width: 100%;
       }
     }
   }

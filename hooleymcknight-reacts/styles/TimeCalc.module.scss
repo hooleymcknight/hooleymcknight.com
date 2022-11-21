@@ -3,6 +3,7 @@
   max-width: 800px;
   margin: auto;
   padding-bottom: 40px;
+  color: var(--primary-text);
 
   form[id="time-conversion"] {
     [class="form-section"] {
@@ -28,9 +29,13 @@
         select {
           padding: 5px 30px 4px 8px;
           appearance: auto;
-          border: 2px solid #f2f2f2;
+          border: 2px solid var(--dark-bg);
           font-size: 18px;
           font-family: Titillium Web;
+
+          &:focus-visible {
+            outline-offset: 3px;
+          }
 
           @media (max-width:450px) {
             padding-right: 20px;
@@ -38,8 +43,8 @@
         }
 
         input {
-          border: 2px solid #f2f2f2;
-          padding: 2px 8px;
+          border: 2px solid var(--dark-bg);
+          padding: 7px 8px;
           font-size: 18px;
 
           @media (max-width:450px) {
@@ -64,9 +69,9 @@
 
       button[id="get-time"] {
         font-family: Titillium Web;
-        background: #4f1665;
-        border-color: transparent;
-        color: #fff;
+        background: var(--primary-purple);
+        border: 2px solid var(--primary-purple);
+        color: var(--alt-text);
         padding: 12px 18px;
         border-radius: 8px;
         text-transform: uppercase;
@@ -74,6 +79,12 @@
         letter-spacing: 0.7px;
         font-size: 16px;
         cursor: pointer;
+        transition: background-color 0.2s linear, color 0.2s linear;
+
+        &:hover {
+          background-color: var(--alt-purple);
+          color: var(--primary-text);
+        }
 
         @media (max-width: 450px) {
           margin-top: 20px;

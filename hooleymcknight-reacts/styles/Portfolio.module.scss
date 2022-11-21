@@ -185,7 +185,9 @@
             font-family: monospace;
 
             @media (max-width: 767px) {
-              font-size: 11px;
+              width: 100%;
+              font-size: 2.5vw;
+              margin-top: 3px;
             }
 
             [class*="copied"] {
@@ -255,6 +257,15 @@
 
         &:hover {
           color: var(--primary-purple);
+        }
+
+        @media (max-width: 767px) {
+          top: 2%;
+          right: 2%;
+        }
+
+        @media (max-width: 450px) {
+          font-size: 30px;
         }
       }
 
