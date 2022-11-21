@@ -9,6 +9,9 @@ const Layout = ({ children, page }) => {
   
   useEffect(() => {
     const prevTheme = sessionStorage.getItem('theme')
+    if (!prevTheme && theme === '') {
+      setTheme('light')
+    }
     document.documentElement.dataset.theme = theme
     sessionStorage.setItem('theme', theme)
 

@@ -211,6 +211,10 @@
           font-size: 18px;
           color: var(--primary-text);
 
+          &:hover {
+            color: var(--primary-purple);
+          }
+
           @media (max-width: 767px) {
             font-size: 12px;
           }
