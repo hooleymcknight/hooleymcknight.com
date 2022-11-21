@@ -24,7 +24,7 @@ html.overlay-active {
     transition: background 0.2s linear;
 }
 
-p, h1, h2, h3, h4, h5, li, a, th, td {
+p, h1, h2, h3, h4, h5, li, a, th, td, input, label, button, select, option {
     font-family: Titillium Web;
 }
 
@@ -1646,6 +1646,29 @@ main.dnd .sketch-overlay {
 
 .resume-section .mobile {
     display: block;
+}
+
+/* copyable */
+.copyable {
+  position: relative;
+  cursor: copy;
+  border: 1px solid #222;
+  padding: 0 6px;
+  font-size: 14px;
+}
+.copied {
+  position: absolute;
+  top: calc(100% - 3px);
+  right: -25px;
+  background: #fafafa;
+  padding: 0px 4px;
+  border: 1px solid #777;
+}
+.copied.fading {
+  opacity: 0;
+  transition-duration: 3s;
+  -moz-transition-duration: 3s;
+  -webkit-transition-duration: 3s;
 }
 
 /* hiding the fun stuff bc job applications, and people can't know I play DnD or edit videos, sad day. */
