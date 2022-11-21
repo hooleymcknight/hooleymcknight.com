@@ -1,0 +1,71 @@
+{
+  "months": [
+    {
+      "display": "01 - Jan",
+      "value": "Jan"
+    },
+    {
+      "display": "02 - Feb",
+      "value": "Feb"
+    },
+    {
+      "display": "03 - Mar",
+      "value": "Mar"
+    },
+    {
+      "display": "04 - Apr",
+      "value": "Apr"
+    },
+    {
+      "display": "05 - May",
+      "value": "May"
+    },
+    {
+      "display": "06 - Jun",
+      "value": "Jun"
+    },
+    {
+      "display": "07 - Jul",
+      "value": "Jul"
+    },
+    {
+      "display": "08 - Aug",
+      "value": "Aug"
+    },
+    {
+      "display": "09 - Sep",
+      "value": "Sep"
+    },
+    {
+      "display": "10 - Oct",
+      "value": "Oct"
+    },
+    {
+      "display": "11 - Nov",
+      "value": "Nov"
+    },
+    {
+      "display": "12 - Dec",
+      "value": "Dec"
+    }
+  ],
+  "timezones": [
+    {
+      "display": "Pacific Time",
+      "value": "P"
+    },
+    {
+      "display": "Mountain Time",
+      "value": "M"
+    },
+    {
+      "display": "Central Time",
+      "value": "C"
+    },
+    {
+      "display": "Eastern Time",
+      "value": "E"
+    }
+  ],
+  "offsets": [ "-8", "-7", "-6", "-5", "-4" ]
+}

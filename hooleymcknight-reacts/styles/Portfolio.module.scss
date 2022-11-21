@@ -1,0 +1,287 @@
+.portfolio {
+  margin: 40px auto;
+  width: 730px;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    width: 95vw;
+  }
+
+  h2 {
+    color: var(--primary-text);
+  }
+
+  [class="projects-section"] {
+    margin-top: calc(25% + 40px);
+  }
+
+  [class="project"] {
+    position: relative;
+    width: 350px;
+    height: calc(350px * 0.855);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: margin-top 0.1s linear, width 0.2s linear, height 0.2s linear;
+
+    &:nth-child(2n + 1) {
+      margin: -25% auto 40px 56px;
+    }
+    &:nth-child(2n) {
+      margin: -25% 56px 40px auto;
+    }
+
+    @media (max-width: 767px) {
+      width: 45vw;
+      height: calc(45vw * 0.855);
+
+      &:nth-child(2n + 1) {
+        margin: -25% auto 5.3vw 7.4vw;
+      }
+      &:nth-child(2n) {
+        margin: -25% 7.4vw 5.3vw auto;
+      }
+    }
+
+    [class="project-hexagon"] {
+      position: absolute;
+      width: auto;
+      height: 100%;
+
+      g {
+        fill: var(--primary-purple);
+      }
+    }
+
+    [class="close-x"] {
+      display: none;
+    }
+
+    [class*="project-clickable"] {
+      position: absolute;
+      background: transparent;
+      width: 170px;
+      height: 300px;
+      z-index: 2;
+      cursor: pointer;
+
+      &[class*="one"] {
+        top: 0;
+        left: 90px;
+      }
+      &[class*="two"] {
+        top: 0;
+        left: 90px;
+        transform: rotate(60deg);
+      }
+      &[class*="three"] {
+        bottom: 0;
+        left: 90px;
+        transform: rotate(-60deg);
+      }
+
+      @media (max-width: 767px) {
+        width: 21.8vw;
+        height: 38.5vw;
+        left: 12vw !important;
+      }
+    }
+
+    /* overall project hover effects */
+    /* because of the structure, we have to mouseover on this one :( */
+    /* will look into better solutions in the future */
+    @media (min-width: 768px) {
+      &:not([project-active])[focused], &:not([project-active]):focus-visible {
+        [class*="project-clickable"] {
+          background: var(--primary-purple);
+  
+          ~ [class="project-inner"] {
+            cursor: pointer;
+  
+            h5, h3 {
+              color: var(--alt-text);
+            }
+          }
+        }
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      &:hover {
+        color: var(--primary-purple);
+      }
+    }
+
+    [class="project-inner"] {
+      margin: auto;
+      z-index: 2;
+      width: 100%;
+
+      h3 {
+        margin: 0 auto;
+        font-size: 20px;
+        width: 92%;
+        color: var(--primary-text);
+
+        @media (max-width: 767px) {
+          font-size: 3vw;
+          width: 80%;
+        }
+      }
+
+      h5 {
+        margin: 0 auto;
+        font-size: 18px;
+        color: var(--primary-text);
+
+        @media (max-width: 767px) {
+          font-size: 2.4vw;
+        }
+      }
+
+      [class="project-content"] {
+        visibility: hidden;
+        opacity: 0;
+        max-height: 0;
+        transition: visibility 0.1s, max-height 0.1s, opacity 0.1s linear;
+
+        img {
+          max-width: 300px;
+          width: 100%;
+          margin-top: 15px;
+
+          @media (max-width: 767px) {
+            width: auto;
+            max-width: 50%;
+          }
+
+          @media (max-width: 450px) {
+            display: none;
+          }
+        }
+
+        [class="blurb"] {
+          max-width: 70%;
+          margin: 15px auto;
+          font-size: 20px;
+          color: var(--primary-text);
+
+          @media (max-width: 767px) {
+            font-size: 2.4vw;
+            max-width: 60%;
+            margin: 10px auto 4px;
+          }
+
+          [class="copyable"] {
+            position: relative;
+            cursor: copy;
+            border: 1px solid var(--primary-text);
+            padding: 3px 6px;
+            font-size: 14px;
+            font-family: monospace;
+
+            @media (max-width: 767px) {
+              font-size: 11px;
+            }
+
+            [class*="copied"] {
+              position: absolute;
+              top: calc(100% - 3px);
+              right: -25px;
+              background: #fafafa;
+              padding: 0px 4px;
+              border: 1px solid #777;
+              font-family: Titillium Web;
+
+              &[class*="fading"] {
+                opacity: 0;
+                transition-duration: 3s;
+                -moz-transition-duration: 3s;
+                -webkit-transition-duration: 3s;
+              }
+            }
+          }
+        }
+
+        [class="project-link"] {
+          font-size: 18px;
+          color: var(--primary-text);
+
+          @media (max-width: 767px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    &[project-active] {
+      width: 730px;
+      height: calc(730px * 0.855);
+      margin: -3% auto 27%;
+
+      @media (max-width: 767px) {
+        width: 95vw;
+        height: calc(95vw * 0.855);
+        margin: -3% auto 26vw;
+      }
+
+      &:first-child {
+        margin-top: -20%;
+      }
+
+      [class="close-x"] {
+        display: block;
+        cursor: pointer;
+        color: var(--primary-text);
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 50px;
+        line-height: 1;
+        z-index: 3;
+        padding: 0 10px;
+        margin: 0;
+        transition: color 0.2s linear;
+        border: none;
+        background: transparent;
+
+        &:hover {
+          color: var(--primary-purple);
+        }
+      }
+
+      [class="project-content"] {
+        visibility: visible;
+        width: 100%;
+        height: calc(100% - 110px);
+        max-height: 600px;
+        margin-bottom: 25px;
+        opacity: 1;
+
+        @media (max-width: 767px) {
+          margin-bottom: 0;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &[data-title="Why Is My Cat So Jacked"] {
+      [class="project-content"] img {
+        max-height: 230px;
+        width: auto;
+        margin-bottom: -15px;
+
+        @media (max-width: 600px) {
+          max-height: 150px;
+        }
+      }
+    }
+  }
+}

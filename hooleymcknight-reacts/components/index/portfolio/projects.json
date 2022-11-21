@@ -1,0 +1,102 @@
+{
+  "Why Is My Cat So Jacked": {
+    "subtitle": "React Native App/Website",
+    "image": "wimcsj.gif",
+    "blurb": "This is my first attempt at building a React Native app. I started this project on Saturday, Nov. 12th, 2022. See the current exported site <a href='https://whyismycatsojacked.com' alt='link to WIMCSJ website'>here</a>, or check out the Android dev app using&nbsp;Expo: <br><button class='copyable' tab-index='0'>exp://exp.host/@hooleymcknight/why-is-my-cat-so-jacked</button>",
+    "link": {
+      "href": "https://github.com/hooleymcknight/whyismycatsojacked.com",
+      "alt": "Link to GitHub repository for this website",
+      "text": "Code Repository on GitHub"
+    }
+  },
+  "This Website :)": {
+    "subtitle": "NextJS Website",
+    "image": "hooleymcknight-site.gif",
+    "blurb": "This is Version 3 of this site, finally fully in ReactJS (specificially NextJS)! This version uses the same design from V2, but offers cleaner code and better functionality.",
+    "link": {
+      "href": "https://github.com/hooleymcknight/hooleymcknight.com",
+      "alt": "Link to GitHub repository for this website",
+      "text": "Code Repository on GitHub"
+    }
+  },
+  "Fiddlesitters Website": {
+    "subtitle": "NextJS Website",
+    "image": "fiddlesitters-site.gif",
+    "blurb": "A work-in-progress hub for our Twitch stream team, this website was built entirely using React and NextJS. The site is currently not live due to server costs, but is an active project for me! This is where I've explored connecting a website to a MySQL database to create an interactive game.",
+    "link": {
+      "href": "https://github.com/hooleymcknight/fiddlesitters",
+      "alt": "Link to GitHub repository for Fiddlesitters website",
+      "text": "Code Repository on GitHub"
+    }
+  },
+  "Jackbox Spinner Wheel": {
+    "subtitle": "HTML/JS/CSS Mini-Project",
+    "image": "wheel.gif",
+    "blurb": "My friends and I found that we were often unable to decide on what Jackbox game we wanted to play, so I threw some of our favorites into a wheel we can spin. ReactJS updates to&nbsp;come!",
+    "link": {
+      "href": "/jackbox-wheel",
+      "alt": "link to the wheel",
+      "text": "Go see the wheel!"
+    }
+  },
+  "Time Conversion Calculator": {
+    "subtitle": "HTML/JS/CSS Mini-Project",
+    "image": "time-conversion.png",
+    "blurb": "At work, a lot of our team found time zones and DST very confusing, particularly when scheduling tests to run in A/B testing apps (such as Dynamic Yield). I built a calculator to make scheduling tests easier on my coworkers and remove the trouble of having to think about time&nbsp;zones.",
+    "link": {
+      "href": "/time-conversion-calculator",
+      "alt": "link to the calculator",
+      "text": "Go try out the calculator!"
+    }
+  },
+  "Voyage of the Dead": {
+    "subtitle": "Video Game by Gaming Corps",
+    "image": "votd.png",
+    "blurb": "This video game (PS4/Xbox One) featured light gun peripherals, which made it an extremely unique development process. As Developer Support, I programmed the Kraken boss fight, lobby fidgets, and other varioius encounters throughout the game, in addition to managing the full QA&nbsp;process.",
+    "link": {
+      "href": "https://news.xbox.com/en-us/2019/08/22/voyage-of-the-dead-is-now-available-for-xbox-one/",
+      "alt": "link to article about game release",
+      "text": "See Xbox's Release Article"
+    }
+  },
+  "American Ninja Warrior Challenge": {
+    "subtitle": "Video Game by Gaming Corps",
+    "image": "anw.jpg",
+    "blurb": "This video game (PS4/Xbox One/Nintendo Switch) was developed alongside Voyage of the Dead by the same team at Gaming Corps Austin. My role for this project was primarily focused on testing console builds. I occasionally supported other parts of the development and design process, including assisting with set&nbsp;decoration.",
+    "link": {
+      "href": "https://news.xbox.com/en-us/2019/03/18/american-ninja-warrior-challenge-is-now-available-for-xbox-one/",
+      "alt": "link to article about game release",
+      "text": "See Xbox's Release Article"
+    }
+  },
+  "Guildie Bot": {
+    "subtitle": "First Code Project - Discord Bot",
+    "image": "gbot.png",
+    "blurb": "Guildie Bot was my vehicle for learning JavaScript and MySQL. Originally designed simply to welcome new members into a Discord server, Guildie Bot grew into a full, text-based adventure game with the support of an AWS&nbsp;database.",
+    "link": {
+      "href": "https://bitbucket.org/hooleymcknight/guildiebot/src/master/",
+      "alt": "Link to Bitbucket repository for Guildie Bot",
+      "text": "Code Repository on Bitbucket"
+    }
+  },
+  "Catra, Adora, Dina, & Ellie Bots": {
+    "subtitle": "Discord Bots",
+    "image": "adora.png",
+    "blurb": "Based on characters from She-Ra and the Last of Us II, these bots work together to manage member roles and other various functions for my current public and private Discord&nbsp;servers.",
+    "link": {
+      "href": "https://bitbucket.org/hooleymcknight/catradora-ellina/src/master/",
+      "alt": "Link to Bitbucket repository for Dina, Ellie, Catra, and Adora bots",
+      "text": "Code Repository on Bitbucket"
+    }
+  },
+  "Guild of Geeks Website": {
+    "subtitle": "WordPress Site (Ended in 2020)",
+    "image": "gog_site.jpg",
+    "blurb": "I originally built this website from scratch before moving it over to WordPress. This site was the main hub of information for my non-profit organization, focusing especially on sharing upcoming events to help the organization grow in the local&nbsp;community.",
+    "link": {
+      "href": "https://bitbucket.org/hooleymcknight/gog-html/src/master/",
+      "alt": "Link to Bitbucket repository for Guild of Geeks website",
+      "text": "Code Repository on Bitbucket"
+    }
+  }
+}
