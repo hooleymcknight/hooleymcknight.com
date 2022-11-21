@@ -5,6 +5,7 @@ const IntroSection = () => {
       <div className="intro-text">
         <h2>Holly M. Phillips</h2>
         <a href="tel:+19364251225" alt="phone number: 936-425-1225">(936) 425-1225</a>
+        <a href="mailto:hmphillips93@gmail.com" alt="email address: hmphillips93@gmail.com">hmphillips93@gmail.com</a>
         <a href="https://www.linkedin.com/in/hooleymcknight/" target="_blank" alt="linkedin profile">LinkedIn Profile</a>
         <a href="https://www.github.com/hooleymcknight/" target="_blank" alt="github profile">GitHub Profile</a>
       </div>

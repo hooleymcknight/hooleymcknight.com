@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="icon" href="./favicon.ico" />
+          <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="Holly's resume, code portfolio, and some fun other things" />
           <meta property="og:image" content={`https://hooleymcknight.com/images/lax_hero.jpg`} />
           <meta name="og:title" content="Holly's resume, code portfolio, and some fun other things" />
