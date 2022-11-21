@@ -7,11 +7,11 @@ export default function WheelPage() {
   return (
     <Layout page='jackbox-wheel'>
       <Head>
-        <title>{siteTitle}</title>
+        <title>{siteTitle} || Jackbox Wheel</title>
       </Head>
 
-      <Wheel />
-      <p>winner</p>
+      <Wheel className={styles.wheel} />
+      <p className={styles["winner-title"]}></p>
 
     </Layout>
   )

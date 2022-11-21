@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { toggleProject, closeProject, focusHandler, blurHandler, copyableHandler } from './projectTileEvents'
@@ -27,7 +28,9 @@ const Project = (props) => {
         <div className="project-content">
           <img src={`https://hooleymcknight.com/images/projects/${data.image}`} alt={props.name} />
           <p className="blurb" dangerouslySetInnerHTML={createMarkup(data.blurb)} onClick={e => copyableHandler(e)} onKeyUp={e => copyableHandler(e)}></p>
-          <a className="project-link" tabIndex="0" target="_blank" href={data.link.href} alt={data.link.alt}>{data.link.text}</a>
+          <Link href={data.link.href} passHref>
+            <a className="project-link" tabIndex="0" target={!data.link.href.startsWith('/') ? "_blank" : ''} alt={data.link.alt}>{data.link.text}</a>
+          </Link>
         </div>
       </div>
 

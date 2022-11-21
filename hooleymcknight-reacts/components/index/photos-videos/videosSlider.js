@@ -14,17 +14,27 @@ const VideoSlider = (props) => {
     props.onVideoSet(video)
   }
 
+  const clickVideo = (e) => {
+    if (e.key !== 'Enter' || !e.target.classList.contains('videos-slider')) return
+
+    const source = e.target.querySelector('.slide.selected .video-wrapper').getAttribute('data-source')
+    const video = data.videos.find(x => x.source === `${source}`)
+    props.onVideoSet(video)
+  }
+
   return (
-    <Carousel className="videos-slider" showThumbs={false} showArrows={true} useKeyboardArrows={true} tabIndex="0" infiniteLoop={true} autoPlay={true} showStatus={false}>
-      {videoData.map((x, index) => 
-        <div key={index} className="video-wrapper" data-source={`${x.source}`} onClick={(e) => setVideoToActive(e)}>
-          <video loop muted playsInline preload="true" className="cover" data-src={`https://hooleymcknight.com${x.source}`}>
-            <source src={`https://hooleymcknight.com${x.short}`} type="video/mp4" />
-          </video>
-          <FontAwesomeIcon icon={faPlayCircle} />
-        </div>
-      )}
-    </Carousel>
+    <div className="video-slider-container" onKeyUp={e => clickVideo(e)}>
+      <Carousel className="videos-slider" showThumbs={false} showArrows={true} useKeyboardArrows={true} infiniteLoop={true} autoPlay={true} showStatus={false}>
+        {videoData.map((x, index) => 
+          <div key={index} className="video-wrapper" data-source={`${x.source}`} onClick={(e) => setVideoToActive(e)}>
+            <video loop muted playsInline preload="true" className="cover" data-src={`https://hooleymcknight.com${x.source}`}>
+              <source src={`https://hooleymcknight.com${x.short}`} type="video/mp4" />
+            </video>
+            <FontAwesomeIcon icon={faPlayCircle} />
+          </div>
+        )}
+      </Carousel>
+    </div>
   )
 }
 
