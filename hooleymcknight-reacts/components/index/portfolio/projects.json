@@ -42,7 +42,7 @@
   "Time Conversion Calculator": {
     "subtitle": "HTML/JS/CSS Mini-Project",
     "image": "time-conversion.png",
-    "blurb": "At work, a lot of our team found time zones and DST very confusing, particularly when scheduling tests to run in A/B testing apps (such as Dynamic Yield). I built a calculator to make scheduling tests easier on my coworkers and remove the trouble of having to think about time&nbsp;zones.",
+    "blurb": "At work, a lot of our team found time zones and DST very confusing when scheduling tests to run in A/B testing apps (such as Dynamic Yield). I built a calculator to make scheduling tests easier and remove the trouble of having to think about time&nbsp;zones. The below link also has a TypeScript&nbsp;version.",
     "link": {
       "href": "/time-conversion-calculator",
       "alt": "link to the calculator",
