@@ -61,6 +61,7 @@ body {
   transition: background-color 0.2s linear, color 0.2s linear;
 
   background: var(--primary-background);
+  color: var(--primary-text);
 }
 
 html[scroll-locked] {
@@ -71,6 +72,10 @@ a {
   color: inherit;
   text-decoration: none;
   transition: color 0.2s linear;
+
+  &:hover {
+    color: var(--primary-purple);
+  }
 }
 
 * {
@@ -82,8 +87,8 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: var(--light-text);
+    background: var(--dark-bg);
   }
 }
 
