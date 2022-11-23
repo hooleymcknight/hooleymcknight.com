@@ -5,6 +5,14 @@
   padding-bottom: 40px;
   color: var(--primary-text);
 
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--primary-purple);
+    }
+  }
+
   form[id="time-conversion"] {
     [class="form-section"] {
       display: flex;
