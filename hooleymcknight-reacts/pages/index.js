@@ -6,6 +6,7 @@ import Subnav from '../components/index/subnav/subnav'
 import SummaryCard from '../components/index/profileSummary'
 import Portfolio from '../components/index/portfolio/portfolio'
 import ResumeSection from '../components/index/resumeSection'
+import BlogHome from '../components/blog/blogHome'
 import Videos from '../components/index/photos-videos/videos'
 import Photos from '../components/index/photos-videos/photos'
 
@@ -22,6 +23,7 @@ export default function Home() {
       <SummaryCard className={styles['summary-section']} />
       <Portfolio />
       <ResumeSection className={styles.resume} />
+      <BlogHome className={styles.blog} page='index' />
       <Videos className={styles.videos} />
       <Photos className={styles.photos} />
 

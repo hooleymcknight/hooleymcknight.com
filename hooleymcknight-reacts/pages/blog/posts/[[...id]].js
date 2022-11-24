@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import Head from 'next/head'
-import Layout, { siteTitle } from '../../components/layout'
-import BlogHome from '../../components/blog/blogHome'
+import Layout, { siteTitle } from '../../../components/layout'
+import styles from '../../../styles/Blog.module.scss'
 
 const createMarkup = (input) => {
   return { __html: input}
 }
 
 const processText = (text, pageID) => {
+  console.log(pageID)
   // set the title
   const titleLine = text.split('\n')[0]
   const title = titleLine.replace('Title:', '').trim()
@@ -63,7 +65,7 @@ const processText = (text, pageID) => {
 
 export default function Blog() {
   const [postContent, setPostContent] = useState({})
-  const postID = useRouter().asPath.replace('/blog/', '').replaceAll('/', '')
+  const postID = useRouter().asPath.replace('/blog/posts', '').replaceAll('/', '')
 
   useEffect(() => {
     async function getContent() {
@@ -97,16 +99,13 @@ export default function Blog() {
         <title>{siteTitle} || Blog</title>
       </Head>
 
-      {postContent.page !== '' ?
-        <>
-          <h1>{postContent.title}</h1>
-          <h3>{postContent.date}</h3>
-          <div className="post-content" dangerouslySetInnerHTML={createMarkup(postContent.text)}></div>
-        </>
-      :
-        <BlogHome />
-      }
-      
+      <div className={styles.post}>
+        <h1>{postContent.title}</h1>
+        <h3>{postContent.date}</h3>
+        <div className="post-content" dangerouslySetInnerHTML={createMarkup(postContent.text)}></div>
+      </div>
+
+      <Link href="/blog"><a className={styles['go-back']} alt="go back to all blog posts">Go back</a></Link>
 
     </Layout>
   )

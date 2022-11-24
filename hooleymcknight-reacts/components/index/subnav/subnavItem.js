@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faIdCard, faCode, faFileAlt, faVideo, faImages } from '@fortawesome/free-solid-svg-icons'
+import { faIdCard, faCode, faFileAlt, faVideo, faImages, faPencil } from '@fortawesome/free-solid-svg-icons'
 
 const icons = {
   "Summary": faIdCard,
   "Portfolio": faCode,
   "Résumé": faFileAlt,
+  "Blog": faPencil,
   "Videos": faVideo,
   "Photos": faImages
 }
