@@ -3,8 +3,6 @@ import styles from '../../styles/Blog.module.scss'
 import postList from './postList.json'
 
 const BlogHome = (props) => {
-  console.log(postList)
-  console.log(props.page)
 
   return (
     <div className={styles['blog-home']} id="blog">
@@ -27,11 +25,17 @@ const BlogHome = (props) => {
                 <p className="blurb">{postList[`${x}`].blurb}</p>
               </a>
             </Link>
-          
           }
           </li>
         )}
       </ul>
+
+      {props.page === 'index'
+      ?
+      <Link href='/blog'><a alt="page with list of all Holly's available blog posts">...more</a></Link>
+      :
+      ''
+      }
     </div>
   )
 }

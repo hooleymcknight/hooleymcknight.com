@@ -100,8 +100,8 @@ export default function Blog() {
       </Head>
 
       <div className={styles.post}>
-        <h1>{postContent.title}</h1>
-        <h3>{postContent.date}</h3>
+        <h1 dangerouslySetInnerHTML={createMarkup(postContent.title)}></h1>
+        <h3 dangerouslySetInnerHTML={createMarkup(postContent.date)}></h3>
         <div className="post-content" dangerouslySetInnerHTML={createMarkup(postContent.text)}></div>
       </div>
 
