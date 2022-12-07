@@ -82,16 +82,6 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: var(--light-text);
-    background: var(--dark-bg);
-  }
-}
-
 nav#main-nav {
   position: fixed;
   top: 0;

@@ -47,19 +47,22 @@
 
 /* summary section */
 .summary-section {
-  background: var(--alt-purple);
-  border: 4px solid var(--primary-purple);
-
-  border-radius: 8px;
-  margin: 40px auto;
-  display: grid;
-  width: fit-content;
-  width: -moz-fit-content;
-  max-width: 95%;
-  grid-template-columns: 0.8fr auto;
-  grid-template-areas:
-    "summaryProfile summaryTitles"
-    "contactInfo contactInfo";
+  padding-top: 100px;
+  
+  [class="summary-inner"] {
+    margin: 0 auto;
+    background: var(--alt-purple);
+    border: 4px solid var(--primary-purple);
+    border-radius: 8px;
+    display: grid;
+    width: fit-content;
+    width: -moz-fit-content;
+    max-width: 95%;
+    grid-template-columns: 0.8fr auto;
+    grid-template-areas:
+      "summaryProfile summaryTitles"
+      "contactInfo contactInfo";
+  }
 
   @media (max-width: 767px) {
     grid-template-columns: auto;
@@ -162,7 +165,8 @@
   display: flex;
   flex-direction: column;
   max-width: 450px;
-  margin: 0 auto 40px;
+  padding-top: 100px;
+  margin: 0 auto;
   text-align: center;
 
   a {
@@ -181,9 +185,14 @@
   }
 }
 
+/*
+    blog section css is in:
+    ./styles/Blog.module.scss
+*/ 
+
 /* videos section */
 .videos {
-  margin-bottom: 40px;
+  padding-top: 100px;
 
   h2 {
     text-align: center;
@@ -329,13 +338,14 @@
 
 /* photos section */ 
 .photos {
+  padding-top: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 6px;
   padding-bottom: 40px;
   max-width: 950px;
-  margin: auto;
+  margin: 0 auto;
 
   h2 {
     width: 100%;

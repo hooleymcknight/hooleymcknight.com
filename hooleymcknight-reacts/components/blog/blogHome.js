@@ -5,7 +5,7 @@ import postList from './postList.json'
 const BlogHome = (props) => {
 
   return (
-    <div className={styles['blog-home']} id="blog">
+    <div className={styles['blog-home']} id={props.page === 'index' ? 'blog' : 'blog-home'}>
       {props.page === 'blog' ? <h1>Hooley Writes</h1> : <h2>Blog</h2>}
 
       <ul>
