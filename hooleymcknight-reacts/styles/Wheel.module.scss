@@ -148,4 +148,78 @@
   color: var(--primary-text);
   font-size: 20px;
   margin-top: 0;
+  min-height: 32px;
+}
+
+.games-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 620px;
+  margin: auto;
+  padding: 40px 0;
+
+  button {
+    position: relative;
+    font-family: Titillium Web;
+    font-size: 20px;
+    width: calc(50% - 4px);
+    padding: 8px 12px;
+    background: var(--alt-purple);
+    color: var(--primary-text);
+    border: 2px solid var(--primary-purple);
+    margin: 2px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+
+    &:hover {
+      background: var(--alt-background);
+      color: var(--alt-text);
+
+      &[disabled] span {
+        display: block;
+      }
+    }
+
+    svg {
+      margin-left: 10px;
+
+      &[class*="fa-plus"] {
+        display: none;
+      }
+    }
+
+    &[data-active="false"] {
+      background: var(--primary-purple);
+      color: var(--alt-text);
+
+      svg[class*="fa-xmark"] {
+        display: none;
+      }
+      svg[class*="fa-plus"] {
+        display: inline-block;
+      }
+    }
+
+    span {
+      display: none;
+      position: absolute;
+      bottom: -25px;
+      left: -10px;
+      background: var(--toggle-alt);
+      border: 1px solid var(--toggle-main);
+      color: var(--alt-text);
+      font-size: 15px;
+      z-index: 2;
+      width: 110%;
+      text-align: center;
+    }
+  }
 }
