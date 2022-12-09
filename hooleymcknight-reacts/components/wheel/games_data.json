@@ -2,107 +2,159 @@
   "games": [
     {
       "title": "Guesspionage",
-      "image": "guesspionage.png"
+      "image": "guesspionage.png",
+      "min_players": 2,
+      "max_players": 8
     },
     {
       "title": "Fakin' It",
-      "image": "fakin-it.png"
+      "image": "fakin-it.png",
+      "min_players": 3,
+      "max_players": 6
     },
     {
       "title": "Trivia Murder Party 2",
-      "image": "trivia-murder-party-2.png"
+      "image": "trivia-murder-party-2.png",
+      "min_players": 1,
+      "max_players": 8
     },
     {
       "title": "Tee K.O.",
-      "image": "tee-ko.png"
+      "image": "tee-ko.png",
+      "min_players": 3,
+      "max_players": 8
     },
     {
       "title": "Quiplash 3",
-      "image": "quiplash-3.png"
+      "image": "quiplash-3.png",
+      "min_players": 3,
+      "max_players": 8
     },
     {
       "title": "Survive the Internet",
-      "image": "survive-the-internet.png"
+      "image": "survive-the-internet.png",
+      "min_players": 3,
+      "max_players": 8
     },
     {
       "title": "Fibbage 3: Enough About You",
-      "image": "fibbage-3.png"
+      "image": "fibbage-3.png",
+      "min_players": 2,
+      "max_players": 8
     },
     {
       "title": "Push the Button",
-      "image": "push-the-button.png"
+      "image": "push-the-button.png",
+      "min_players": 4,
+      "max_players": 10
     },
     {
       "title": "The Devil in the Details",
-      "image": "the-devil-in-the-details.png"
+      "image": "the-devil-in-the-details.png",
+      "min_players": 3,
+      "max_players": 8
     },
     {
       "title": "Monster Seeking Monster",
-      "image": "monster-seeking-monster.png"
+      "image": "monster-seeking-monster.png",
+      "min_players": 3,
+      "max_players": 7
     },
     {
       "title": "Civic Doodle",
-      "image": "civic-doodle.png"
+      "image": "civic-doodle.png",
+      "min_players": 3,
+      "max_players": 8
     },
     {
       "title": "Patently Stupid",
-      "image": "patently-stupid.png"
+      "image": "patently-stupid.png",
+      "min_players": 3,
+      "max_players": 8
     },
     {
       "title": "Split the Room",
-      "image": "split-the-room.png"
+      "image": "split-the-room.png",
+      "min_players": 3,
+      "max_players": 8
     },
     {
       "title": "Mad Verse City",
-      "image": "mad-verse-city.png"
+      "image": "mad-verse-city.png",
+      "min_players": 3,
+      "max_players": 8
     },
     {
       "title": "Role Models",
-      "image": "role-models.png"
+      "image": "role-models.png",
+      "min_players": 3,
+      "max_players": 6
     },
     {
       "title": "Champ'd Up",
-      "image": "champd-up.png"
+      "image": "champd-up.png",
+      "min_players": 3,
+      "max_players": 8
     },
     {
       "title": "Blather Round",
-      "image": "blather-round.png"
+      "image": "blather-round.png",
+      "min_players": 2,
+      "max_players": 6
     },
     {
       "title": "Drawful Animate",
-      "image": "drawful-animate.png"
+      "image": "drawful-animate.png",
+      "min_players": 3,
+      "max_players": 10
     },
     {
       "title": "The Wheel of Enormous Proportions",
-      "image": "the-wheel-of-enormous-proportions.png"
+      "image": "the-wheel-of-enormous-proportions.png",
+      "min_players": 2,
+      "max_players": 8
     },
     {
       "title": "Poll Mine",
-      "image": "poll-mine.png"
+      "image": "poll-mine.png",
+      "min_players": 2,
+      "max_players": 10
     },
     {
       "title": "Weapons Drawn",
-      "image": "weapons-drawn.png"
+      "image": "weapons-drawn.png",
+      "min_players": 4,
+      "max_players": 8
     },
     {
       "title": "Fibbage 4: Enough About You",
-      "image": "fibbage-4.png"
+      "image": "fibbage-4.png",
+      "min_players": 2,
+      "max_players": 8
     },
     {
       "title": "Quixort",
-      "image": "quixort.png"
+      "image": "quixort.png",
+      "min_players": 1,
+      "max_players": 10
     },
     {
       "title": "Roomerang",
-      "image": "roomerang.png"
+      "image": "roomerang.png",
+      "min_players": 4,
+      "max_players": 9
     },
     {
       "title": "Junktopia",
-      "image": "junktopia.png"
+      "image": "junktopia.png",
+      "min_players": 3,
+      "max_players": 8
     },
     {
       "title": "Nonsensory",
-      "image": "nonsensory.png"
+      "image": "nonsensory.png",
+      "min_players": 3,
+      "max_players": 8
     }
   ]
 }

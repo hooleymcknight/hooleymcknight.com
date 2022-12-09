@@ -32,7 +32,7 @@
   "Jackbox Spinner Wheel": {
     "subtitle": "HTML/JS/CSS Mini-Project",
     "image": "wheel.gif",
-    "blurb": "My friends and I found that we were often unable to decide on what Jackbox game we wanted to play, so I threw some of our favorites into a wheel we can spin. ReactJS updates are here! You can now add/remove games from<br>the&nbsp;wheel.",
+    "blurb": "My friends and I found that we were often unable to decide on what Jackbox game we wanted to play, so I threw some of our favorites into a wheel we can spin. ReactJS updates are here! You can now add/remove games from the&nbsp;wheel.",
     "link": {
       "href": "/jackbox-wheel",
       "alt": "link to the wheel",
