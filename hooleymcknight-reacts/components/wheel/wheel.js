@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react'
 import { spinWheel } from './wheelEvents'
-import gamesData from './games_data.json'
 
 const Wheel = (props) => {
-  const [sliceCount, setSliceCount] = useState(gamesData.games.length)
-  const [data, setData] = useState(gamesData.games)
+  const gamesData = props.activeGames
+  const [sliceCount, setSliceCount] = useState(gamesData.length)
+  const [data, setData] = useState(gamesData)
   const [spinRot, setSpinRot] = useState(0)
+
+  if (sliceCount !== gamesData.length) setSliceCount(gamesData.length)
+  if (data !== gamesData) setData(gamesData)
 
   useEffect(() => {
     const setUpSlices = (sliceCount) => {
@@ -27,12 +30,19 @@ const Wheel = (props) => {
         sliceData['rotation'] = rotation
         sliceData['sliceHeight'] = sliceHeight
       })
+
+      const currentWinner = document.querySelector('.game-slice[winner]')
+        if(currentWinner) {
+          currentWinner.removeAttribute('winner')
+          document.querySelector('.wheel-container').removeAttribute('winner')
+          document.querySelector('[class*="winner-title"]').innerText = ''
+        }
       setData([..._tempData])
     }
 
     setUpSlices(sliceCount)
 
-    window.addEventListener('resize', function(e) {
+    window.addEventListener('resize', function() {
       const thresholdWidths = [419, 420, 421, 766, 767, 768]
       if(thresholdWidths.includes(window.innerWidth)) {
         // force a re-render
@@ -43,25 +53,28 @@ const Wheel = (props) => {
   }, [sliceCount])
 
   return (
-    <div className={props.className}>
-      <button className="spinner" tabIndex="0" aria-label="spin the wheel" onClick={(e) => spinWheel(e, sliceCount, setSpinRot)}>
-        <span>Spin</span>
-      </button>
+    <>
+      <div className={props.styles.wheel}>
+        <button className="spinner" tabIndex="0" aria-label="spin the wheel" onClick={(e) => spinWheel(e, sliceCount, setSpinRot)}>
+          <span>Spin</span>
+        </button>
 
-      <div className="wheel-container" style={{transform: `rotate(${spinRot}deg)`}}>
-        {gamesData.games.map((x, index) => 
-          <div key={index} className="game-slice" slice-degrees={x.rotation}
-            style={{
-              backgroundImage: `url(https://hooleymcknight.com/jackbox-wheel/jackbox-tiles/${x.image})`,
-              transform: `rotate(${x.rotation}deg)`,
-              top: `calc(50% - calc(${x.sliceHeight}px / 2))`,
-              height: `${x.sliceHeight}px`
-            }}>
-              <span className="game-title">{x.title}</span>
-          </div>
-        )}
+        <div className="wheel-container" style={{transform: `rotate(${spinRot}deg)`}}>
+          {gamesData.map((x, index) => 
+            <div key={index} className="game-slice" slice-degrees={x.rotation}
+              style={{
+                backgroundImage: `url(https://hooleymcknight.com/jackbox-wheel/jackbox-tiles/${x.image})`,
+                transform: `rotate(${x.rotation}deg)`,
+                top: `calc(50% - calc(${x.sliceHeight}px / 2))`,
+                height: `${x.sliceHeight}px`
+              }}>
+                <span className="game-title">{x.title}</span>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+      <p className={props.styles["winner-title"]}></p>
+    </>
   )
 }
 

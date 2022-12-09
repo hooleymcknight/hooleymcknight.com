@@ -62,18 +62,18 @@
     grid-template-areas:
       "summaryProfile summaryTitles"
       "contactInfo contactInfo";
-  }
 
-  @media (max-width: 767px) {
-    grid-template-columns: auto;
-    grid-template-areas:
-      "summaryProfile"
-      "summaryTitles"
-      "contactInfo";
-  }
-
-  @media (max-width: 450px) {
-    width: 100%;
+    @media (max-width: 767px) {
+      grid-template-columns: auto;
+      grid-template-areas:
+        "summaryProfile"
+        "summaryTitles"
+        "contactInfo";
+    }
+  
+    @media (max-width: 450px) {
+      width: 100%;
+    }
   }
 
   [class="summary-profile"] {
@@ -125,7 +125,9 @@
       width: 100%;
 
       ul {
-        width: 100%;
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   }
