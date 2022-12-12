@@ -10,4 +10,6 @@ Newest updates:
  - made the jackbox wheel more dynamic (add or remove games from the wheel)
 
 Planned updates:
- - currently no planned updates, but I'm looking for ways to improve. If you have any ideas, I'd love to hear them!
+ - trap focus in the modals
+ - smooth scroll on the homepage when you click a subnav item
+ - autoplay videos when opened
