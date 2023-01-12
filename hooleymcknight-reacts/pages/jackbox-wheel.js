@@ -5,6 +5,8 @@ import Layout, { siteTitle } from '../components/layout'
 import styles from '../styles/Wheel.module.scss'
 import Wheel from '../components/wheel/wheel'
 import GamesList from '../components/wheel/gamesList'
+import WheelTitle from '../components/wheel/wheelTitle'
+import GamesListDesc from '../components/wheel/gamesListDesc'
 
 import gamesDataRaw from '../components/wheel/games_data.json'
 
@@ -39,7 +41,10 @@ export default function WheelPage() {
         <title>{siteTitle} || Jackbox Wheel</title>
       </Head>
 
+      <WheelTitle className={styles['wheel-title']} />
       <Wheel styles={styles} activeGames={activeGames} />
+
+      <GamesListDesc className={styles['games-list-desc']} />
       <GamesList className={styles['games-list']} gamesRemovable={gamesRemovable} gamesData={gamesData} activeGames={activeGames} onChange={e => changeActiveGames(e)} />
 
     </Layout>
