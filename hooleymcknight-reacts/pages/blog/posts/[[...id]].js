@@ -67,6 +67,27 @@ export default function Blog() {
   const [postContent, setPostContent] = useState({})
   const postID = useRouter().asPath.replace('/blog/posts', '').replaceAll('/', '')
 
+  if (postID !== '[[...id]]' && postContent.page !== postID) {
+    console.log('we need to search again')
+    fetch(`/posts/${postID}.txt`)
+      .then((r) => {
+        return r.text()
+      })
+      .then((r) => {
+        if (r.includes('{"statusCode":404}')) {
+          setPostContent({
+            title: '404',
+            date: '',
+            page: postID,
+            text: 'Page not found.'
+          })
+        }
+        else {
+          setPostContent(processText(r, postID))
+        }
+      })
+  }
+
   useEffect(() => {
     async function getContent() {
       await fetch(`/posts/${postID}.txt`)
