@@ -33,12 +33,5 @@
     "date": "November 23, 2022",
     "image": "jp_julia.png",
     "blurb": "Hooley discusses the surprising (albeit mild) emotional response to an internet breakup."
-  },
-  "blog-post": {
-    "route": "blog_post",
-    "title": "404",
-    "date": "today",
-    "image": "",
-    "blurb": "uh oh"
   }
 }
