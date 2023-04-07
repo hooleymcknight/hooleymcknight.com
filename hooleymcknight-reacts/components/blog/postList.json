@@ -1,32 +1,44 @@
 {
   "job_search": {
+    "route": "job_search",
     "title": "My Job Search Stats",
     "date": "April 1, 2023",
     "image": "jobs_chart_sq.png",
     "blurb": "Hooley analyzes her job search and the surprising stats on her interactions with companies."
   },
   "turning_point": {
+    "route": "turning_point",
     "title": "Turning Point in My Life",
     "date": "March 18, 2023",
     "image": "turning_point.jpg",
     "blurb": "Hooley discusses a recent surgery and the effect that it is going to have on her future life."
   },
   "unemployed": {
+    "route": "unemployed",
     "title": "You're Still You When You're Unemployed",
     "date": "January 11, 2023",
     "image": "unemployed.png",
     "blurb": "Hooley copes with unemployment by internalizing a perspective her therapist shared with her."
   },
   "why_bang": {
+    "route": "why_bang",
     "title": "Why I Use Exclamation Points With Myself!",
     "date": "December 6, 2022",
     "image": "why_bang.png",
     "blurb": "Hooley talks about her personal benefits of using exclamation points when taking notes for herself."
   },
   "jp_and_julia": {
+    "route": "jp_and_julia",
     "title": "When the Internet Role Model Couple Breaks Up",
     "date": "November 23, 2022",
     "image": "jp_julia.png",
     "blurb": "Hooley discusses the surprising (albeit mild) emotional response to an internet breakup."
+  },
+  "blog-post": {
+    "route": "blog_post",
+    "title": "404",
+    "date": "today",
+    "image": "",
+    "blurb": "uh oh"
   }
 }
