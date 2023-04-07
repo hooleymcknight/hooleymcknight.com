@@ -17,7 +17,7 @@ const BlogHome = (props) => {
           ''
           :
           
-            <Link href={`/blog/${x}`}>
+            <Link href={`/blog/${x.replaceAll('_', '-')}`}>
               <a>
                 <img src={`../posts/${postList[`${x}`].image}`} alt={postList[`${x}`].title} />
                 <p className="blog-title">{postList[`${x}`].title}</p>

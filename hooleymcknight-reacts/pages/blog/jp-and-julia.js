@@ -1,16 +1,15 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Head from 'next/head'
-import Layout, { siteTitle } from '../../../components/layout'
-import styles from '../../../styles/Blog.module.scss'
+import Layout, { siteTitle } from '../../components/layout'
+import styles from '../../styles/Blog.module.scss'
 
 const createMarkup = (input) => {
   return { __html: input}
 }
 
 const processText = (text, pageID) => {
-  console.log(pageID)
   // set the title
   const titleLine = text.split('\n')[0]
   const title = titleLine.replace('Title:', '').trim()
@@ -63,13 +62,16 @@ const processText = (text, pageID) => {
   return contentObj
 }
 
+
+
 export default function Blog() {
   const [postContent, setPostContent] = useState({})
-  const postID = useRouter().asPath.replace('/blog/posts', '').replaceAll('/', '')
+  const router = useRouter()
+  const postID = router.asPath.replace('/blog', '').replaceAll('/', '')
 
   if (postID !== '[[...id]]' && postContent.page !== postID) {
-    console.log('we need to search again')
-    fetch(`/posts/${postID}.txt`)
+    const server = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://hooleymcknight.com'
+    fetch(`${server}/posts/${postID.replaceAll('-', '_')}.txt`)
       .then((r) => {
         return r.text()
       })
@@ -87,32 +89,6 @@ export default function Blog() {
         }
       })
   }
-
-  useEffect(() => {
-    async function getContent() {
-      await fetch(`/posts/${postID}.txt`)
-        .then((r) => {
-          return r.text()
-        })
-        .then((r) => {
-          if (r.includes('{"statusCode":404}')) {
-            setPostContent({
-              title: '404',
-              date: '',
-              page: postID,
-              text: 'Page not found.'
-            })
-          }
-          else {
-            setPostContent(processText(r, postID))
-          }
-        })
-    }
-
-    // if we havent run the page yet or if the page is still showing up as the variable [...id], get content
-    // do not get content if we are on the blog home page.
-    if ((!postContent.page || postContent.page === '[[...id]]') && postContent.page !== '') getContent()
-  }, [postContent])
 
   return (
     <Layout page='blog'>

@@ -1,11 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Head from 'next/head'
 import Layout, { siteTitle } from '../../components/layout'
 import styles from '../../styles/Blog.module.scss'
-
-import blogPosts from '../../components/blog/postList.json'
 
 const createMarkup = (input) => {
   return { __html: input}
@@ -66,15 +64,31 @@ const processText = (text, pageID) => {
 
 
 
-const Blog = ({ pageContents }) => {
+export default function Blog() {
+  const [postContent, setPostContent] = useState({})
   const router = useRouter()
-  // console.log(pageContents)
-  console.log(router.asPath)
-  
-  useEffect(() => {
-    // console.log(pageContents)
-    console.log('76', router.asPath)
-  }, [router.asPath])
+  const postID = router.asPath.replace('/blog', '').replaceAll('/', '')
+
+  if (postID !== '[[...id]]' && postContent.page !== postID) {
+    const server = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://hooleymcknight.com'
+    fetch(`${server}/posts/${postID.replaceAll('-', '_')}.txt`)
+      .then((r) => {
+        return r.text()
+      })
+      .then((r) => {
+        if (r.includes('{"statusCode":404}')) {
+          setPostContent({
+            title: '404',
+            date: '',
+            page: postID,
+            text: 'Page not found.'
+          })
+        }
+        else {
+          setPostContent(processText(r, postID))
+        }
+      })
+  }
 
   return (
     <Layout page='blog'>
@@ -83,67 +97,13 @@ const Blog = ({ pageContents }) => {
       </Head>
 
       <div className={styles.post}>
-        <h1 dangerouslySetInnerHTML={createMarkup(pageContents.title)}></h1>
-        <h3 dangerouslySetInnerHTML={createMarkup(pageContents.date)}></h3>
-        <div className="post-content" dangerouslySetInnerHTML={createMarkup(pageContents.text)}></div>
+        <h1 dangerouslySetInnerHTML={createMarkup(postContent.title)}></h1>
+        <h3 dangerouslySetInnerHTML={createMarkup(postContent.date)}></h3>
+        <div className="post-content" dangerouslySetInnerHTML={createMarkup(postContent.text)}></div>
       </div>
 
       <Link href="/blog"><a className={styles['go-back']} alt="go back to all blog posts">Go back</a></Link>
 
     </Layout>
   )
-}
-
-export default Blog
-
-export async function getStaticProps({ params: { post } }) {
-  const pageContent = await Promise.all([fetchContent(post)])
-  const pageContents = JSON.stringify(pageContent)
-  console.log('102', pageContents)
-  return { props: { pageContents } }
-}
-
-export async function getStaticPaths() {
-  const [posts] = await Promise.all([getAllBlogPostEntries()])
-
-  const paths = posts.map((c) => {
-    return { params: { post: c.route } }
-  })
-
-  return {
-    paths,
-    fallback: false,
-  }
-}
-
-async function fetchContent(postID) {
-  const server = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://hooleymcknight.com'
-  
-  await fetch(`${server}/posts/${postID}.txt`)
-    .then((r) => {
-      return r.text()
-    })
-    .then((r) => {
-      if (r.includes('{"statusCode":404}')) {
-        console.log('404')
-        return {
-          title: '404',
-          date: '',
-          page: postID,
-          text: 'Page not found.'
-        }
-      }
-      else {
-        console.log('137', r)
-        return processText(r, postID)
-      }
-    })
-}
-
-async function getAllBlogPostEntries() {
-  let postData = []
-  Object.keys(blogPosts).forEach((key) => {
-    postData.push(blogPosts[key])
-  })
-  return postData
 }
