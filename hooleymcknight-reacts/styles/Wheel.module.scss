@@ -1,5 +1,11 @@
+.wheel-title, .games-list-desc {
+  text-align: center;
+  width: 95%;
+  margin: auto;
+}
+
 .wheel {
-  padding: 60px 0 40px;
+  padding: 30px 0 40px;
   overflow: hidden;
   position: relative;
 
@@ -147,9 +153,14 @@
   text-align: center;
   color: var(--primary-text);
   font-size: 20px;
-  margin-top: 0;
+  margin: 0;
   min-height: 32px;
 }
+
+// .games-list-desc {
+//   text-align: center;
+//   width: 95%;
+// }
 
 .games-list {
   display: flex;
@@ -174,6 +185,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    &:focus-visible {
+      outline-offset: 2px;
+      text-decoration: underline;
+    }
 
     @media (max-width: 500px) {
       width: 100%;
@@ -220,6 +236,11 @@
       z-index: 2;
       width: 110%;
       text-align: center;
+
+      @media (max-width: 500px) {
+        width: 100%;
+        left: 0;
+      }
     }
   }
 }

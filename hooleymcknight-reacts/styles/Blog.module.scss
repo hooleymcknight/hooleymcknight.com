@@ -46,6 +46,7 @@
           font-weight: bold;
           margin: 30px auto 0 0;
           line-height: 34px;
+          width: 100%;
 
           @media (max-width: 850px) {
             margin-top: 10px;
@@ -121,6 +122,13 @@
   [class="post-content"] {
     padding: 10px;
     font-size: 18px;
+
+    img {
+      width: 95%;
+      max-width: 500px;
+      display: block;
+      margin: auto;
+    }
   }
 }
 

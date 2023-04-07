@@ -3,7 +3,7 @@ Date: December 6, 2022
 
 When I'm taking notes for myself or making a to-do list (boy howdy do I use to-do lists), I sometimes have a tendency to use a lot of exclamation points. A recent example: 
 
-<img src="./why_bang_example.png" alt="screenshot of Holly's Discord notes talking about dev things she can discuss in interviews" />
+<img src="https://hooleymcknight.com/posts/why_bang_example.png" alt="screenshot of Holly's Discord notes talking about dev things she can discuss in interviews" />
 
 It seems like not a big deal, but it's the little things like this that add up. So why do I throw a lot of these exclamation points around in my notes? Three reasons.
 

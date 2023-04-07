@@ -54,6 +54,7 @@ const Wheel = (props) => {
 
   return (
     <>
+      <p className={props.styles["winner-title"]}></p>
       <div className={props.styles.wheel}>
         <button className="spinner" tabIndex="0" aria-label="spin the wheel" onClick={(e) => spinWheel(e, sliceCount, setSpinRot)}>
           <span>Spin</span>
@@ -73,7 +74,6 @@ const Wheel = (props) => {
           )}
         </div>
       </div>
-      <p className={props.styles["winner-title"]}></p>
     </>
   )
 }

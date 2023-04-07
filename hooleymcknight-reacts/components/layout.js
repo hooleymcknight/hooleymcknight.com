@@ -27,6 +27,12 @@ const Layout = ({ children, page }) => {
         {children}
       </main>
       <ThemeToggle theme={theme} onToggle={(theme) => setTheme(theme)} />
+      {page !== 'privacy-policy' ? 
+        <footer>
+          <a href="/privacy-policy" alt="Privacy Policy" className="privacy-policy">Privacy Policy</a>
+        </footer>
+        : ""
+      }
     </>
   )
 }

@@ -12,7 +12,7 @@ class MyDocument extends Document {
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta name="description" content="Holly's resume, code portfolio, and some fun other things" />
-          <meta property="og:image" content={`https://hooleymcknight.com/images/lax_hero.jpg`} />
+          <meta property="og:image" content={`https://hooleymcknight.com/images/lax_hero_preview.jpg`} />
           <meta name="og:title" content="Holly's resume, code portfolio, and some fun other things" />
           <meta name="twitter:card" content="summary_large_image" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
