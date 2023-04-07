@@ -1,0 +1,40 @@
+.bot-added-section {
+  margin: 40px;
+}
+
+.bot-details {
+  display: grid;
+  grid-template-areas:
+    "bot-name blank0"
+    "bot-image desc-header"
+    "bot-image bot-description"
+    "bot-image blank1"
+    "cl-header cl-header"
+    "command-list command-list";
+  grid-template-columns: 440px auto;
+
+  h2[class="bot-name"] {
+    grid-area: bot-name;   
+  }
+
+  img {
+    grid-area: bot-image;
+    max-width: 400px;
+  }
+
+  h4[class="desc-header"] {
+    grid-area: desc-header;
+  }
+
+  p[class="bot-description"] {
+    grid-area: bot-description;
+  }
+
+  h4[class="cl-header"] {
+    grid-area: cl-header;
+  }
+
+  p[class="command-list"] {
+    grid-area: command-list;
+  }
+}

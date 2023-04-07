@@ -1,14 +1,4 @@
 {
-  "Why Is My Cat So Jacked": {
-    "subtitle": "React Native App/Website",
-    "image": "wimcsj.gif",
-    "blurb": "This is my first attempt at building a React Native app. I started this project on Saturday, Nov. 12th, 2022. See the current exported site <a href='https://whyismycatsojacked.com' alt='link to WIMCSJ website'>here</a>, or check out the Android dev app using&nbsp;Expo: <br><button class='copyable' tab-index='0'>exp://exp.host/@hooleymcknight/why-is-my-cat-so-jacked</button>",
-    "link": {
-      "href": "https://github.com/hooleymcknight/whyismycatsojacked.com",
-      "alt": "Link to GitHub repository for this website",
-      "text": "Code Repository on GitHub"
-    }
-  },
   "This Website :)": {
     "subtitle": "NextJS Website",
     "image": "hooleymcknight-site.gif",
@@ -22,7 +12,7 @@
   "Fiddlesitters Website": {
     "subtitle": "NextJS Website",
     "image": "fiddlesitters-site.gif",
-    "blurb": "A work-in-progress hub for our Twitch stream team, this website was built entirely using React and NextJS. The site is currently not live due to server costs, but is an active project for me! This is where I've explored connecting a website to a MySQL database to create an interactive game.",
+    "blurb": "A work-in-progress hub for our Twitch stream team, this website was built entirely using React and NextJS. The site is currently live at <a href='https://fiddlesitters.com' alt='Fiddlesitters website' target='blank'>fiddlesitters.com</a>! This is where I've explored connecting a website to a MySQL database to create an interactive game.",
     "link": {
       "href": "https://github.com/hooleymcknight/fiddlesitters",
       "alt": "Link to GitHub repository for Fiddlesitters website",
@@ -37,6 +27,16 @@
       "href": "/jackbox-wheel",
       "alt": "link to the wheel",
       "text": "Go see the wheel!"
+    }
+  },
+  "Why Is My Cat So Jacked": {
+    "subtitle": "React Native App/Website",
+    "image": "wimcsj.gif",
+    "blurb": "This is my first attempt at building a React Native app. I started this project on Saturday, Nov. 12th, 2022. See the current exported site <a href='https://whyismycatsojacked.com' alt='link to WIMCSJ website' target='blank'>here</a>, or check out the Android dev app using&nbsp;Expo: <br><button class='copyable' tab-index='0'>exp://exp.host/@hooleymcknight/why-is-my-cat-so-jacked</button>",
+    "link": {
+      "href": "https://github.com/hooleymcknight/whyismycatsojacked.com",
+      "alt": "Link to GitHub repository for this website",
+      "text": "Code Repository on GitHub"
     }
   },
   "Time Conversion Calculator": {

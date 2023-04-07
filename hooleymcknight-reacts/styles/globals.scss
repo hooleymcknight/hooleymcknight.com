@@ -186,6 +186,19 @@ main {
   }
 }
 
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+
+  a {
+    font-size: 14px;
+    text-decoration: underline;
+  }
+}
+
 /* mobile/desktop only stuff */
 .mobile-only {
   display: none;
