@@ -2,6 +2,7 @@
 import { Carousel } from 'react-responsive-carousel'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const PhotoViewer = (props) => {
   const photosData = props.data
@@ -18,7 +19,7 @@ const PhotoViewer = (props) => {
         <Carousel className="photo-slider" selectedItem={activeIndex} dynamicHeight={true} showThumbs={false} showArrows={true} useKeyboardArrows={true} tabIndex="0" infiniteLoop={true} showStatus={false}>
           {photosData.map((x, index) => 
             <div key={index} className="photo-wrapper">
-              <img src={`https://hooleymcknight.com${x.source}`} alt={x.alt} />
+              <LazyLoadImage src={`https://hooleymcknight.com${x.source}`} alt={x.alt} />
               <p>{x.caption}</p>
             </div>
           )}
