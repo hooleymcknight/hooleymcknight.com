@@ -64,6 +64,11 @@ body {
   color: var(--primary-text);
 }
 
+button {
+  font-family: Titillium Web;
+  cursor: pointer;
+}
+
 html[scroll-locked] {
   overflow: hidden;
 }
