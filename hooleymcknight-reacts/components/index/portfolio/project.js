@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { toggleProject, closeProject, focusHandler, blurHandler, copyableHandler } from './projectTileEvents'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import Hexagon from './hexagon'
 import ProjectClickables from './clickables'
@@ -26,7 +27,7 @@ const Project = (props) => {
         <h5>{data.subtitle}</h5>
 
         <div className="project-content">
-          <img src={`https://hooleymcknight.com/images/projects/${data.image}`} alt={props.name} />
+          <LazyLoadImage src={`https://hooleymcknight.com/images/projects/${data.image}`} alt={props.name} />
           <p className="blurb" dangerouslySetInnerHTML={createMarkup(data.blurb)} onClick={e => copyableHandler(e)} onKeyUp={e => copyableHandler(e)}></p>
           <Link href={data.link.href} passHref>
             <a className="project-link" tabIndex="0" target={!data.link.href.startsWith('/') ? "_blank" : ''} alt={data.link.alt}>{data.link.text}</a>

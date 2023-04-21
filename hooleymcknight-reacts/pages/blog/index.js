@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import BlogHome from '../components/blog/blogHome'
+import Layout, {siteTitle} from '../../components/layout'
+import BlogHome from '../../components/blog/blogHome'
 
 export default function Blog() {
 

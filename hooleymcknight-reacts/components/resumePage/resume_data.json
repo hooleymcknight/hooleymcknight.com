@@ -23,8 +23,7 @@
         "Improved developer throughput by training and advising a team of 7 developers",
         "Personalized the testing plan for 40+ clients by leading strategy sessions with the UI/UX design team"
       ]
-    }
-    ,
+    },
     {
       "job title": "Front-End JavaScript & jQuery A/B Test Developer",
       "company": "Conversion Fanatics",
@@ -36,8 +35,7 @@
         "Analyzed test data to determine how to best improve client revenue",
         "Communicated all aspects of the CRO process to 17+ clients"
       ]
-    }
-    ,
+    },
     {
       "job title": "President & Founder, Board of Directors",
       "company": "Guild of Geeks",
@@ -50,8 +48,7 @@
         "Exemplified core principles of the Discord Partner Program by managing a unique, kind, and active non-profit organization",
         "Engaged community of over 170 members by building and maintaining organization's website"
       ]
-    }
-    ,
+    },
     {
       "job title": "Curbside Shopper",
       "company": "H-E-B",
@@ -63,8 +60,7 @@
         "Built and delivered orders to dozens of curbside customers per shift",
         "Increased customer satisfaction inside the store by helping shoppers locate items and navigate the store"
       ]
-    }
-    ,
+    },
     {
       "job title": "Developer Support",
       "company": "Gaming Corps",
@@ -88,7 +84,7 @@
       "CRO Apps: Convert", "Dynamic Yield", "Google Optimize", "Optimizely", "VWO", "AB Tasty", "Monetate"
     ],
     "Practicing": [
-      "!React Native", "!Python", "MongoDB", "C#", "C++", "Oracle SQL", "Java", "PHP", "Apache", "Jenkins", "Magento"
+      "!VueJS", "!React Native", "!Python", "MongoDB", "C#", "C++", "Oracle SQL", "Java", "PHP", "Apache", "Jenkins", "Magento"
     ]
   },
   "Education & Certifications": [

@@ -1,7 +1,9 @@
-import { useState, useEffect } from 'react'
-import PhotoViewer from './photoViewer'
+import { lazy,  useState, useEffect } from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import data from './media_data.json'
+
+const PhotoViewer = lazy(() => import('./photoViewer'))
 
 const Photos = (props) => {
   const [activePhoto, setActivePhoto] = useState({})
@@ -35,7 +37,7 @@ const Photos = (props) => {
     <div className={props.className} id="photos">
       <h2>Photos</h2>
       {photos.map((x, index) =>
-        <img key={index} src={`https://hooleymcknight.com${x.tile}`} alt={x.alt} tabIndex="0" role="button" aria-label="click to see larger version of photo" onClick={(e) => activatePhoto(e)} onKeyPress={(e) => activatePhoto(e)} />
+        <LazyLoadImage key={index} src={`https://hooleymcknight.com${x.tile}`} alt={x.alt} tabIndex="0" role="button" aria-label="click to see larger version of photo" onClick={(e) => activatePhoto(e)} onKeyPress={(e) => activatePhoto(e)} />
       )}
       {activePhoto.source
       ?

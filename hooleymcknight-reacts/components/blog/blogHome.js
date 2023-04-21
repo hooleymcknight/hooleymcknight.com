@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styles from '../../styles/Blog.module.scss'
 import postList from './postList.json'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const BlogHome = (props) => {
 
@@ -17,9 +18,9 @@ const BlogHome = (props) => {
           ''
           :
           
-            <Link href={`/blog/posts/${x}`}>
+            <Link href={`/blog/${x.replaceAll('_', '-')}`}>
               <a>
-                <img src={`../posts/${postList[`${x}`].image}`} alt={postList[`${x}`].title} />
+                <LazyLoadImage src={`../posts/${postList[`${x}`].image}`} alt={postList[`${x}`].title} />
                 <p className="blog-title">{postList[`${x}`].title}</p>
                 <p className="blog-date">{postList[`${x}`].date}</p>
                 <p className="blurb">{postList[`${x}`].blurb}</p>
