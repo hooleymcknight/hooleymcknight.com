@@ -17,7 +17,7 @@ const SummaryCard = (props) => {
             <ul>
                 <li><FontAwesomeIcon icon={faCircleNotch} /> Web Developer</li>
                 <li><FontAwesomeIcon icon={faCircleNotch} /> Funny Person</li>
-                <li><FontAwesomeIcon icon={faCircleNotch} /> Creative Writer</li>
+                <li><FontAwesomeIcon icon={faCircleNotch} /> Animal Lover</li>
                 <li><FontAwesomeIcon icon={faCircleNotch} /> Video Editor</li>
             </ul>
         </div>

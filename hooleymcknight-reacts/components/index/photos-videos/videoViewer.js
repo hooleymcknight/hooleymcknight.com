@@ -14,15 +14,8 @@ const VideoViewer = (props) => {
         </button>
 
         <div className="video">
-          <video key={props.video.source} controls>
-            <source src={`https://hooleymcknight.com${props.video.source}`} type="video/mp4" />
-          </video>
+          <iframe width="560" height="315" src={`https://www.youtube-nocookie.com/embed/${props.video.videoID}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-
-        <a className="yt-link" href={props.video.link} alt="Link to Watch on YouTube">
-          <FontAwesomeIcon icon={faYoutube} />
-          Watch on YouTube
-        </a>
       </div>
     </div>
   )

@@ -223,17 +223,10 @@
       align-items: center;
       max-height: 400px;
       position: relative;
+      cursor: pointer;
 
       &:hover svg {
         color: var(--primary-purple);
-      }
-
-      video[class="cover"] {
-        display: block;
-        margin: auto;
-        width: 100%;
-        max-width: 800px;
-        cursor: pointer;
       }
 
       svg {
@@ -268,16 +261,16 @@
       color: var(--primary-text);
       position: fixed;
       top: 140px;
-      width: fit-content;
-      width: -moz-fit-content;
+      width: 95%;
+      min-width: 300px;
+      max-width: 1400px;
       left: 50%;
       height: auto;
       z-index: 250;
       max-height: 80vh;
       transform: translateX(-50%);
       border-radius: 8px;
-      max-width: 95%;
-      padding-bottom: 20px;
+      padding: 0 10px 20px;
       border: 2px solid var(--primary-purple);
 
       @media (max-width: 767px) {
@@ -290,7 +283,6 @@
         text-align: center;
         font-weight: bold;
         z-index: -1;
-        margin-bottom: 0;
       }
 
       [class="close-x"] {
@@ -313,29 +305,17 @@
         }
       }
 
-      video {
-        max-width: calc(100% - 40px);
-        height: auto;
-        max-height: 70vh;
-        margin: 20px;
+      [class="video"] {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
 
-        @media (max-width: 767px) {
-          max-height: unset;
-          margin: 20px 5px;
-          max-width: calc(100% - 10px);
-        }
-      }
-
-      [class="yt-link"] {
-        margin: 0 auto;
-        width: fit-content;
-        width: -moz-fit-content;
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-
-        svg {
-          margin-right: 6px;
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
         }
       }
     }

@@ -1,0 +1,65 @@
+Title: May 5th Charity Stream
+Date: April 27, 2023
+
+Currently upcoming! Woohoo! The Fiddlesitters crew is doing a charity stream on May 5th. I'll be heading up the event and so the event will be streamed from <a href="https://twitch.tv/hooleymcknight" alt="Holly's Twitch page" target="_blank">my Twitch.</a> Before we get into the stream info, let's talk about the charity we're raising money for.
+
+The Thrive Youth Center is based in San Antonio, Texas. Thrive Youth Center aims to help local queer youth, particularly helping prevent them from becoming homeless. It's sadly not uncommon for queer kids to get kicked out onto the streets when they come out as gay/bi/pan/trans/etc. A lot of the Fiddlesitters crew identifies as LGBTQ+ and we're also mostly from Texas, so we feel really passionate about this. Texas was never exactly the safest place to be queer, but recently things have gotten a lot worse with the passing of some really scare bills aimed against the trans community, particularly against trans kids. The Trevor Project had a 2022 study which found that 45% of LGBTQ youth seriously considered attempting suicide within that year. <a href="https://www.thetrevorproject.org/resources/article/facts-about-lgbtq-youth-suicide/" alt="Trevor Project article about LGBTQ+ youth suicide" target="_blank">(source)</a> The Fiddlesitters crew wants to help as much as we can to protect these kids and help them just...be kids, so they can someday become adults. Please consider donating to Thrive Youth Center, either through us during our charity stream on the 5th, or directly to the <a href="https://thriveyouthcenter.dm.networkforgood.com/forms/friends-of-thrive" alt="Thrive Youth Center website, donation page" target="_blank">Thrive Youth Center donation page.</a>
+
+While we're on the topic of trans youth in particular: Congress has a bill going up right now called <a href="https://www.congress.gov/bill/118th-congress/house-bill/734" alt="link to HR 745 bill" target="_blank">HR 734</a>, which claims to "protect women and girls in sports" by banning trans youth from competing in sports nationwide. Trans women are women. So this bill is not protecting women in sports. We want to oppose this bill. There's a phone number you can call (I'm going to share it with you in a second) and introduce yourself as a constituent to let your House representative know that you're *against* this bill. I've got a little script for you if you want to use that. Let's do this.
+
+Phone number to call: <a href="tel:+12052369024" alt="call to reach your House representative">(205) 236-9024</a>
+
+An automated system is going to ask you to input your zip code, so it can automatically route you to the correct House representative based on where you live. You'll need to leave your name, email, phsyical address (so they know you live in their voting zone), and phone number. Here's a script you can use:
+
+*Hi my name is (your name). My email is (your email address), my phone number is (your phone number). I live at (your address). I'm a constituent and I'm against HR 734. Trans kids should be welcome in sports. Thank you!*
+(Then you can just hang up.)
+
+Alrighty. Once you're finished with that, and thank you for doing that, then we'll get back to the charity stream plans.
+
+All done? Sweet! Let's talk video games! Let's start with the schedule:
+
+<img src="https://hooleymcknight.com/posts/streamsched_post.png" alt="May 5th charity stream schedule graphic (details are written out below the image)" />
+
+Starting at the top and rotating around clockwise (why did I design it like this lol), we have Splatty Toon Game (that's Splatoon 3 but in Hooley-speak) at 1pm Pacific time, 3pm Central, 4pm Eastern, and 5pm Tinks time. Then starting at 2pm Pacific (4pm Central, 5pm Eastern, 6pm Tinks time) we have a coding hour. Matt and I will spend the hour doing some competitive coding challenge, probably in C# using Unity. Starting at 3pm Pacific (5pm Central, 6pm Eastern, 7pm Tinks time), we will be playing Destiny 2. The graphic says DeadKnee. But it's Destiny 2. Moving around to the bottom hexagon tile, we have our next game, Jackybox (various Jackbox Party Packs) starting at 5pm Pacific (7pm Central, 8pm Eastern, 9pm Tinks time). Everyone is welcome! The more the merrier with Jackbox so please join us! After a couple hours of that, I'll jump over to start playing RimWorld from 7pm to 9pm Pacific (9pm - 11pm Central, 10pm - 12am Eastern, 11pm - 1am Tinks time). RimWorld is a solo game but I am guessing we will have a few people in chat all playing RimWorld at the same time and sharing our stories as they happen. Then at 9pm Pacific (11pm Central, 12am Eastern, 1am Tinks time), we will do a one-hour Homestuck Group Read. Blake, Kat, and Heather are the *most* excited about this. Finally, we'll finish off with a head-to-head race between me and James, each playing Rocket: Robot on Wheels. This final segment will start at 10pm Pacific (12am Central, 1am Eastern, 2am Tinks time) and go until we're tired, or until I inevitably win.
+
+All the same info but in list form:
+<table>
+  <tbody>
+    <tr>
+      <th>Game</th>
+      <th>Time</th>
+    </tr>
+    <tr>
+      <td>Splatoon 3</td>
+      <td>1pm&nbsp;PT <span>3pm&nbsp;CT, 4pm&nbsp;ET, 5pm&nbsp;TT</span></td>
+    </tr>
+    <tr>
+      <td>Coding Hour</td>
+      <td>2pm&nbsp;PT <span>4pm&nbsp;CT, 5pm&nbsp;ET, 6pm&nbsp;TT</span></td>
+    </tr>
+    <tr>
+      <td>Destiny 2</td>
+      <td>3pm&nbsp;PT <span>5pm&nbsp;CT, 6pm&nbsp;ET, 7pm&nbsp;TT</span></td>
+    </tr>
+    <tr>
+      <td>Jackbox</td>
+      <td>5pm&nbsp;PT <span>7pm&nbsp;CT, 8pm&nbsp;ET, 9pm&nbsp;TT</span></td>
+    </tr>
+    <tr>
+      <td>RimWorld</td>
+      <td>7pm&nbsp;PT <span>9pm&nbsp;CT, 10pm&nbsp;ET, 11pm&nbsp;TT</span></td>
+    </tr>
+    <tr>
+      <td>Homestuck Group Read</td>
+      <td>9pm&nbsp;PT <span>11pm&nbsp;CT, 12am&nbsp;ET, 1am&nbsp;TT</span></td>
+    </tr>
+    <tr>
+      <td>Rocket Race w/ James</td>
+      <td>10pm&nbsp;PT <span>12am&nbsp;CT, 1am&nbsp;ET, 2am&nbsp;TT</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>I'm genuinely excited about all of this!!! I hope you come by and hang out. It's gonna be such a fun time. This is actually the first time I'll be doing a competitive coding hour in general, much less on stream. I'm excited to see how this goes. It's also our first Homestuck Group Read, which we've been planning out for a while!
+
+Even if you're unable to stop by, please consider donating. I'll update this page here as soon as I have a donation link set up. And if you're not able to donate (valid af) please consider sharing our stream! You can share the image above anywhere, or this link. Or if you have me on Instagram or Facebook, I've made posts there. We all really appreciate you!!

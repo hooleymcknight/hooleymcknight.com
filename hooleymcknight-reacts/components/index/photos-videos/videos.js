@@ -6,7 +6,7 @@ const Videos = (props) => {
   const [activeVideo, setActiveVideo] = useState({})
 
   useEffect(() => {
-    if (activeVideo.source) {
+    if (activeVideo.videoID) {
       document.documentElement.setAttribute('scroll-locked', 'true')
     }
     else {
@@ -18,7 +18,7 @@ const Videos = (props) => {
     <div className={props.className} id="videos">
       <h2>Video Clips</h2>
       <VideoSlider onVideoSet={(video) => setActiveVideo(video)} />
-      {activeVideo.source
+      {activeVideo.videoID
       ?
       <VideoViewer video={activeVideo} onDeactivate={() => {setActiveVideo({})}} />
       :

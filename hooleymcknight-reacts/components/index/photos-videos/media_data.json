@@ -1,34 +1,28 @@
 {
   "videos": [
     {
-      "short": "/videos/shorts/Kiva_short.mp4",
-      "source": "/videos/KivaBoatDay_16-9.mp4",
-      "title": "Kiva Birthday Boat Day",
-      "link": "https://youtu.be/hXZHWgAcjVA"
+      "videoID": "XpNF3d1os_c",
+      "title": "Hooley Goes to Los Angeles"
     },
     {
-      "short": "/videos/shorts/AmongUs_short.mp4",
-      "source": "/videos/amongus_thesacrifice.mp4",
-      "title": "Among Us: The Sacrifice",
-      "link": "https://youtu.be/z5ArjSdj2SE"
+      "videoID": "hXZHWgAcjVA",
+      "title": "Kiva Birthday Boat Day"
     },
     {
-      "short": "/videos/shorts/OW_Reaper_short.mp4",
-      "source": "/videos/ow_reaper_potg.mp4",
-      "title": "Best Reaper POTGs by Hooley, Pt. I",
-      "link": "https://youtu.be/68VlNNIBHYk"
+      "videoID": "z5ArjSdj2SE",
+      "title": "Among Us: The Sacrifice"
     },
     {
-      "short": "/videos/shorts/pax2018_short.mp4",
-      "source": "/videos/pax_south_2018.mp4",
-      "title": "PAX South 2018 Compilation",
-      "link": "https://youtu.be/MDjFizu3YP4"
+      "videoID": "68VlNNIBHYk",
+      "title": "Best Reaper POTGs by Hooley, Pt. I"
     },
     {
-      "short": "/videos/shorts/Phasmo_short.mp4",
-      "source": "/videos/phasmaphobia_genuineterror.mp4",
-      "title": "Phasmaphobia: Genuine Terror",
-      "link": "https://youtu.be/3C7OJ6-ANNg"
+      "videoID": "MDjFizu3YP4",
+      "title": "PAX South 2018 Compilation"
+    },
+    {
+      "videoID": "VU5fp7bWEhc",
+      "title": "Sea of Thieves: Highlights #6"
     }
   ],
   "photos": [

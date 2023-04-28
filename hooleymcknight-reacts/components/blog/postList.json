@@ -1,4 +1,11 @@
 {
+  "may_5_charity_stream": {
+    "route": "may-5-charity-stream",
+    "title": "May 5th Charity Stream",
+    "date": "April 27, 2023",
+    "image": "streamsched_post.png",
+    "blurb": "Hooley & Bake and the Fiddlesitters do a charity stream! All proceeds go to Thrive Youth Center in support of LGBTQ+ youth."
+  },
   "music-dive_the-click": {
     "route": "music-dive-the-click",
     "title": "Music Dive: The Click by AJR",
