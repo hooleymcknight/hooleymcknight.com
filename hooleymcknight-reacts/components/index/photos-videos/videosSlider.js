@@ -9,11 +9,8 @@ const VideoSlider = (props) => {
   const videoData = data.videos
 
   const setVideoToActive = (e) => {
-    console.log(e)
     const id = e.target.closest('.video-wrapper').getAttribute('data-id')
-    console.log(id)
     const video = videoData.find(x => x.videoID === `${id}`)
-    console.log(video)
     props.onVideoSet(video)
   }
 
