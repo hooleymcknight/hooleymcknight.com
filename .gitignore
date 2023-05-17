@@ -12,6 +12,7 @@
 */prom/*
 */images/*
 /keys
+*/files/dnd/*
 *.code-workspace
 
 # dependencies
