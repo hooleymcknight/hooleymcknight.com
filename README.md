@@ -14,7 +14,7 @@ Woohoo!! Version 3 is here! V3 is built fully in ReactJS.
  - trap focus in the modals
  - autoplay videos when opened
 
-### Older updates:
+## Older updates:
  - made the jackbox wheel more dynamic (add or remove games from the wheel)
  - added a blog section to the homepage, and a few blog pages!
  - smooth scroll on the homepage when you click a subnav item
