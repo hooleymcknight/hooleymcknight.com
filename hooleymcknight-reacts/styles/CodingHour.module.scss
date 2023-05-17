@@ -1,0 +1,116 @@
+.codingHourPage {
+  padding-top: 0;
+}
+
+.codingHour {
+  background: url('https://cdn.discordapp.com/splashes/762597160126119937/1cf2d0a5bf5ccb918ed0fddb71483c7c.jpg?size=2048');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
+
+  p {
+    margin: 0;
+  }
+
+  [class="welcome-modal"] {
+    background: #2a2f2e;
+    color: #fff;
+    width: 800px;
+    position: absolute;
+    left: calc(50% - 400px);
+    top: 10vh;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 800px) {
+      width: 95%;
+      left: 2.5%;
+    }
+
+    h1 {
+      width: 100%;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    form {
+      width: 50%;
+      padding-right: 10px;
+
+      label:not([for]) {
+        display: block;
+      }
+
+      label[for] {
+        padding: 0 4px 0 2px;
+      }
+
+      [class="formset"] {
+        margin-bottom: 20px;
+
+        label {
+          width: 100%;
+        }
+
+        > div {
+          display: inline-flex;
+        }
+        
+        &[id="character-age-set"] {
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+
+          label {
+            width: 100%;
+          }
+
+          span {
+            font-size: 14px;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+
+    [class="character-image-section"] {
+      width: 50%;
+      padding-left: 10px;
+
+      img {
+        max-width: 100%;
+      }
+
+      button {
+        margin: auto;
+        display: block;
+      }
+    }
+
+    @media (max-width: 580px) {
+      form {
+        width: 100%;
+        padding: 0 10px;
+      }
+
+      [class="character-image-section"] {
+        width: auto;
+        padding: 0 10px;
+        margin-left: 0;
+
+        img {
+          max-height: 100px;
+        }
+      }
+    }
+  }
+}
+
+.explanation {
+  padding: 0 40px;
+
+  a {
+    text-decoration: underline;
+  }
+}

@@ -4,6 +4,8 @@ import ThemeToggle from '../components/themeToggle'
 
 export const siteTitle = 'Holly Phillips'
 
+const navExcludedPages = ['links', 'coding-hour', 'donation-links']
+
 const Layout = ({ children, page, className }) => {
   const [theme, setTheme] = useState('')
   
@@ -27,7 +29,7 @@ const Layout = ({ children, page, className }) => {
 
   return (
     <>
-      {page !== 'links' ?
+      {!navExcludedPages.includes(page) ?
         <Navbar />
       :
         ''
@@ -37,7 +39,7 @@ const Layout = ({ children, page, className }) => {
         {children}
       </main>
 
-      {page !== 'links' ?
+      {!navExcludedPages.includes(page) ?
         <ThemeToggle theme={theme} onToggle={(theme) => setTheme(theme)} />
       :
         ''

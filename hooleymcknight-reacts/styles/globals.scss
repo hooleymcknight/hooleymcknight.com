@@ -13,6 +13,9 @@ html {
   --off-light: #ccc;
   --off-dark: #4d4d4d;
 
+  --light-dropdown-bg: #fff;
+  --dark-dropdown-bg: #222;
+
   scroll-behavior: smooth;
 }
 
@@ -28,6 +31,8 @@ html[data-theme="light"] {
 
   --toggle-main: var(--off-light);
   --toggle-alt: var(--off-dark);
+
+  --dropdown-bg: var(--light-dropdown-bg);
 
   .toggle-switch {
     margin-left: -1px;
@@ -45,6 +50,8 @@ html[data-theme="dark"] {
 
   --toggle-main: var(--off-dark);
   --toggle-alt: var(--off-light);
+
+  --dropdown-bg: var(--dark-dropdown-bg);
 
   .toggle-switch {
     margin-left: 24px;

@@ -13,7 +13,14 @@ const GamesList = (props) => {
   return (
     <div className={props.className}>
       {gamesData.map(x =>
-        <button onClick={e => props.onChange(e)} key={x.title} data-game={x.title} data-active={!inactive.filter(y => y.title === x.title).length} disabled={!props.gamesRemovable && !inactive.filter(y => y.title === x.title).length}>
+        <button 
+        onClick={e => props.onChange(e)} 
+        key={x.title} 
+        data-game={x.title} 
+        data-active={!inactive.filter(y => y.title === x.title).length} 
+        disabled={!props.gamesRemovable && !inactive.filter(y => y.title === x.title).length}
+        data-player-range={`${x['min_players']},${x['max_players']}`}
+        available={`${props.availableGames.includes(x)}`} >
           {x.title}
           <FontAwesomeIcon icon={faTimes} />
           <FontAwesomeIcon icon={faPlus} />

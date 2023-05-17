@@ -1,160 +1,304 @@
 {
   "games": [
     {
+      "title": "Bidiots",
+      "image": "bidiots.png",
+      "description": "create art, auction it, you are given vague hints about art worth, the most money wins",
+      "category": "drawing",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 6,
+      "pack": 2
+    },
+    {
+      "title": "Earwax",
+      "image": "earwax.png",
+      "description": "Cards Against Humanity but with audio files",
+      "category": "judging",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": 2
+    },
+    {
+      "title": "Bomb Corp.",
+      "image": "bomb-corp.png",
+      "description": "coordinate with your teammates to defuse bombs and solve brain puzzles",
+      "category": "cooperative",
+      "playStyle": "cooperative",
+      "min_players": 1,
+      "max_players": 4,
+      "pack": 2
+    },
+    {
       "title": "Guesspionage",
       "image": "guesspionage.png",
+      "description": "Family Feud, but FBI themed",
+      "category": "survey",
+      "playStyle": "competitive",
       "min_players": 2,
-      "max_players": 8
+      "max_players": 8,
+      "pack": 3
     },
     {
       "title": "Fakin' It",
       "image": "fakin-it.png",
+      "description": "everyone receives prompt. Faker doesn't, tries to blend in. Everyone else tries to guess Faker.",
+      "category": "bluffing",
+      "playStyle": "competitive",
       "min_players": 3,
-      "max_players": 6
-    },
-    {
-      "title": "Trivia Murder Party 2",
-      "image": "trivia-murder-party-2.png",
-      "min_players": 1,
-      "max_players": 8
+      "max_players": 6,
+      "pack": 3
     },
     {
       "title": "Tee K.O.",
       "image": "tee-ko.png",
+      "description": "draw designs, write funny text, make terrible t-shirts",
+      "category": "drawing bracket",
+      "playStyle": "competitive",
       "min_players": 3,
-      "max_players": 8
-    },
-    {
-      "title": "Quiplash 3",
-      "image": "quiplash-3.png",
-      "min_players": 3,
-      "max_players": 8
+      "max_players": 8,
+      "pack": 3
     },
     {
       "title": "Survive the Internet",
       "image": "survive-the-internet.png",
+      "description": "make your friends look bad/ridiculous by changing the context of their comments",
+      "category": "judging",
+      "playStyle": "competitive",
       "min_players": 3,
-      "max_players": 8
+      "max_players": 8,
+      "pack": 4
     },
     {
       "title": "Fibbage 3: Enough About You",
       "image": "fibbage-3.png",
+      "description": "Make up lies about yourself, try to trick everyone else",
+      "category": "bluffing",
+      "playStyle": "competitive",
       "min_players": 2,
-      "max_players": 8
-    },
-    {
-      "title": "Push the Button",
-      "image": "push-the-button.png",
-      "min_players": 4,
-      "max_players": 10
-    },
-    {
-      "title": "The Devil in the Details",
-      "image": "the-devil-in-the-details.png",
-      "min_players": 3,
-      "max_players": 8
-    },
-    {
-      "title": "Monster Seeking Monster",
-      "image": "monster-seeking-monster.png",
-      "min_players": 3,
-      "max_players": 7
+      "max_players": 8,
+      "pack": 4
     },
     {
       "title": "Civic Doodle",
       "image": "civic-doodle.png",
+      "description": "telephone but for drawing",
+      "category": "drawing",
+      "playStyle": "competitive",
       "min_players": 3,
-      "max_players": 8
+      "max_players": 8,
+      "pack": 4
+    },
+    {
+      "title": "Bracketeering",
+      "image": "bracketeering.png",
+      "description": "March Madness but with random prompts",
+      "category": "bracket",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 16,
+      "pack": 4
+    },
+    {
+      "title": "Monster Seeking Monster",
+      "image": "monster-seeking-monster.png",
+      "description": "you're a monster, flirt terribly with other monsters, try to find a date. Most dates usually wins",
+      "category": "improv",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 7,
+      "pack": 4
     },
     {
       "title": "Patently Stupid",
       "image": "patently-stupid.png",
+      "description": "elevator pitches for dumb inventions",
+      "category": "drawing improv",
+      "playStyle": "competitive",
       "min_players": 3,
-      "max_players": 8
+      "max_players": 8,
+      "pack": 5
     },
     {
       "title": "Split the Room",
       "image": "split-the-room.png",
+      "description": "create controversial questions that people disagree on (not like politically)",
+      "category": "bracket",
+      "playStyle": "competitive",
       "min_players": 3,
-      "max_players": 8
+      "max_players": 8,
+      "pack": 5
     },
     {
       "title": "Mad Verse City",
       "image": "mad-verse-city.png",
+      "description": "Transformers spit hot fire (rap battles)",
+      "category": "improv",
+      "playStyle": "competitive",
       "min_players": 3,
-      "max_players": 8
+      "max_players": 8,
+      "pack": 5
+    },
+    {
+      "title": "Push the Button",
+      "image": "push-the-button.png",
+      "description": "aliens invaded your spaceship, try to figure out who they are by interrogating them",
+      "category": "bluffing",
+      "playStyle": "competitive",
+      "min_players": 4,
+      "max_players": 10,
+      "pack": 6
     },
     {
       "title": "Role Models",
       "image": "role-models.png",
+      "description": "categorize people (like if we were the Avengers, who would be Hulk?)",
+      "category": "survey",
+      "playStyle": "mixed",
       "min_players": 3,
-      "max_players": 6
+      "max_players": 6,
+      "pack": 6
+    },
+    {
+      "title": "Trivia Murder Party 2",
+      "image": "trivia-murder-party-2.png",
+      "description": "same as Trivia Murder Party but better, obscure trivia game, death-themed",
+      "category": "trivia",
+      "playStyle": "competitive",
+      "min_players": 1,
+      "max_players": 8,
+      "pack": 6
+    },
+    {
+      "title": "The Devil in the Details",
+      "image": "the-devil-in-the-details.png",
+      "description": "CHAOTIC SCREAMING AT FAMILY MEMBERS TO DO TASKS TOGETHER",
+      "category": "cooperative",
+      "playStyle": "mixed",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": 7
+    },
+    {
+      "title": "Quiplash 3",
+      "image": "quiplash-3.png",
+      "description": "claymation Quiplash 2 inside of a sphincter",
+      "category": "judging",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": 7
     },
     {
       "title": "Champ'd Up",
       "image": "champd-up.png",
+      "description": "draw a funny superhero and pit them against someone else's drawn superhero",
+      "category": "drawing bracket",
+      "playStyle": "competitive",
       "min_players": 3,
-      "max_players": 8
+      "max_players": 8,
+      "pack": 7
     },
     {
       "title": "Blather Round",
       "image": "blather-round.png",
+      "description": "Taboo but the game builds half your sentence for you",
+      "category": "word",
+      "playStyle": "competitive",
       "min_players": 2,
-      "max_players": 6
+      "max_players": 6,
+      "pack": 7
     },
     {
       "title": "Drawful Animate",
       "image": "drawful-animate.png",
+      "description": "guess other people's 2-slide flipbook drawings",
+      "category": "drawing",
+      "playStyle": "competitive",
       "min_players": 3,
-      "max_players": 10
+      "max_players": 10,
+      "pack": 8
     },
     {
       "title": "The Wheel of Enormous Proportions",
       "image": "the-wheel-of-enormous-proportions.png",
+      "description": "random trivia meets wheel of fortune, hosted by a thirsty wheel",
+      "category": "trivia",
+      "playStyle": "competitive",
       "min_players": 2,
-      "max_players": 8
+      "max_players": 8,
+      "pack": 8
     },
     {
       "title": "Poll Mine",
       "image": "poll-mine.png",
+      "description": "Family Feud but build the survey first",
+      "category": "survey",
+      "playStyle": "mixed",
       "min_players": 2,
-      "max_players": 10
+      "max_players": 10,
+      "pack": 8
     },
     {
       "title": "Weapons Drawn",
       "image": "weapons-drawn.png",
+      "description": "murder mystery, hide a letter in a drawing, try to find other people's hidden letters",
+      "category": "drawing bluffing",
+      "playStyle": "competitive",
       "min_players": 4,
-      "max_players": 8
+      "max_players": 8,
+      "pack": 8
     },
     {
       "title": "Fibbage 4: Enough About You",
       "image": "fibbage-4.png",
+      "description": "Fibbage 3: EAU but weird ATLA-like animal combos",
+      "category": "bluffing",
+      "playStyle": "competitive",
       "min_players": 2,
-      "max_players": 8
+      "max_players": 8,
+      "pack": 9
     },
     {
       "title": "Quixort",
       "image": "quixort.png",
+      "description": "put things in the right order (ex: which TSwift songs came out first)",
+      "category": "cooperative",
+      "playStyle": "mixed",
       "min_players": 1,
-      "max_players": 10
+      "max_players": 10,
+      "pack": 9
     },
     {
       "title": "Roomerang",
       "image": "roomerang.png",
+      "description": "drama show! kick out your roommates bc why not",
+      "category": "cooperative",
+      "playStyle": "competitive",
       "min_players": 4,
-      "max_players": 9
+      "max_players": 9,
+      "pack": 9
     },
     {
       "title": "Junktopia",
       "image": "junktopia.png",
+      "description": "buy and resell random objects by giving them a cool backstory",
+      "category": "improv",
+      "playStyle": "competitive",
       "min_players": 3,
-      "max_players": 8
+      "max_players": 8,
+      "pack": 9
     },
     {
       "title": "Nonsensory",
       "image": "nonsensory.png",
+      "description": "draw something on a scale of two different things, like 40% dinner and 60% show might be a taco playing a trumpet",
+      "category": "drawing",
+      "playStyle": "competitive",
       "min_players": 3,
-      "max_players": 8
+      "max_players": 8,
+      "pack": 9
     }
   ]
 }

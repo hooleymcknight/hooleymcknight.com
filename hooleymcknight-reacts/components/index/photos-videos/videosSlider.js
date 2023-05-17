@@ -2,6 +2,7 @@
 import { Carousel } from 'react-responsive-carousel'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 import data from './media_data.json'
 
@@ -27,7 +28,7 @@ const VideoSlider = (props) => {
       <Carousel className="videos-slider" showThumbs={false} showArrows={true} useKeyboardArrows={true} infiniteLoop={true} autoPlay={true} showStatus={false}>
         {videoData.map((x, index) => 
           <div key={index} className="video-wrapper" data-id={`${x.videoID}`} onClick={(e) => setVideoToActive(e)}>
-            <img src={`http://img.youtube.com/vi/${x.videoID}/0.jpg`} alt={x.title} />
+            <LazyLoadImage src={`http://img.youtube.com/vi/${x.videoID}/0.jpg`} alt={x.title} />
             <FontAwesomeIcon icon={faPlayCircle} />
           </div>
         )}

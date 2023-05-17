@@ -111,6 +111,11 @@
   width: 95%;
   margin: 60px auto 0;
 
+  a {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
   h1 {
     margin-bottom: 10px;
   }
