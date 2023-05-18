@@ -16,6 +16,7 @@ export default function WheelPage() {
   const [availableGames, setAvailableGames] = useState([...gamesData])
   const [activeGames, setActiveGames] = useState([...gamesData])
   const [gamesRemovable, setGamesRemovable] = useState(true)
+  const [excludedFilters, setExcludedFilters] = useState([])
 
   let categories = [... new Set(gamesData.map(x => x.category))]
   categories.forEach((category, index) => {
@@ -52,16 +53,24 @@ export default function WheelPage() {
           outOfRangeGames.push(game)
         }
       })
+      if (!excludedFilters.includes(data)) {
+        setExcludedFilters([...excludedFilters, data])
+      }
       setAvailableGames(availableGames.filter(x => !outOfRangeGames.includes(x)))
     }
     else { // add games back in
       let gamesToReAdd = []
       let missingGames = gamesData.filter(x => !availableGames.includes(x))
+      const newExcFilters = [...excludedFilters].filter(x => x !== data)
+      
       missingGames.forEach((game) => {
         if (game[type].includes(data) && dataToggle) {
-          gamesToReAdd.push(game)
+          if (!newExcFilters.includes(game.playStyle) || !newExcFilters.includes(game.category.split(' ')[0]) || !newExcFilters.includes(game.category.split(' ')[1])) {
+            gamesToReAdd.push(game)
+          }
         }
       })
+      setExcludedFilters(newExcFilters)
       setAvailableGames([...availableGames, ...gamesToReAdd])
     }
 

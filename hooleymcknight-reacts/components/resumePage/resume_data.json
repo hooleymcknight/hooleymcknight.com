@@ -78,13 +78,13 @@
   ],
   "Skills": {
     "Proficient in": [
-      "!NodeJS", "!HTML", "!CSS", "!ReactJS", "!jQuery", "!REST API", "WordPress", "Shopify Liquid",
-      "!MySQL", "!Git", "Nginx", "!Amazon Web Services", "!Asana", "Trello", "ClickUp", "JIRA", "Bitbucket",
+      "!NodeJS", "!HTML", "!CSS", "!ReactJS", "!jQuery", "!REST API", "!Git", "WordPress", "!Shopify Liquid", "Recharge",
+      "!MySQL", "Nginx", "Sass", "AJAX", "ExpressJS", "NextJS", "!Amazon Web Services", "Asana", "Trello", "ClickUp", "JIRA", "Bitbucket",
       "!GitHub", "G Suite", "Microsoft Office", "!Windows 10", "!Linux", "Mac",
       "CRO Apps: Convert", "Dynamic Yield", "Google Optimize", "Optimizely", "VWO", "AB Tasty", "Monetate"
     ],
     "Practicing": [
-      "!VueJS", "!React Native", "!Python", "MongoDB", "C#", "C++", "Oracle SQL", "Java", "PHP", "Apache", "Jenkins", "Magento"
+      "!VueJS", "!Shopify 2.0", "!Shopify App Development", "!Shopify Checkout UI Extensions", "!GraphQL", "!React Native", "Typescript", "Python", "MongoDB", "C#", "C++", "Oracle SQL", "Java", "PHP", "Apache", "Jenkins", "Magento", "Docker", "Jest"
     ]
   },
   "Education & Certifications": [

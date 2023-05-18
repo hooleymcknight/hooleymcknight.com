@@ -11,8 +11,10 @@ Woohoo!! Version 3 is here! V3 is built fully in ReactJS.
 
 
 ## Planned updates:
+ - re-align the spinner of the jackbox wheel on mobile
  - trap focus in the modals
- - autoplay videos when opened
+ - autoplay videos when opened (maybe)
+ - new styling for jackbox wheel filters
 
 ## Older updates:
  - made the jackbox wheel more dynamic (add or remove games from the wheel)
