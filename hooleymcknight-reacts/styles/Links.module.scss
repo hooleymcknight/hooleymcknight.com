@@ -12,6 +12,11 @@
     }
   }
 
+  &[id="emergency-vets"] {
+    height: auto;
+    min-height: unset;
+  }
+
   &[id="links"] {
     @media (max-height: 730px) {
       overflow-y: scroll;
