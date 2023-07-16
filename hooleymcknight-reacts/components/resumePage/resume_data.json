@@ -1,6 +1,29 @@
 {
   "Work Experience": [
     {
+      "job title": "Freelance Developer",
+      "company": "Fusion 92",
+      "location": "Tacoma, Washington",
+      "start date": "June 2023",
+      "end date": "present",
+      "impact": [
+        "Empowers clients to update their WordPress content by making field updates that give clients more flexibility and control",
+        "Improves site usability for customers by making styling and content changes with SASS and PHP"
+      ]
+    },
+    {
+      "job title": "Freelance Developer",
+      "company": "Basis LLC",
+      "location": "Tacoma, Washington",
+      "start date": "May 2023",
+      "end date": "present",
+      "impact": [
+        "Developed an unreleased project (expected release: July 2023)",
+        "Customized client's Shopify checkout by building checkout extensibility apps",
+        "Supported A/B testing and related analytics development"
+      ]
+    },
+    {
       "job title": "Front-End Engineer",
       "company": "surefoot",
       "location": "Seattle, Washington",
@@ -77,14 +100,26 @@
     }
   ],
   "Skills": {
-    "Proficient in": [
-      "!NodeJS", "!HTML", "!CSS", "!ReactJS", "!jQuery", "!REST API", "!Git", "WordPress", "!Shopify Liquid", "Recharge",
-      "!MySQL", "Nginx", "Sass", "AJAX", "ExpressJS", "NextJS", "!Amazon Web Services", "Asana", "Trello", "ClickUp", "JIRA", "Bitbucket",
-      "!GitHub", "G Suite", "Microsoft Office", "!Windows 10", "!Linux", "Mac",
-      "CRO Apps: Convert", "Dynamic Yield", "Google Optimize", "Optimizely", "VWO", "AB Tasty", "Monetate"
+    "JavaScript": [
+      "NodeJS", "ReactJS", "jQuery", "NextJS", "ExpressJS", "React Native", "Typescript"
     ],
-    "Practicing": [
-      "!VueJS", "!Shopify 2.0", "!Shopify App Development", "!Shopify Checkout UI Extensions", "!GraphQL", "!React Native", "Typescript", "Python", "MongoDB", "C#", "C++", "Oracle SQL", "Java", "PHP", "Apache", "Jenkins", "Magento", "Docker", "Jest"
+    "Front-end": [
+      "HTML", "CSS", "Sass", "REST API", "AJAX"
+    ],
+    "CMS": [
+      "WordPress", "Shopify Liquid", "Shopify 2.0", "Shopify App Development", "Checkout Checkout UI Extensions", "Recharge", "Magento"
+    ],
+    "Database": [
+      "MySQL", "NoSQL", "MongoDB", "Oracle SQL"
+    ],
+    "CRO": [
+      "Google Analytics (UA)", "GA4", "Convert", "Dynamic Yield", "Google Optimize", "Optimizely", "VWO", "AB Tasty", "Monetate", "Adobe Target"
+    ],
+    "VCS": [
+      "Git", "GitHub", "Bitbucket"
+    ],
+    "Other": [
+      "Amazon Web Services (AWS)", "GraphQL", "Nginx", "Python", "C#", "C++", "Java", "PHP", "Apache", "Jenkins", "Docker", "Jest", "G Suite", "Microsoft Office", "Windows 10", "Linux", "Mac", "Asana", "Trello", "ClickUp", "JIRA"
     ]
   },
   "Education & Certifications": [

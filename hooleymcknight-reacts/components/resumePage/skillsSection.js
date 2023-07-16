@@ -21,7 +21,7 @@ const SkillsSection = (props) => {
       <h3>Skills</h3>
       {Object.keys(skills).map((x, index) =>
         <div key={index} className="skill-line">
-          <p className="skill-level">{x}</p>
+          <b className="skill-header">{x}:</b>
           <p className="skills" dangerouslySetInnerHTML={createMarkup(boldenSkills(skills[x]).join(', '))}></p>
         </div>
       )}

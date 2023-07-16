@@ -11,8 +11,8 @@ const ResumeContent = (props) => {
   return (
     <div className={classes}>
       <IntroSection />
-      <WorkExp data={data["Work Experience"]} />
       <SkillsSection data={data["Skills"]} />
+      <WorkExp data={data["Work Experience"]} />
       <EduCerts data={data["Education & Certifications"]} />
     </div>
   )

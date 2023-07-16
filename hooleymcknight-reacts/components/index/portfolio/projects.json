@@ -1,8 +1,18 @@
 {
+  "DBD Killer Voting App": {
+    "subtitle": "Windows app + Twitch bot",
+    "image": "dbd-killer-votes-app.png",
+    "blurb": "This app combines a Twitch chat bot with a Windows desktop app to help a fellow Twitch streamer streamline a giveaway voting system he uses while playing Dead by Daylight.",
+    "link": {
+      "href": "https://github.com/hooleymcknight/dbd-killer-voting",
+      "alt": "Link to GitHub repository for DBD Killer Voting App",
+      "text": "Code Repository on GitHub"
+    }
+  },
   "Tierator": {
     "subtitle": "Vue.js Website",
     "image": "tierator_v2.gif",
-    "blurb": "This is my first Vue.js project; it's a tier creator. It's still a work in progress, but it is currently live at <a href='https://tierator.com' alt='Tierator website' target='_blank'>tierator.com</a>. Woo! Feel free to email me suggestions/bug reports if you feel so inclined: <a href='mailto:hmphillips93@gmail.com' target='_blank'>hmphillips93@gmail.com</a>.",
+    "blurb": "This is my first Vue.js project; it's a tier creator. Due to server costs, it is not currently live.",
     "link": {
       "href": "https://github.com/hooleymcknight/tierator",
       "alt": "Link to GitHub repository for Tierator website",
@@ -22,7 +32,7 @@
   "Fiddlesitters Website": {
     "subtitle": "NextJS Website",
     "image": "fiddlesitters-site.gif",
-    "blurb": "A work-in-progress hub for our Twitch stream team, this website was built entirely using React and NextJS. The site is currently live at <a href='https://fiddlesitters.com' alt='Fiddlesitters website' target='blank'>fiddlesitters.com</a>! This is where I've explored connecting a website to a MySQL database to create an interactive game.",
+    "blurb": "A work-in-progress hub for our Twitch stream team, this website was built entirely using React and NextJS. This is where I've explored connecting a website to a MySQL database to create an interactive game. Due to server costs, it is not currently live.",
     "link": {
       "href": "https://github.com/hooleymcknight/fiddlesitters",
       "alt": "Link to GitHub repository for Fiddlesitters website",
@@ -42,7 +52,7 @@
   "Why Is My Cat So Jacked": {
     "subtitle": "React Native App",
     "image": "wimcsj.gif",
-    "blurb": "This is my first attempt at building a React Native app. I started this project on Saturday, Nov. 12th, 2022. See the current exported site <a href='https://whyismycatsojacked.com' alt='link to WIMCSJ website' target='blank'>here</a>, or check out the Android dev app using&nbsp;Expo: <br><button class='copyable' tab-index='0'>exp://exp.host/@hooleymcknight/why-is-my-cat-so-jacked</button>",
+    "blurb": "This is my first attempt at building a React Native app. I built it over a weekend back in November 2022. Due to server costs, it is not currently live.",
     "link": {
       "href": "https://github.com/hooleymcknight/whyismycatsojacked.com",
       "alt": "Link to GitHub repository for this website",

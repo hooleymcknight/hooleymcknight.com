@@ -63,11 +63,12 @@
       display: flex;
       margin-left: 15px;
 
-      [class="skill-level"] {
-        width: 160px;
-        max-width: 160px;
+      [class="skill-header"] {
+        width: 140px;
+        max-width: 140px;
         flex-grow: 1;
         flex-shrink: 0;
+        margin: 1em 0 0;
       }
 
       [class="skills"] {
