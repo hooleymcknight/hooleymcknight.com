@@ -8,7 +8,6 @@ Woohoo!! Version 3 is here! V3 is built fully in ReactJS.
 ## Newest updates:
  - added a filter for Party Packs to the Jackbox Wheel
 
-
 ## Planned updates:
  - fix the functionality of the Jackbox Wheel filters
  - re-align the spinner of the jackbox wheel on mobile
