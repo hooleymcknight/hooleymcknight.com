@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import styles from '../styles/Links.module.scss'
-import Link from 'next/link'
-import LinkWithQR from '../components/links/LinkWithQR'
+import Head from 'next/head';
+import Layout, { siteTitle } from '../components/layout';
+import styles from '../styles/Links.module.scss';
+import Link from 'next/link';
+import LinkWithQR from '../components/links/LinkWithQR';
 
 export default function DonationLinks() {
 
@@ -26,5 +26,5 @@ export default function DonationLinks() {
       </div>
 
     </Layout>
-  )
+  );
 }

@@ -1,14 +1,25 @@
 {
   "Work Experience": [
     {
+      "job title": "Front End Developer",
+      "company": "Fusion 92",
+      "location": "Tacoma, Washington",
+      "start date": "September 2023",
+      "end date": "present",
+      "impact": [
+        "Makes sites more user-friendly for both clients and their customers by making updates in WordPress (PHP, SASS, JavaScript) and other platforms (Vue, Nuxt)",
+        "Assists with the migration process from an external platform to an in-house one for hundreds of sites"
+      ]
+    },
+    {
       "job title": "Freelance Developer",
       "company": "Fusion 92",
       "location": "Tacoma, Washington",
       "start date": "June 2023",
-      "end date": "present",
+      "end date": "September 2023",
       "impact": [
-        "Empowers clients to update their WordPress content by making field updates that give clients more flexibility and control",
-        "Improves site usability for customers by making styling and content changes with SASS and PHP"
+        "Empowered clients to update their WordPress content by making field updates that give clients more flexibility and control",
+        "Improved site usability for customers by making styling and content changes with SASS and PHP"
       ]
     },
     {
@@ -18,7 +29,7 @@
       "start date": "May 2023",
       "end date": "present",
       "impact": [
-        "Developed an unreleased project (expected release: July 2023)",
+        "Developed an entirely new version of the site (tryautobrush.com) based on the Dawn theme in Shopify",
         "Customized client's Shopify checkout by building checkout extensibility apps",
         "Supported A/B testing and related analytics development"
       ]

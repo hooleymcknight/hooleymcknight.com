@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import BotAdded from '../components/bots/botAdded'
+import Head from 'next/head';
+import Layout, { siteTitle } from '../components/layout';
+import BotAdded from '../components/bots/botAdded';
 
 export default function BotAddedPage() {
 
@@ -13,5 +13,5 @@ export default function BotAddedPage() {
       <BotAdded />
 
     </Layout>
-  )
+  );
 }

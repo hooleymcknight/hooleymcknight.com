@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import styles from '../styles/PrivacyPolicy.module.scss'
+import Head from 'next/head';
+import Layout, { siteTitle } from '../components/layout';
+import styles from '../styles/PrivacyPolicy.module.scss';
 
 export default function PrivacyPolicy() {
   return (
@@ -15,5 +15,5 @@ export default function PrivacyPolicy() {
       </div>
 
     </Layout>
-  )
+  );
 }

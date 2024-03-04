@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import styles from '../styles/TimeCalc.module.scss'
-import Layout, { siteTitle } from '../components/layout'
-import TimeCalc from '../components/timeCalc/timeCalc'
+import Head from 'next/head';
+import styles from '../styles/TimeCalc.module.scss';
+import Layout, { siteTitle } from '../components/layout';
+import TimeCalc from '../components/timeCalc/timeCalc';
 
 
 export default function TimeCalcPage() {
@@ -14,5 +14,5 @@ export default function TimeCalcPage() {
       <TimeCalc className={styles['time-calc']} />
 
     </Layout>
-  )
+  );
 }

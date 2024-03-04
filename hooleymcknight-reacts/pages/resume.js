@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import styles from '../styles/Resume.module.scss'
-import Layout, { siteTitle } from '../components/layout'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFileDownload } from '@fortawesome/free-solid-svg-icons'
-import ResumeContent from '../components/resumePage/resumeContent'
+import Head from 'next/head';
+import styles from '../styles/Resume.module.scss';
+import Layout, { siteTitle } from '../components/layout';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
+import ResumeContent from '../components/resumePage/resumeContent';
 
 export default function Resume() {
   return (
@@ -20,5 +20,5 @@ export default function Resume() {
       </a>
 
     </Layout>
-  )
+  );
 }

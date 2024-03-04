@@ -1,36 +1,36 @@
-import Head from 'next/head'
-import Layout from '../components/layout'
-import styles from '../styles/CodingHour.module.scss'
-import { useEffect, useState } from 'react'
+import Head from 'next/head';
+import Layout from '../components/layout';
+import styles from '../styles/CodingHour.module.scss';
+import { useEffect, useState } from 'react';
 
-const characters = ['arthur', 'augustus', 'blythe', 'elijah', 'harley', 'hester', 'james', 'kathryn', 'langston', 'luisa', 'margaret', 'mattias', 'olive', 'penelope', 'riley', 'theodore', 'wren']
+const characters = ['arthur', 'augustus', 'blythe', 'elijah', 'harley', 'hester', 'james', 'kathryn', 'langston', 'luisa', 'margaret', 'mattias', 'olive', 'penelope', 'riley', 'theodore', 'wren'];
 
 function pickRandom(set) {
-  const selectedIndex = Math.floor(Math.random() * (set.length))
-  return set[selectedIndex]
+  const selectedIndex = Math.floor(Math.random() * (set.length));
+  return set[selectedIndex];
 }
 
 export default function CodingHour() {
-  const [activeImg, setActiveImg] = useState(pickRandom(characters))
-  const [sliderData, setSliderData] = useState('43')
+  const [activeImg, setActiveImg] = useState(pickRandom(characters));
+  const [sliderData, setSliderData] = useState('43');
   // const [formData, setFormData] = useState({
   //   name: '',
   //   pronouns: '',
   //   food: ''
-  // })
+  // });
 
   function randomizeImage() {
-    setActiveImg(pickRandom(characters))
+    setActiveImg(pickRandom(characters));
   }
 
   function toggleSelection(e) {
-    // setFormData({})
-    console.log('I didnt have time to set this up yet lol')
+    // setFormData({});
+    console.log('I didnt have time to set this up yet lol');
   }
 
   function updateSlider(e) {
-    const value = e.target.value
-    setSliderData(value)
+    const value = e.target.value;
+    setSliderData(value);
   }
 
   return (
@@ -124,5 +124,5 @@ export default function CodingHour() {
       </div>
 
     </Layout>
-  )
+  );
 }

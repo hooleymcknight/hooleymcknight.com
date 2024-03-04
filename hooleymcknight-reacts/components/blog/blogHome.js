@@ -18,7 +18,7 @@ const BlogHome = (props) => {
           ''
           :
           
-            <Link href={`/blog/${x.replaceAll('_', '-')}`}>
+            <Link href={`/blog/${x.replace(/_/g, '-')}`}>
               <a>
                 <LazyLoadImage src={`../posts/${postList[`${x}`].image}`} alt={postList[`${x}`].title} />
                 <p className="blog-title">{postList[`${x}`].title}</p>

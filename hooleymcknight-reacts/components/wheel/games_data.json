@@ -299,6 +299,56 @@
       "min_players": 3,
       "max_players": 8,
       "pack": 9
+    },
+    {
+      "title": "Tee K.O. 2",
+      "image": "tee-ko-2.png",
+      "description": "two K. O., if you will",
+      "category": "drawing bracket",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": 10
+    },
+    {
+      "title": "Timejinx",
+      "image": "timejinx.png",
+      "description": "guess what year shit happened",
+      "category": "trivia",
+      "playStyle": "competitive",
+      "min_players": 1,
+      "max_players": 8,
+      "pack": 10
+    },
+    {
+      "title": "FixyText",
+      "image": "fixy-text.png",
+      "description": "GoogleDocs from hell",
+      "category": "word",
+      "playStyle": "mixed",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": 10
+    },
+    {
+      "title": "Dodo Re Mi",
+      "image": "dodo-re-mi.png",
+      "description": "shitty Guitar Hero",
+      "category": "cooperative",
+      "playStyle": "mixed",
+      "min_players": 1,
+      "max_players": 9,
+      "pack": 10
+    },
+    {
+      "title": "Hypnotorious",
+      "image": "hypnotorious.png",
+      "description": "answer questions as a secret identity, categorize yourselves",
+      "category": "improv",
+      "playStyle": "competitive",
+      "min_players": 4,
+      "max_players": 8,
+      "pack": 10
     }
   ]
 }

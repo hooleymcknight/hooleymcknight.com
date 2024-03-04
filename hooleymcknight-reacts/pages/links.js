@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import styles from '../styles/Links.module.scss'
-import LinksList from '../components/links/LinksList'
+import Head from 'next/head';
+import Layout, { siteTitle } from '../components/layout';
+import styles from '../styles/Links.module.scss';
+import LinksList from '../components/links/LinksList';
 
 export default function Links() {
 
@@ -15,5 +15,5 @@ export default function Links() {
       <LinksList />
 
     </Layout>
-  )
+  );
 }

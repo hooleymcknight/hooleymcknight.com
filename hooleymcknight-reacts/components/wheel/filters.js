@@ -48,6 +48,18 @@ const Filters = (props) => {
         <span>{sliderData}</span>
       </div>
 
+      <div id="game-pack-set" className="filter-set">
+        <label onClick={(e) => toggleDropdown(e)}>Party Packs <FontAwesomeIcon icon={faChevronDown} /></label>
+        <div className="filter-dropdown">
+          {props.partyPacks.map(x =>  // change this stuff
+            <div key={x} className="filter-checkbox" data-type="pack">
+              <input type="checkbox" defaultChecked="true" value={x} onChange={(e) => applyFilter(e)} />
+              <label htmlFor={x} onClick={(e) => toggleCheckbox(e)}>{x}</label>
+            </div>
+          )}
+        </div>
+      </div>
+
       <div id="category-set" className="filter-set">
         <label onClick={(e) => toggleDropdown(e)}>Categories <FontAwesomeIcon icon={faChevronDown} /></label>
         <div className="filter-dropdown">
