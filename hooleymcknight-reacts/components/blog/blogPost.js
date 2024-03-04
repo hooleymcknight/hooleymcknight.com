@@ -51,7 +51,7 @@ const processText = (text, pageID) => {
     _text = italicText
   }
 
-  _text = '<p>' + _text.replaceAll('\n', '<br />') + '</p>'
+  _text = '<p>' + _text.replace(/\n/g, '<br />') + '</p>'
 
   let contentObj = {
     title: title,
@@ -67,11 +67,11 @@ const processText = (text, pageID) => {
 export default function BlogPost() {
   const [postContent, setPostContent] = useState({})
   const router = useRouter()
-  const postID = router.asPath.replace('/blog', '').replaceAll('/', '')
+  const postID = router.asPath.replace('/blog', '').replace(/\//g, '')
 
   if (postID !== '[[...id]]' && postContent.page !== postID) {
     const server = process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://hooleymcknight.com'
-    fetch(`${server}/posts/${postID.replaceAll('-', '_')}.txt`)
+    fetch(`${server}/posts/${postID.replace(/-/g, '_')}.txt`)
       .then((r) => {
         return r.text()
       })
