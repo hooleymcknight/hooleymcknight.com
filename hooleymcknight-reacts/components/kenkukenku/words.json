@@ -1,0 +1,73 @@
+{
+    "words": {
+        "tavern": {
+            "tags": ["noun", "place"],
+            "related_words": ["pub"]
+        },
+        "pub": {
+            "tags": ["noun", "place"],
+            "related_words": ["tavern"]
+        },
+        "Eliona": {
+            "tags": ["name"],
+            "related_words": [""]
+        },
+        "get": {
+            "tags": [""],
+            "related_words": [""]
+        },
+        "drink": {
+            "tags": [""],
+            "related_words": [""]
+        },
+        "": {
+            "tags": [""],
+            "related_words": [""]
+        },
+        "": {
+            "tags": [""],
+            "related_words": [""]
+        },
+        "": {
+            "tags": [""],
+            "related_words": [""]
+        },
+        "": {
+            "tags": [""],
+            "related_words": [""]
+        },
+        "": {
+            "tags": [""],
+            "related_words": [""]
+        },
+
+        "": {
+            "tags": [""],
+            "related_words": [""]
+        },
+        "": {
+            "tags": [""],
+            "related_words": [""]
+        },
+        "": {
+            "tags": [""],
+            "related_words": [""]
+        },
+        "": {
+            "tags": [""],
+            "related_words": [""]
+        },
+        "": {
+            "tags": [""],
+            "related_words": [""]
+        },
+        "": {
+            "tags": [""],
+            "related_words": [""]
+        },
+        "": {
+            "tags": [""],
+            "related_words": [""]
+        },
+    }
+}
