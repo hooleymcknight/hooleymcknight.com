@@ -8,7 +8,19 @@
       "end date": "present",
       "impact": [
         "Makes sites more user-friendly for both clients and their customers by making updates in WordPress (PHP, SASS, JavaScript) and other platforms (Vue, Nuxt)",
+        "Develops functional and accessible email campaigns for various clients",
         "Assists with the migration process from an external platform to an in-house one for hundreds of sites"
+      ]
+    },
+    {
+      "job title": "Nighttime Cleaner",
+      "company": "Edgeworks Climbing + Fitness",
+      "location": "Tacoma, Washington",
+      "start date": "June 2023",
+      "end date": "present",
+      "impact": [
+        "Improve customer satisfaction by maintaining the climbing gym and keeping all spaces clean and organized",
+        "Maintain safety standards throughout the facility by disinfecting bathroom spaces, workout equipment, and more"
       ]
     },
     {
@@ -27,7 +39,7 @@
       "company": "Basis LLC",
       "location": "Tacoma, Washington",
       "start date": "May 2023",
-      "end date": "present",
+      "end date": "October 2023",
       "impact": [
         "Developed an entirely new version of the site (tryautobrush.com) based on the Dawn theme in Shopify",
         "Customized client's Shopify checkout by building checkout extensibility apps",
@@ -130,7 +142,7 @@
       "Git", "GitHub", "Bitbucket"
     ],
     "Other": [
-      "Amazon Web Services (AWS)", "GraphQL", "Nginx", "Python", "C#", "C++", "Java", "PHP", "Apache", "Jenkins", "Docker", "Jest", "G Suite", "Microsoft Office", "Windows 10", "Linux", "Mac", "Asana", "Trello", "ClickUp", "JIRA"
+      "Amazon Web Services (AWS)", "GraphQL", "Nginx", "Python", "C#", "C++", "Java", "PHP", "Apache", "Jenkins", "Docker", "Jest", "G Suite", "Microsoft Office", "Windows 10", "Linux", "Mac", "Asana", "Trello", "ClickUp", "JIRA", "Monday", "Basecamp", "Airtable"
     ]
   },
   "Education & Certifications": [

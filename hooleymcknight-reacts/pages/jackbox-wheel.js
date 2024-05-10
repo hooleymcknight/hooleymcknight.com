@@ -11,12 +11,19 @@ import GamesListDesc from '../components/wheel/gamesListDesc';
 import gamesDataRaw from '../components/wheel/games_data.json';
 import Filters from '../components/wheel/filters';
 
+const defaultPlayerCount = 4;
+const maxWheelSlices = 8;
+
 export default function WheelPage() {
   const gamesData = gamesDataRaw.games;
-  const [availableGames, setAvailableGames] = useState([...gamesData]);
-  const [activeGames, setActiveGames] = useState([...gamesData]);
-  const [gamesRemovable, setGamesRemovable] = useState(true);
-  const [excludedFilters, setExcludedFilters] = useState([]);
+
+  const [activeGames, setActiveGames] = useState(gamesData);
+  const [disallowedGames, setDisallowedGames] = useState([]); // these are the games that are MANUALLY toggled. unaffected by filters.
+  const [filteredOutGames, setFilteredOutGames] = useState([]);
+  const [numberOfPlayers, setNumberOfPlayers] = useState(defaultPlayerCount);
+  const [offAttributes, setOffAttributes] = useState({"pack": [], "category": [], "playStyle": []});
+
+  const finalGameSet = activeGames.filter(x => !filteredOutGames.includes(x)).filter(x => !disallowedGames.includes(x));
 
   let categories = [... new Set(gamesData.map(x => x.category))];
   categories.forEach((category, index) => {
@@ -24,79 +31,91 @@ export default function WheelPage() {
       categories.splice(index, 1);
       categories.push(category.split(' ')[0], category.split(' ')[1]);
     }
-  })
+  });
   categories = [... new Set(categories)];
 
   let playStyles = [... new Set(gamesData.map(x => x.playStyle))];
-
   let partyPacks = [... new Set(gamesData.map(x => x.pack))];
 
-  const changeAllowedGames = (type, data, dataToggle) => {
-    // this exists because we need another state for games that are allowed based on number of players
-    // it cant change activegames or it will remove the users choices.
-    // allowed vs active
-
-    let outOfRangeGames = [];
-
-    if (type === 'playerCount') { // update the available games based on number of players
-      gamesData.forEach((game) => {
-        if (game.min_players > data) {
-          outOfRangeGames.push(game);
-        }
-        if (game.max_players < data) {
-          outOfRangeGames.push(game);
-        }
-      });
-      setAvailableGames(gamesData.filter(x => !outOfRangeGames.includes(x)));
-    }
-    else if (!dataToggle) { // remove games
-      outOfRangeGames = gamesData.filter(x => !availableGames.includes(x));
-      gamesData.forEach((game) => {
-        if (String(game[type]).includes(data) && !dataToggle || !String(game[type]).includes(data) && dataToggle) {
-          outOfRangeGames.push(game);
-        }
-      });
-      if (!excludedFilters.includes(data)) {
-        setExcludedFilters([...excludedFilters, data]);
+  const applyChange = (type, data, dataToggle) => {
+    if (type === 'game') { // dataToggle for this is probably reverse of what I would want it. boolean to text is dumb.
+      const thisGame = gamesData.filter(x => x.title === data)[0];
+      if(dataToggle == 'true' && !disallowedGames.includes(thisGame)) { // user wants this game disallowed
+        let newDisallowedGames = [... new Set(disallowedGames), thisGame];
+        setDisallowedGames(newDisallowedGames);
       }
-      setAvailableGames(availableGames.filter(x => !outOfRangeGames.includes(x)));
-    }
-    else { // add games back in
-      let gamesToReAdd = [];
-      let missingGames = gamesData.filter(x => !availableGames.includes(x));
-      const newExcFilters = [...excludedFilters].filter(x => x !== data);
-      
-      missingGames.forEach((game) => {
-        if (String(game[type]).includes(data) && dataToggle) {
-          if (!newExcFilters.includes(game.playStyle) || !newExcFilters.includes(game.category.split(' ')[0]) || !newExcFilters.includes(game.category.split(' ')[1])) {
-            gamesToReAdd.push(game);
-          }
-        }
-      });
-      setExcludedFilters(newExcFilters);
-      setAvailableGames([...availableGames, ...gamesToReAdd]);
-    }
+      else if (dataToggle == 'false' && (disallowedGames.includes(thisGame) || filteredOutGames.includes(thisGame))) { // user wants to put this game back in the mix
+        const indexOfGameToAllow = disallowedGames.indexOf(thisGame);
+        let newDisallowedGames = [... new Set(disallowedGames)];
+        newDisallowedGames.splice(indexOfGameToAllow, 1);
+        setDisallowedGames(newDisallowedGames);
 
-    
-  }
-
-  const changeActiveGames = (e) => {
-    const selectedGame = e.target.closest('button').getAttribute('data-game');
-    const gameIndex = activeGames.map(x => x.title).indexOf(selectedGame);
-    // if the game is in the active games, remove it
-    if (gameIndex > -1) {
-      const newActive = [...activeGames];
-      newActive.splice(gameIndex, 1);
-      if (newActive.length <= 8) setGamesRemovable(false);
-      setActiveGames([...newActive]);
+        const indexOfGameToUnfilter = filteredOutGames.indexOf(thisGame);
+        let newFilteredOutGames = [... new Set(filteredOutGames)];
+        newFilteredOutGames.splice(indexOfGameToUnfilter, 1);
+        setFilteredOutGames(newFilteredOutGames);
+      }
     }
-    else { // otherwise, add the game back in
-      const gameInfo = gamesData.filter(x => x.title === selectedGame)[0];
-      const newIndex = gamesData.indexOf(gameInfo);
-      const newActive = [...activeGames];
-      newActive.splice(newIndex, 0, gameInfo);
-      if (newActive.length > 8) setGamesRemovable(true);
-      setActiveGames([...newActive]);
+    else if(type === 'playerCount') {
+      setNumberOfPlayers(data);
+      let validGames = gamesData.filter(x => x['min_players'] <= data && x['max_players'] >= data);
+      setActiveGames(gamesData.filter(x => !disallowedGames.includes(x)).filter(x => validGames.includes(x)));
+    }
+    else {
+      // update a reference what we are filtering in or out
+      // {"pack": [], "category": [], "playStyle": []}
+      let newOffAttributes = offAttributes;
+
+      // if the attribute is currently filtered out
+      if (newOffAttributes[type].filter(x => x.includes(data)).length && dataToggle) {
+        newOffAttributes[type] = newOffAttributes[type].filter(x => !x.includes(data));
+        setOffAttributes(newOffAttributes);
+      }
+      else if (!newOffAttributes[type].filter(x => x.includes(data)).length && !dataToggle) {
+        newOffAttributes[type].push(data);
+        setOffAttributes(newOffAttributes);
+      }
+
+
+      let relevantFilteredGames;
+      if (type === 'pack') {
+        relevantFilteredGames = gamesData.filter(x => x[type] == data);
+      }
+      else {
+        relevantFilteredGames = gamesData.filter(x => x[type].includes(data));
+      }
+
+      if (!dataToggle) {
+        // filter out relevant games (add to from filteredOutGames)
+        let newFilteredOutGames = [... new Set(filteredOutGames), ...relevantFilteredGames];
+        setFilteredOutGames(newFilteredOutGames);
+      }
+      else {
+        // add relevant games back into the mix (remove from filteredOutGames)
+        // first we need to find out whatever is filtered OFF
+        const filterOptions = Object.keys(offAttributes);
+        const filterValues = Object.values(offAttributes).filter(x => x.length > 0);
+
+        relevantFilteredGames.forEach((game) => {
+          filterOptions.forEach((option) => {
+            // for categories only
+            if (option === 'category') {
+              game['category'].split(' ')?.forEach((category) => {
+                if (offAttributes['category'].includes(category)) {
+                  relevantFilteredGames.splice(relevantFilteredGames.indexOf(game), 1);
+                }
+              });
+            }
+            else if (offAttributes[option].length) {
+              if (offAttributes[option].includes(game[option])) {
+                relevantFilteredGames.splice(relevantFilteredGames.indexOf(game), 1);
+              }
+            }
+          });
+        });
+
+        setFilteredOutGames(filteredOutGames.filter(x => !relevantFilteredGames.includes(x)));
+      }
     }
   }
 
@@ -107,22 +126,24 @@ export default function WheelPage() {
       </Head>
 
       <WheelTitle className={styles['wheel-title']} />
-      <Wheel styles={styles} activeGames={activeGames.filter(x => availableGames.includes(x))} />
+      <Wheel styles={styles} activeGames={finalGameSet} /> {/* make sure active games excludes disallowed games */}
 
       <Filters className={styles['filters']}
         partyPacks={partyPacks}
         categories={categories}
         playStyles={playStyles}
-        onApply={(type, data, dataToggle) => changeAllowedGames(type, data, dataToggle)}
+        onApply={(type, data, dataToggle) => applyChange(type, data, dataToggle)}
+        defaultPlayerCount={defaultPlayerCount}
       />
 
       <GamesListDesc className={styles['games-list-desc']} />
       <GamesList className={styles['games-list']}
-        gamesRemovable={gamesRemovable}
         gamesData={gamesData}
-        activeGames={activeGames}
-        availableGames={availableGames}
-        onChange={e => changeActiveGames(e)}
+        disallowedGames={disallowedGames}
+        numberOfPlayers={numberOfPlayers}
+        filteredOutGames={filteredOutGames}
+        gamesRemovable={finalGameSet.length > maxWheelSlices}
+        onApply={(type, data, dataToggle) => applyChange(type, data, dataToggle)}
       />
 
     </Layout>

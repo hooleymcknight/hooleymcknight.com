@@ -15,6 +15,7 @@
 /files/*
 *.code-workspace
 *emergency-vets.js
+*.docx
 
 # dependencies
 */node_modules

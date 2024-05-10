@@ -3,24 +3,27 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes, faPlus } from '@fortawesome/free-solid-svg-icons'
 
 const GamesList = (props) => {
-  const gamesData = props.gamesData // all games
-  const [activeGames, setActiveGames] = useState(props.activeGames) // only the active ones
+  const gamesData = props.gamesData; // all games
 
-  const inactive = gamesData.filter(x => activeGames.indexOf(x) === -1)
-
-  if (activeGames !== props.activeGames) setActiveGames(props.activeGames)
+  const toggleGameAllowance = (e) => {
+    const gameTitle = e.target.dataset.game;
+    const prevActiveSetting = e.target.dataset.active;
+    props.onApply('game', gameTitle, prevActiveSetting);
+  }
 
   return (
     <div className={props.className}>
       {gamesData.map(x =>
         <button 
-        onClick={e => props.onChange(e)} 
-        key={x.title} 
-        data-game={x.title} 
-        data-active={!inactive.filter(y => y.title === x.title).length} 
-        disabled={!props.gamesRemovable && !inactive.filter(y => y.title === x.title).length}
-        data-player-range={`${x['min_players']},${x['max_players']}`}
-        available={`${props.availableGames.includes(x)}`} >
+          onClick={e => toggleGameAllowance(e)} 
+          key={x.title} 
+          data-game={x.title} 
+          data-active={!props.disallowedGames.includes(x) && !props.filteredOutGames.includes(x)}
+          disabled={!props.gamesRemovable && !props.disallowedGames.includes(x)}
+          data-player-range={`${x['min_players']},${x['max_players']}`}
+          data-valid-player-count={x['min_players'] <= props.numberOfPlayers && x['max_players'] >= props.numberOfPlayers}
+          // data-available={`${props.availableGames.includes(x)}`}
+        >
           {x.title}
           <FontAwesomeIcon icon={faTimes} />
           <FontAwesomeIcon icon={faPlus} />

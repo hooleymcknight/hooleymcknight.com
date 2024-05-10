@@ -224,7 +224,8 @@
       }
     }
 
-    &[available="false"] {
+    &[data-available="false"],
+    &[data-valid-player-count="false"] {
       opacity: 0.2;
       pointer-events: none;
     }
