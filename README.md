@@ -7,11 +7,12 @@ Woohoo!! Version 3 is here! V3 is built fully in ReactJS.
 
 ## Newest updates:
  - added a filter for Party Packs to the Jackbox Wheel
+ - fixed the functionality of the Jackbox Wheel filters
 
 ## Planned updates:
- - fix the functionality of the Jackbox Wheel filters
  - re-align the spinner of the jackbox wheel on mobile
  - trap focus in the modals
+ - find a place to add in jackbox game descriptions
  - autoplay videos when opened (maybe)
  - new styling for jackbox wheel filters
 
