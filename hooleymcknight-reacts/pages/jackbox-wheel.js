@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 
@@ -10,6 +10,7 @@ import GamesListDesc from '../components/wheel/gamesListDesc';
 
 import gamesDataRaw from '../components/wheel/games_data.json';
 import Filters from '../components/wheel/filters';
+import BackToWheel from '../components/wheel/backToWheel';
 
 const defaultPlayerCount = 4;
 const maxWheelSlices = 8;
@@ -22,6 +23,8 @@ export default function WheelPage() {
   const [filteredOutGames, setFilteredOutGames] = useState([]);
   const [numberOfPlayers, setNumberOfPlayers] = useState(defaultPlayerCount);
   const [offAttributes, setOffAttributes] = useState({"pack": [], "category": [], "playStyle": []});
+
+  const [showWheelButton, setShowWheelButton] = useState(false);
 
   const finalGameSet = activeGames.filter(x => !filteredOutGames.includes(x)).filter(x => !disallowedGames.includes(x));
 
@@ -119,6 +122,20 @@ export default function WheelPage() {
     }
   }
 
+  const toggleWheelButton = () => {
+    const firstPack = document.querySelector('[data-description-shown]');
+    if (!showWheelButton && window.scrollY + window.innerHeight >= firstPack.offsetTop) {
+      setShowWheelButton(true);
+    }
+    else if (showWheelButton && window.scrollY + window.innerHeight < firstPack.offsetTop) {
+      setShowWheelButton(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', toggleWheelButton);
+  }, [showWheelButton]);
+
   return (
     <Layout page='jackbox-wheel'>
       <Head>
@@ -138,6 +155,7 @@ export default function WheelPage() {
 
       <GamesListDesc className={styles['games-list-desc']} />
       <GamesList className={styles['games-list']}
+        packClassName={styles['pack-group']}
         gamesData={gamesData}
         disallowedGames={disallowedGames}
         numberOfPlayers={numberOfPlayers}
@@ -145,6 +163,11 @@ export default function WheelPage() {
         gamesRemovable={finalGameSet.length > maxWheelSlices}
         onApply={(type, data, dataToggle) => applyChange(type, data, dataToggle)}
       />
+
+      {showWheelButton ?
+        <BackToWheel className={styles['back-to-wheel']} />
+        : ''
+      }
 
     </Layout>
   );
