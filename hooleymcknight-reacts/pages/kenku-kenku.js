@@ -30,7 +30,10 @@ const KenkuKenku = () => {
   return (
     <Layout page='kenku-kenku' className={styles}>
       <Head>
-        <title>{siteTitle} || Kenku Kenku</title>
+        <title>{`${siteTitle} || Kenku Kenku`}</title>
+        <meta name="description" content="Kenku kenku kenku kenku kenku!" />
+        <meta property="og:image" content={`https://hooleymcknight.com/images/lax_hero_preview.jpg`} />
+        <meta name="og:title" content="Kenku kenku kenku kenku kenku!" />
       </Head>
 
       <p>things</p>

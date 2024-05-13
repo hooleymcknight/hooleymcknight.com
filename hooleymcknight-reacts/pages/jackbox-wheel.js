@@ -11,6 +11,7 @@ import GamesListDesc from '../components/wheel/gamesListDesc';
 import gamesDataRaw from '../components/wheel/games_data.json';
 import Filters from '../components/wheel/filters';
 import BackToWheel from '../components/wheel/backToWheel';
+import WinnerGame from '../components/wheel/winnerGame';
 
 const defaultPlayerCount = 4;
 const maxWheelSlices = 8;
@@ -23,6 +24,7 @@ export default function WheelPage() {
   const [filteredOutGames, setFilteredOutGames] = useState([]);
   const [numberOfPlayers, setNumberOfPlayers] = useState(defaultPlayerCount);
   const [offAttributes, setOffAttributes] = useState({"pack": [], "category": [], "playStyle": []});
+  const [winningGame, setWinningGame] = useState('');
 
   const [showWheelButton, setShowWheelButton] = useState(false);
 
@@ -124,6 +126,7 @@ export default function WheelPage() {
 
   const toggleWheelButton = () => {
     const firstPack = document.querySelector('[data-description-shown]');
+    if (!firstPack) return;
     if (!showWheelButton && window.scrollY + window.innerHeight >= firstPack.offsetTop) {
       setShowWheelButton(true);
     }
@@ -139,11 +142,15 @@ export default function WheelPage() {
   return (
     <Layout page='jackbox-wheel'>
       <Head>
-        <title>{siteTitle} || Jackbox Wheel</title>
+        <title>{`${siteTitle} || Jackbox Wheel`}</title>
+        <meta name="description" content="The esteemed Jackbox Wheel... Happy spinning!" />
+        <meta property="og:image" content={`https://hooleymcknight.com/jackbox-wheel/jackbox-wheel.png`} />
+        <meta name="og:title" content="The esteemed Jackbox Wheel... Happy spinning!" />
       </Head>
 
       <WheelTitle className={styles['wheel-title']} />
-      <Wheel styles={styles} activeGames={finalGameSet} /> {/* make sure active games excludes disallowed games */}
+      <WinnerGame className={styles['winner-title']} winningGame={winningGame} />
+      <Wheel styles={styles} activeGames={finalGameSet} setWinningGame={(e) => setWinningGame(e)} /> {/* make sure active games excludes disallowed games */}
 
       <Filters className={styles['filters']}
         partyPacks={partyPacks}

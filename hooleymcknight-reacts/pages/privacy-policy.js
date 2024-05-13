@@ -6,7 +6,10 @@ export default function PrivacyPolicy() {
   return (
     <Layout page='privacy-policy'>
       <Head>
-        <title>{siteTitle} || Privacy Policy</title>
+        <title>{`${siteTitle} || Privacy Policy`}</title>
+        <meta name="description" content="This is the shortest privacy policy you'll ever read." />
+        <meta property="og:image" content={`https://hooleymcknight.com/jackbox-wheel/jackbox-wheel.png`} />
+        <meta name="og:title" content="This is the shortest privacy policy you'll ever read." />
       </Head>
 
       <div class={styles["privacy-policy"]}>

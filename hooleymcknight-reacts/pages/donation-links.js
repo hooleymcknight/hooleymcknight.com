@@ -9,7 +9,10 @@ export default function DonationLinks() {
   return (
     <Layout page='donation-links' className={styles.links}>
       <Head>
-        <title>{siteTitle} || Donation Links</title>
+        <title>{`${siteTitle} || Donation Links`}</title>
+        <meta name="description" content="Ways to donate through Holly" />
+        <meta property="og:image" content={`https://hooleymcknight.com/images/lax_hero_preview.jpg`} />
+        <meta name="og:title" content="Ways to donate through Holly" />
       </Head>
 
       <img className="links-img" src="https://hooleymcknight.com/images/pkmn.jpg" alt="Holly wearing a Pokemon t-shirt standing in front of a fence with an open smile" />

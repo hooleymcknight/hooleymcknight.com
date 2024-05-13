@@ -151,10 +151,54 @@
 
 .winner-title {
   text-align: center;
-  color: var(--primary-text);
   font-size: 20px;
   margin: 0;
-  min-height: 32px;
+  transition: all 0.3s ease;
+  // position: relative;
+
+  [class="confetti-container"] {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &[data-declaring="true"] [class="confetti-container"] {
+    background-image: url('https://hooleymcknight.com/jackbox-wheel/confetti.gif');
+    background-size: contain;
+    background-repeat: repeat-y;
+    background-position: top center;
+    -webkit-animation: confetti 5s;
+    animation: confetti 5s;
+  }
+
+  @-webkit-keyframes confetti {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
+
+  @keyframes confetti {
+    from {opacity: 1;}
+    to {opacity: 0;}
+  }
+
+  &[data-declared="false"] {
+    visibility: hidden;
+  }
+
+  &[data-declared="true"] {
+    background-color: var(--primary-purple);
+    padding: 12px;
+    color: var(--alt-text);
+  }
+
+  p {
+    margin: 0;
+    z-index: 1;
+    font-weight: bold;
+  }
 }
 
 // .games-list-desc {

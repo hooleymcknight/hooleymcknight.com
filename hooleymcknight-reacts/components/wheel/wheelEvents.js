@@ -2,7 +2,7 @@ const randomNumber = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-const spinWheel = (e, sliceCount, setSpinRot) => {
+const spinWheel = (e, sliceCount, setSpinRotation, setWinningGame) => {
   const spinner = e.target.closest('.spinner')
   const wheelContainer = spinner.nextElementSibling
   const halfSliceSize = (360 / sliceCount) / 2
@@ -18,7 +18,8 @@ const spinWheel = (e, sliceCount, setSpinRot) => {
   if (winner) {
     wheelContainer.removeAttribute('winner')
     winner.removeAttribute('winner')
-    document.querySelector('[class*="winner-title"]').innerText = ''
+    // document.querySelector('[class*="winner-title"] p').innerText = ''
+    setWinningGame('');
   }
 
   // spin the wheel!
@@ -31,7 +32,7 @@ const spinWheel = (e, sliceCount, setSpinRot) => {
   }
   const spinRot = randomNumber(origRot + (360 * 3), (origRot + (360 * 8)))
   const origStyle = wheelContainer.getAttribute('style')
-  setSpinRot(spinRot)
+  setSpinRotation(spinRot)
 
   // after 3 seconds, determine the winner
   setTimeout(function() {
@@ -51,7 +52,8 @@ const spinWheel = (e, sliceCount, setSpinRot) => {
         // declare a winner
         slice.setAttribute('winner', 'true')
         wheelContainer.setAttribute('winner', 'true')
-        document.querySelector('[class*="winner-title"]').innerText = slice.innerText
+        // document.querySelector('[class*="winner-title"]').innerText = slice.innerText
+        setWinningGame(slice.innerText);
 
         // reset spinner
         spinner.innerText = 'Spin'
