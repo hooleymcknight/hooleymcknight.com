@@ -24,7 +24,7 @@ const WinnerGame = (props) => {
         data-declaring={declaring}
       >
         <div className="confetti-container"></div>
-        <p>{props.winningGame}</p>
+        <p>{typeof(props.winningGame) === 'string' ? props.winningGame : ''}</p>
       </div>
     );
   }
