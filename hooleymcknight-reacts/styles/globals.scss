@@ -76,7 +76,8 @@ button {
   cursor: pointer;
 }
 
-html[scroll-locked] {
+html[scroll-locked],
+html[data-scroll-locked="true"] {
   overflow: hidden;
 }
 

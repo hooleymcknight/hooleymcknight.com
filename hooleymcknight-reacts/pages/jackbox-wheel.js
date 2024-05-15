@@ -27,6 +27,7 @@ export default function WheelPage() {
   const [winningGame, setWinningGame] = useState('');
 
   const [showWheelButton, setShowWheelButton] = useState(false);
+  const [confettiAllowed, setConfettiAllowed] = useState(true);
 
   const finalGameSet = activeGames.filter(x => !filteredOutGames.includes(x)).filter(x => !disallowedGames.includes(x));
 
@@ -135,7 +136,19 @@ export default function WheelPage() {
     }
   }
 
+  function updateConfettiAllowed(value) {
+    window.sessionStorage.setItem('confetti-allowed', value);
+    setConfettiAllowed(value);
+  }
+
   useEffect(() => {
+    if (window.sessionStorage.getItem('confetti-allowed') === null) {
+      window.sessionStorage.setItem('confetti-allowed', 'true');
+    }
+    else if(window.sessionStorage.getItem('confetti-allowed') == 'false') {
+      setConfettiAllowed(false);
+    }
+
     window.addEventListener('scroll', toggleWheelButton);
   }, [showWheelButton]);
 
@@ -149,15 +162,18 @@ export default function WheelPage() {
       </Head>
 
       <WheelTitle className={styles['wheel-title']} />
-      <WinnerGame className={styles['winner-title']} winningGame={winningGame} />
+      <WinnerGame className={styles['winner-title']} winningGame={winningGame} confettiAllowed={confettiAllowed} />
       <Wheel styles={styles} activeGames={finalGameSet} setWinningGame={(e) => setWinningGame(e)} /> {/* make sure active games excludes disallowed games */}
 
       <Filters className={styles['filters']}
+        toggleClassName={styles['filter-toggle']}
         partyPacks={partyPacks}
         categories={categories}
         playStyles={playStyles}
         onApply={(type, data, dataToggle) => applyChange(type, data, dataToggle)}
         defaultPlayerCount={defaultPlayerCount}
+        confettiAllowed={confettiAllowed}
+        onToggleConfetti={(value) => updateConfettiAllowed(value)}
       />
 
       <GamesListDesc className={styles['games-list-desc']} />
