@@ -1,6 +1,56 @@
 {
   "games": [
     {
+      "title": "Drawful",
+      "image": "drawful.png",
+      "description": "multiple choice Pictionary",
+      "category": "drawing",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": 1
+    },
+    {
+      "title": "Word Spud",
+      "image": "word-spud.png",
+      "description": "word relation game, cheapass GSN Chain Reaction",
+      "category": "word",
+      "playStyle": "competitive",
+      "min_players": 2,
+      "max_players": 8,
+      "pack": 1
+    },
+    {
+      "title": "Lie Swatter",
+      "image": "lie-swatter.png",
+      "description": "fast-paced guess the lie",
+      "category": "trivia",
+      "playStyle": "competitive",
+      "min_players": 1,
+      "max_players": 100,
+      "pack": 1
+    },
+    {
+      "title": "Fibbage XL",
+      "image": "fibbage-xl.png",
+      "description": "try to find the truth while making up lies to fool people, about trivia topics",
+      "category": "bluffing trivia",
+      "playStyle": "competitive",
+      "min_players": 2,
+      "max_players": 8,
+      "pack": 1
+    },
+    {
+      "title": "You Don't Know Jack 2015",
+      "image": "you-dont-know-jack-2015.png",
+      "description": "casual Jeopardy but everyone answers",
+      "category": "trivia",
+      "playStyle": "mixed",
+      "min_players": 1,
+      "max_players": 4,
+      "pack": 1
+    },
+    {
       "title": "Bidiots",
       "image": "bidiots.png",
       "description": "create art, auction it, you are given vague hints about art worth, the most money wins",
@@ -31,6 +81,26 @@
       "pack": 2
     },
     {
+      "title": "Fibbage 2",
+      "image": "fibbage-2.png",
+      "description": "try to find the truth while making up lies to fool people, about trivia topics",
+      "category": "bluffing trivia",
+      "playStyle": "competitive",
+      "min_players": 1,
+      "max_players": 4,
+      "pack": 2
+    },
+    {
+      "title": "Quiplash XL",
+      "image": "quiplash-xl.png",
+      "description": "Cards Against Humanity, but you write your own answers",
+      "category": "judging",
+      "playStyle": "competitive",
+      "min_players": 1,
+      "max_players": 4,
+      "pack": 2
+    },
+    {
       "title": "Guesspionage",
       "image": "guesspionage.png",
       "description": "Family Feud, but FBI themed",
@@ -55,6 +125,26 @@
       "image": "tee-ko.png",
       "description": "draw designs, write funny text, make terrible t-shirts",
       "category": "drawing bracket",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": 3
+    },
+    {
+      "title": "Trivia Murder Party",
+      "image": "trivia-murder-party.png",
+      "description": "obscure trivia game, death-themed",
+      "category": "trivia",
+      "playStyle": "competitive",
+      "min_players": 1,
+      "max_players": 8,
+      "pack": 3
+    },
+    {
+      "title": "Quiplash 2",
+      "image": "quiplash-2.png",
+      "description": "Cards Against Humanity, but you write your own answers",
+      "category": "judging",
       "playStyle": "competitive",
       "min_players": 3,
       "max_players": 8,
@@ -141,6 +231,16 @@
       "pack": 5
     },
     {
+      "title": "You Don't Know Jack",
+      "image": "you-dont-know-jack.png",
+      "description": "casual Jeopardy but everyone answers",
+      "category": "trivia",
+      "playStyle": "mixed",
+      "min_players": 1,
+      "max_players": 8,
+      "pack": 5
+    },
+    {
       "title": "Push the Button",
       "image": "push-the-button.png",
       "description": "aliens invaded your spaceship, try to figure out who they are by interrogating them",
@@ -148,6 +248,26 @@
       "playStyle": "competitive",
       "min_players": 4,
       "max_players": 10,
+      "pack": 6
+    },
+    {
+      "title": "Joke Boat",
+      "image": "joke-boat.png",
+      "description": "make up good punchlines from joke prompts",
+      "category": "improv",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": 6
+    },
+    {
+      "title": "Dictionarium",
+      "image": "dictionarium.png",
+      "description": "make new definitions for words to try and trick people",
+      "category": "word improv",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
       "pack": 6
     },
     {
@@ -211,6 +331,16 @@
       "pack": 7
     },
     {
+      "title": "Talking Points",
+      "image": "talking-points.png",
+      "description": "troll each other's live powerpoint presentations",
+      "category": "improv",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": 7
+    },
+    {
       "title": "Drawful Animate",
       "image": "drawful-animate.png",
       "description": "guess other people's 2-slide flipbook drawings",
@@ -228,6 +358,16 @@
       "playStyle": "competitive",
       "min_players": 2,
       "max_players": 8,
+      "pack": 8
+    },
+    {
+      "title": "Job Job",
+      "image": "job-job.png",
+      "description": "make a funny sentence out of a semi-random word bank",
+      "category": "word",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 10,
       "pack": 8
     },
     {

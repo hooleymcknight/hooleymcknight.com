@@ -5,16 +5,15 @@ import { faChevronDown, faFilter, faSliders, faXmark } from '@fortawesome/free-s
 
 
 const Filters = (props) => {
-  const [sliderData, setSliderData] = useState(props.defaultPlayerCount);
+  // const [sliderData, setSliderData] = useState(props.numberOfPlayers);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   useEffect(() => {
-    props.onApply('playerCount', sliderData, null);
-  }, [sliderData]);
+    props.onApply('playerCount', props.sliderData, null, document.querySelector('input[name="player-count"]'));
+  }, []);
 
-  function updateSlider(e) {
-    const value = e.target.value;
-    setSliderData(value);
+  function updateSlider(value) {
+    props.onApply('playerCount', value, null, document.querySelector('input[name="player-count"]'));
   }
 
   function toggleCheckbox(e) {
@@ -26,7 +25,7 @@ const Filters = (props) => {
     const type = e.target.closest('.filter-checkbox').getAttribute('data-type');
     const data = e.target.value;
     const dataValue = e.target.checked;
-    props.onApply(type, data, dataValue);
+    props.onApply(type, data, dataValue, e.target);
   }
 
   function toggleDropdown(e) {
@@ -43,7 +42,9 @@ const Filters = (props) => {
 
   function toggleFilterTray(e) {
     if (e.target.closest('#open-filters')) {
-      document.documentElement.dataset.scrollLocked = true;
+      if (window.outerWidth <= 500) {
+        document.documentElement.dataset.scrollLocked = true;
+      }
       setFiltersOpen(true);
     }
     else if (e.target.closest('#close-filters')) {
@@ -54,15 +55,15 @@ const Filters = (props) => {
 
   function resetAllFilters() {
     Array.from(document.querySelectorAll('input')).forEach((input) => {
-      if (input.name === "player-count") {
+      if (input.type === 'range') {
         return;
       }
       input.checked = true;
 
       const type = input.closest('.filter-checkbox').getAttribute('data-type');
       const data = input.value;
-      props.onApply(type, data, true);
     });
+    props.resetFilters();
   }
 
   const confettiToggleHandler = () => {
@@ -100,8 +101,8 @@ const Filters = (props) => {
         <div id="player-count-set" className="filter-set">
           <label>Number of Players</label>
           <div>
-            <input type="range" name="player-count" min="1" max="10" onChange={(e) => {updateSlider(e)}} defaultValue={props.defaultPlayerCount} />
-            <span>{sliderData}</span>
+            <input type="range" name="player-count" min="1" max="10" onChange={(e) => {updateSlider(e.target.value)}} defaultValue={props.defaultPlayerCount} />
+            <span>{props.sliderData}</span>
           </div>
         </div>
 
