@@ -241,6 +241,16 @@
       "pack": 5
     },
     {
+      "title": "Zeeple Dome",
+      "image": "zeeple-dome.png",
+      "description": "Do crazy shit to survive in space?",
+      "category": "skill",
+      "playStyle": "competitive",
+      "min_players": 1,
+      "max_players": 6,
+      "pack": 5
+    },
+    {
       "title": "Push the Button",
       "image": "push-the-button.png",
       "description": "aliens invaded your spaceship, try to figure out who they are by interrogating them",
