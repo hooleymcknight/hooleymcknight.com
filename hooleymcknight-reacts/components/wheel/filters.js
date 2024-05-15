@@ -147,11 +147,16 @@ const Filters = (props) => {
           </div>
         </div>
 
-        <div id="confetti-toggle-container" className="filter-set" data-confetti-allowed={props.confettiAllowed}>
-          Toggle Confetti
-          <button className="confetti-toggle" onClick={confettiToggleHandler}>
-            <div className="toggle-switch"></div>
-          </button>
+        <div className="filter-set open-filter" data-confetti-allowed={props.confettiAllowed}>
+        <label onClick={(e) => toggleDropdown(e)}>Options <FontAwesomeIcon icon={faChevronDown} /></label>
+          <div className="filter-dropdown">
+            <div id="confetti-toggle-container">
+              <p>Toggle Confetti</p>
+              <button className="confetti-toggle" onClick={confettiToggleHandler}>
+                <div className="toggle-switch"></div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </>

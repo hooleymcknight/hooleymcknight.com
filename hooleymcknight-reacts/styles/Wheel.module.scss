@@ -446,7 +446,11 @@
     }
     
     &[id="category-set"] [class="filter-dropdown"] {
-      width: 220%;
+      // width: 220%;
+    }
+
+    &[data-confetti-allowed] [class="filter-dropdown"] {
+      width: 100%;
     }
 
     [class="filter-dropdown"] {
@@ -454,10 +458,6 @@
       opacity: 0;
       transition: all 0.2s ease;
       
-      // box-shadow: 1px 2px 5px #222;
-      // position: absolute;
-      // background: var(--dropdown-bg);
-      // top: calc(100% + 10px);
       z-index: 2;
       display: flex;
       flex-direction: row;
