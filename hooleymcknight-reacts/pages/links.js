@@ -8,7 +8,10 @@ export default function Links() {
   return (
     <Layout page='links' className={styles.links}>
       <Head>
-        <title>{siteTitle} || Links</title>
+        <title>{`${siteTitle} || Links`}</title>
+        <meta name="description" content="Links to Holly's social media." />
+        <meta property="og:image" content={`https://hooleymcknight.com/jackbox-wheel/jackbox-wheel.png`} />
+        <meta name="og:title" content="Links to Holly's social media." />
       </Head>
 
       <img className="links-img" src="https://hooleymcknight.com/images/pkmn.jpg" alt="Holly wearing a Pokemon t-shirt standing in front of a fence with an open smile" />

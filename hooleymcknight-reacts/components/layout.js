@@ -1,31 +1,31 @@
-import { useState, useEffect } from 'react'
-import Navbar from '../components/navbar/navbar'
-import ThemeToggle from '../components/themeToggle'
+import { useState, useEffect } from 'react';
+import Navbar from '../components/navbar/navbar';
+import ThemeToggle from '../components/themeToggle';
 
-export const siteTitle = 'Holly Phillips'
+export const siteTitle = 'Holly Phillips';
 
-const navExcludedPages = ['links', 'coding-hour', 'donation-links', 'emergency-vets']
+const navExcludedPages = ['links', 'coding-hour', 'donation-links', 'emergency-vets'];
 
 const Layout = ({ children, page, className }) => {
-  const [theme, setTheme] = useState('')
+  const [theme, setTheme] = useState('');
   
   useEffect(() => {
-    const prevTheme = sessionStorage.getItem('theme')
+    const prevTheme = localStorage.getItem('theme');
     if (!prevTheme && theme === '') {
       if (page === 'links') {
-        setTheme('dark')
+        setTheme('dark');
       }
       else {
-        setTheme('light')
+        setTheme('light');
       }
     }
-    document.documentElement.dataset.theme = theme
-    sessionStorage.setItem('theme', theme)
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem('theme', theme);
 
     if (prevTheme && theme === '') {
-      setTheme(prevTheme)
+      setTheme(prevTheme);
     }
-  }, [theme])
+  }, [theme]);
 
   return (
     <>
@@ -52,7 +52,7 @@ const Layout = ({ children, page, className }) => {
         : ""
       }
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

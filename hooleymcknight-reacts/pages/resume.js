@@ -9,7 +9,10 @@ export default function Resume() {
   return (
     <Layout page='resume'>
       <Head>
-        <title>{siteTitle} || Résumé</title>
+        <title>{`${siteTitle} || Résumé`}</title>
+        <meta name="description" content="Holly's résumé: skills, education, and professional experience." />
+        <meta property="og:image" content={`https://hooleymcknight.com/jackbox-wheel/jackbox-wheel.png`} />
+        <meta name="og:title" content="Holly's résumé: skills, education, and professional experience." />
       </Head>
 
       <ResumeContent className={styles.resume} />

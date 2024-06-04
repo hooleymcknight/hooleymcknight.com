@@ -15,6 +15,9 @@ export default function Home() {
     <Layout page='index'>
       <Head>
         <title>{siteTitle}</title>
+        <meta name="description" content="Holly's resume, code portfolio, and some fun other things" />
+        <meta property="og:image" content={`https://hooleymcknight.com/images/lax_hero_preview.jpg`} />
+        <meta name="og:title" content="Holly's resume, code portfolio, and some fun other things" />
       </Head>
 
       <div className={styles['index-hero']}></div>

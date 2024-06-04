@@ -1,62 +1,64 @@
-import { useState, useEffect } from 'react'
-import { spinWheel } from './wheelEvents'
+import { useState, useEffect } from 'react';
+import { spinWheel } from './wheelEvents';
 
 const Wheel = (props) => {
-  const gamesData = props.activeGames
-  const [sliceCount, setSliceCount] = useState(gamesData.length)
-  const [data, setData] = useState(gamesData)
-  const [spinRot, setSpinRot] = useState(0)
+  const gamesData = props.activeGames;
+  const [sliceCount, setSliceCount] = useState(gamesData.length);
+  const [data, setData] = useState(gamesData);
+  const [spinRot, setSpinRotation] = useState(0);
 
-  if (sliceCount !== gamesData.length) setSliceCount(gamesData.length)
-  if (data !== gamesData) setData(gamesData)
+  if (sliceCount !== gamesData.length) setSliceCount(gamesData.length);
+  if (data !== gamesData) setData(gamesData);
 
   useEffect(() => {
     const setUpSlices = (sliceCount) => {
-      const screenWidth = window.innerWidth
+      const screenWidth = window.innerWidth;
     
-      let diameter = 700
+      let diameter = 700;
       if (screenWidth < 767 && screenWidth > 420) {
-        diameter = 450 // fudged this a little, need to re-evaluate all this math
+        diameter = 450;
+        // fudged this a little, need to re-evaluate all this math
+        // no-- if it ain't broke, don't fix it
       }
       else if(screenWidth <= 420) {
-        diameter = 310 // same as above. hmmmm
+        diameter = 310; // same as above. hmmmm
       }
     
-      let _tempData = [...data]
+      let _tempData = [...data];
       _tempData.forEach((sliceData, idx) => {
-        const rotation = (360 / sliceCount) * idx
-        const sliceHeight = (diameter * Math.PI) / sliceCount
+        const rotation = (360 / sliceCount) * idx;
+        const sliceHeight = (diameter * Math.PI) / sliceCount;
 
-        sliceData['rotation'] = rotation
-        sliceData['sliceHeight'] = sliceHeight
+        sliceData['rotation'] = rotation;
+        sliceData['sliceHeight'] = sliceHeight;
       })
 
-      const currentWinner = document.querySelector('.game-slice[winner]')
-        if(currentWinner) {
-          currentWinner.removeAttribute('winner')
-          document.querySelector('.wheel-container').removeAttribute('winner')
-          document.querySelector('[class*="winner-title"]').innerText = ''
-        }
-      setData([..._tempData])
+      const currentWinner = document.querySelector('.game-slice[winner]');
+      if(currentWinner) {
+        // currentWinner.removeAttribute('winner');
+        // document.querySelector('.wheel-container').removeAttribute('winner');
+        // document.querySelector('[class*="winner-title"]').innerText = '';
+        props.setWinningGame(currentWinner);
+      }
+      setData([..._tempData]);
     }
 
-    setUpSlices(sliceCount)
+    setUpSlices(sliceCount);
 
     window.addEventListener('resize', function() {
-      const thresholdWidths = [419, 420, 421, 766, 767, 768]
+      const thresholdWidths = [419, 420, 421, 766, 767, 768];
       if(thresholdWidths.includes(window.innerWidth)) {
         // force a re-render
-        setUpSlices(sliceCount)
-        setSliceCount(sliceCount)
+        setUpSlices(sliceCount);
+        setSliceCount(sliceCount);
       }
     })
-  }, [sliceCount])
+  }, [sliceCount]);
 
   return (
     <>
-      <p className={props.styles["winner-title"]}></p>
       <div className={props.styles.wheel}>
-        <button className="spinner" tabIndex="0" aria-label="spin the wheel" onClick={(e) => spinWheel(e, sliceCount, setSpinRot)}>
+        <button className="spinner" tabIndex="0" aria-label="spin the wheel" onClick={(e) => spinWheel(e, sliceCount, setSpinRotation, props.setWinningGame)}>
           <span>Spin</span>
         </button>
 
@@ -75,7 +77,7 @@ const Wheel = (props) => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Wheel
+export default Wheel;
