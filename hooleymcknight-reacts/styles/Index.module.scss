@@ -30,7 +30,7 @@
     justify-content: space-around;
     color: #fff;
 
-    button {
+    button, a {
       background: none;
       border: none;
       padding: 5px 10px;
@@ -45,6 +45,10 @@
 
     span {
       font-weight: bold;
+    }
+
+    img {
+      max-width: 16px;
     }
   }
 }

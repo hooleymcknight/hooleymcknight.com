@@ -1,3 +1,6 @@
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCircleChevronUp } from "@fortawesome/free-solid-svg-icons";
+
 const BackToWheel = (props) => {
 
     const isBrowser = () => typeof window !== 'undefined'; //The approach recommended by Next.js
@@ -17,6 +20,7 @@ const BackToWheel = (props) => {
         }}
         onClick={scrollToTop}
       >
+        {/* <FontAwesomeIcon icon={faCircleChevronUp} /> */}
         <span>Back to Wheel</span>
       </button>
     )
