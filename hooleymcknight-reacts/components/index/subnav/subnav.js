@@ -12,7 +12,7 @@ const Subnavbar = (props) => {
         {/* <SubnavItem link="#videos" name="Videos" />
         <SubnavItem link="#photos" name="Photos" /> */}
         <SubnavItem link="/jackbox-wheel" name="Jackbox Wheel" />
-        <SubnavItem link="/kenku-kenku" name="Kenku Kenku" />
+        {/* <SubnavItem link="/kenku-kenku" name="Kenku Kenku" /> */}
       </ul>
     </nav>
   )

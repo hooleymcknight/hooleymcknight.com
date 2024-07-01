@@ -11,7 +11,7 @@ const icons = {
   // "Videos": faVideo,
   // "Photos": faImages
   "Jackbox Wheel": faGamepad,
-  "Kenku Kenku": faDiceD20,
+  // "Kenku Kenku": faDiceD20,
 }
 
 const SubnavItem = (props) => {

@@ -4,32 +4,12 @@ import Layout, { siteTitle } from '../components/layout';
 import styles from '../styles/KenkuKenku.module.scss';
 import wordsData from './api/words.json';
 
-const apiEndpoint = '/api/updateWords'; // this needs .js after uploading
+const apiEndpoint = '/api/updateWords.js'; // this needs .js after uploading
 
 const KenkuKenku = () => {
   const [words, setWords] = useState(wordsData);
 
   useEffect(() => {
-    // async function fetchData() {
-    //   await fetch(apiEndpoint, {
-    //     method: 'GET',
-    //     headers: {
-    //       'Accept': 'application/json',
-    //       'Content-Type': 'application/json'
-    //     }
-    //   }).then(res => {
-    //     console.log(res);
-    //     return res.json();
-    //   }).then(data => {
-    //     console.log(data)
-    //   })
-    //   .catch(err => {
-    //     console.log(err);
-    //   })
-    // }
-    // fetchData();
-
-    // setWords(words);
   }, [words]);
 
   const sortAlphabetically = () => {
@@ -84,6 +64,7 @@ const KenkuKenku = () => {
     });
     if (response.status === 200) {
       console.log('re-render')
+      console.log(response.pantaloons)
       setWords(wordsData); // ========= this is not re-rendering
     }
   }
