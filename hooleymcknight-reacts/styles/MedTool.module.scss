@@ -1,0 +1,9 @@
+.medtool {
+    margin: 0 40px;
+
+    [class="time-slot"][data-active="true"] {
+        background: var(--primary-purple);
+        color: var(--alt-text);
+        font-weight: bold;
+    }
+}

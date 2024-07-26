@@ -8,7 +8,7 @@ export default function PrivacyPolicy() {
       <Head>
         <title>{`${siteTitle} || Privacy Policy`}</title>
         <meta name="description" content="This is the shortest privacy policy you'll ever read." />
-        <meta property="og:image" content={`https://hooleymcknight.com/jackbox-wheel/jackbox-wheel.png`} />
+        <meta property="og:image" content={`https://hooleymcknight.com/images/lax_hero_preview.jpg`} />
         <meta name="og:title" content="This is the shortest privacy policy you'll ever read." />
       </Head>
 

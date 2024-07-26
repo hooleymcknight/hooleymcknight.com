@@ -10,7 +10,7 @@ export default function TimeCalcPage() {
       <Head>
         <title>{`${siteTitle} || Time Conversion Calculator`}</title>
         <meta name="description" content="A time conversion calculator to help out with confusing time zone things." />
-        <meta property="og:image" content={`https://hooleymcknight.com/jackbox-wheel/jackbox-wheel.png`} />
+        <meta property="og:image" content={`https://hooleymcknight.com/images/lax_hero_preview.jpg`} />
         <meta name="og:title" content="A time conversion calculator to help out with confusing time zone things." />
       </Head>
 
