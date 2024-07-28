@@ -1,9 +1,54 @@
 .medtool {
-    margin: 0 40px;
+    margin: 0 40px 60px;
+
+    @media screen and (min-width: 1200px) {
+        min-width: 1000px;
+        margin: 0 80px;
+    }
+
+    [class="med-tool-selectors"] {
+        display: flex;
+        flex-wrap: wrap;
+
+        [class="med-selector"] {
+            display: flex;
+            flex-direction: column;
+            max-width: 200px;
+            margin-bottom: 16px;
+            margin-right: 32px;
+    
+            input, select {
+                width: fit-content;
+                width: -moz-fit-content;
+                font-family: 'Poppins';
+            }
+        }
+    }
+
+    
 
     [class="time-slot"][data-active="true"] {
         background: var(--primary-purple);
         color: var(--alt-text);
         font-weight: bold;
+    }
+
+    [class="output-times"] {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        [class="day-section"] {
+            border: 2px solid var(--alt-background);
+            margin-bottom: 40px;
+            width: 200px;
+            padding: 10px;
+    
+            h3 {
+                margin-top: 0;
+                text-decoration: underline;
+                text-underline-offset: 3px;
+            }
+        }
     }
 }
