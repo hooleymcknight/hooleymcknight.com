@@ -33,6 +33,14 @@
         font-weight: bold;
     }
 
+    [id="output-section"] {
+        background-color: var(--primary-background);
+        font-family: 'Poppins';
+        padding: 10px;
+        width: fit-content;
+        width: -moz-fit-content;
+    }
+
     [class="output-times"] {
         display: flex;
         flex-wrap: wrap;

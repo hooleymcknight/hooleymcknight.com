@@ -278,3 +278,11 @@ input[type="range"] {
     background: #4f1665;
   }
 }
+
+/* hiding things that don't need shown on the med tools page */
+
+body > img, body > a {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
