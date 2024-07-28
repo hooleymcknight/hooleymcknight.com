@@ -96,7 +96,7 @@ export default function MedTool() {
           {[...days].slice(0, repeatableDays).map((i) => 
             <div key={i} className="day-section">
               {startingDate ?
-                <h3>Day {i} - {`${new Date(new Date().setDate(new Date(startingDate).getDate() + (i - 1))).toLocaleDateString('en-US', {month: "numeric", day: "numeric"})}`}</h3>
+                <h3>Day {i} - {`${new Date(new Date(startingDate).setDate(new Date(startingDate).getDate() + (i - 1))).toLocaleDateString('en-US', {month: "numeric", day: "numeric"})}`}</h3>
               :
                 <h3>Day {i}</h3>
               }
