@@ -4,9 +4,17 @@ import Layout, { siteTitle } from '../components/layout';
 import styles from '../styles/KenkuKenku.module.scss';
 import wordsData from './api/words.json';
 
-const apiEndpoint = '/api/updateWords.js'; // this needs .js after uploading
+// const apiEndpoint = '/api/updateWords.js'; // this needs .js after uploading
 
-const KenkuKenku = () => {
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://hooleymcknight.com/api/updateWords.js`)
+  const repo = await res.json()
+  // Pass data to the page via props
+  return { props: { wordsProps } }
+}
+
+const KenkuKenku = ({ wordsProps }) => {
   const [words, setWords] = useState(wordsData);
 
   useEffect(() => {
@@ -25,7 +33,7 @@ const KenkuKenku = () => {
   }
 
   const readWords = async () => {
-    const response = await fetch(apiEndpoint, {
+    const response = await fetch(`${document.location.origin}/api/updateWords${document.location.origin.includes('hooleymcknight.com') ? '.js' : ''}`, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
@@ -51,7 +59,7 @@ const KenkuKenku = () => {
       "related_words": [],
       "phrases": [newPhrase]
     }
-    const response = await fetch(apiEndpoint, {
+    const response = await fetch(`${document.location.origin}/api/updateWords${document.location.origin.includes('hooleymcknight.com') ? '.js' : ''}`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
