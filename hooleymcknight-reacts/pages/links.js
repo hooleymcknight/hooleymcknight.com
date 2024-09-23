@@ -10,7 +10,7 @@ export default function Links() {
       <Head>
         <title>{`${siteTitle} || Links`}</title>
         <meta name="description" content="Links to Holly's social media." />
-        <meta property="og:image" content={`https://hooleymcknight.com/jackbox-wheel/jackbox-wheel.png`} />
+        <meta property="og:image" content={`https://hooleymcknight.com/images/lax_hero_preview.jpg`} />
         <meta name="og:title" content="Links to Holly's social media." />
       </Head>
 
