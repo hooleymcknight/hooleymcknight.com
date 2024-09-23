@@ -1,0 +1,53 @@
+.gift-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 20px;
+
+    h3 {
+        width: 100%;
+    }
+
+    [class="img-wrapper"] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+
+        img {
+            padding: 20px;
+            max-width: 300px;
+            max-height: 300px;
+        }
+    }
+
+    a {
+        background: var(--primary-purple);
+        color: var(--alt-text);
+        border-radius: 8px;
+        padding: 4px 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    p {
+        margin-top: 0;
+    }
+
+    [class="spoiler"] {
+        background: var(--primary-text);
+        color: var(--primary-text);
+        border: none;
+        padding: 2px 4px;
+        width: 220px;
+    }
+
+    [class="spoiler shown"] {
+        background: var(--primary-text);
+        color: var(--alt-text);
+        border: none;
+        padding: 2px 4px;
+        width: 220px;
+    }
+}
