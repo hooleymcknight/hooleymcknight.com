@@ -499,6 +499,16 @@
       "min_players": 4,
       "max_players": 8,
       "pack": 10
+    },
+    {
+      "title": "Fakin' It All Night Long",
+      "image": "fakin-it-all-night-long.png",
+      "description": "Fakin' It but more long-distance-friendly and obviously NSFW",
+      "category": "bluffing",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": "Jackbox Naughty Pack"
     }
   ]
 }
