@@ -225,3 +225,64 @@ footer {
     display: none;
   }
 }
+
+/* SLIDER */
+input[type="range"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+  margin: 0 10px;
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0 #000;
+    background: var(--light-purple);
+    border-radius: 25px;
+    border: 1px solid var(--dark-bg);
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    height: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 0 #000;
+    background: var(--light-purple);
+    border-radius: 25px;
+    border: 1px solid var(--dark-bg);
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: var(--dark-purple);
+    border: 1px solid var(--light-bg);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-top: -5px;
+  }
+
+  &::-moz-range-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--dark-purple);
+    border: 1px solid var(--light-bg);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-top: -5px;
+  }
+
+  &::-ms-fill-lower {
+    background: #4f1665;
+  }
+}
+
+/* hiding things that don't need shown on the med tools page */
+
+body > img, body > a {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}

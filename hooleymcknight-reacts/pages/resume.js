@@ -11,7 +11,7 @@ export default function Resume() {
       <Head>
         <title>{`${siteTitle} || Résumé`}</title>
         <meta name="description" content="Holly's résumé: skills, education, and professional experience." />
-        <meta property="og:image" content={`https://hooleymcknight.com/jackbox-wheel/jackbox-wheel.png`} />
+        <meta property="og:image" content={`https://hooleymcknight.com/images/lax_hero_preview.jpg`} />
         <meta name="og:title" content="Holly's résumé: skills, education, and professional experience." />
       </Head>
 

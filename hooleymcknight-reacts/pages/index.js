@@ -27,8 +27,8 @@ export default function Home() {
       <Portfolio />
       <ResumeSection className={styles.resume} />
       <BlogHome className={styles.blog} page='index' />
-      <Videos className={styles.videos} />
-      <Photos className={styles.photos} />
+      {/* <Videos className={styles.videos} />
+      <Photos className={styles.photos} /> */}
 
     </Layout>
   )

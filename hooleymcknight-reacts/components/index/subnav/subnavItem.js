@@ -1,18 +1,31 @@
-import { useState, useEffect } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faIdCard, faCode, faFileAlt, faVideo, faImages, faPencil } from '@fortawesome/free-solid-svg-icons'
+import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faIdCard, faCode, faFileAlt, faVideo, faImages, faPencil, faGamepad, faDiceD20 } from '@fortawesome/free-solid-svg-icons';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const icons = {
   "Summary": faIdCard,
   "Portfolio": faCode,
   "Résumé": faFileAlt,
   "Blog": faPencil,
-  "Videos": faVideo,
-  "Photos": faImages
+  // "Videos": faVideo,
+  // "Photos": faImages
+  "Jackbox Wheel": faGamepad,
+  // "Kenku Kenku": faDiceD20,
 }
 
 const SubnavItem = (props) => {
-  const [scrollingSection, setScrollingSection] = useState('')
+  const [scrollingSection, setScrollingSection] = useState('');
+
+  const subnavClickHandler = (e) => {
+    const button = e.target.closest('button');
+    if (button.getAttribute('section').includes('#')) {
+      setScrollingSection(button.getAttribute('section'));
+    }
+    else {
+      console.log('navigate to:', button.getAttribute('section'));
+    }
+  }
 
   useEffect(() => {
     // scroll to section on the homepage
@@ -29,12 +42,22 @@ const SubnavItem = (props) => {
 
   return (
     <li role="menuitem" className='subnav-item'>
-      <button type="button" alt={props.name} tabIndex="0" section={props.link} onClick={(e) => { setScrollingSection(e.target.closest('button').getAttribute('section')) }}>
-        <span className="desktop-only">{props.name}</span>
-        <span className="mobile-only">
-          <FontAwesomeIcon icon={icons[props.name]} />
-        </span>
-      </button>
+      {props.link.includes('#')
+        ?
+          <button type="button" alt={props.name} tabIndex="0" section={props.link} onClick={(e) => { subnavClickHandler(e) }}>
+            <span className="desktop-only">{props.name}</span>
+            <span className="mobile-only">
+              <FontAwesomeIcon icon={icons[props.name]} />
+            </span>
+          </button>
+        : 
+          <a href={props.link} alt={props.name} tabIndex="0">
+            <span className="desktop-only">{props.name}</span>
+            <span className="mobile-only">
+              <FontAwesomeIcon icon={icons[props.name]} />
+            </span>
+          </a>
+      }
     </li>
   )
 }
