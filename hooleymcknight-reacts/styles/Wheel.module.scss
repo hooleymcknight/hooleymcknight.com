@@ -456,8 +456,11 @@
     &[id="game-pack-set"] [class="filter-dropdown"] {
       max-width: 320px;
 
-      [class="filter-checkbox"] {
+      [class="filter-checkbox"][data-pack-name="number"] {
         width: 20%;
+      }
+      [class="filter-checkbox"][data-pack-name="string"] {
+        width: auto;
       }
     }
     

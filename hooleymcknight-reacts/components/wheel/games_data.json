@@ -508,7 +508,27 @@
       "playStyle": "competitive",
       "min_players": 3,
       "max_players": 8,
-      "pack": "Jackbox Naughty Pack"
+      "pack": "Naughty Pack"
+    },
+    {
+      "title": "Dirty Drawful",
+      "image": "dirty-drawful.png",
+      "description": "Drawful but NSFW. Not animated",
+      "category": "drawing",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": "Naughty Pack"
+    },
+    {
+      "title": "Let Me Finish",
+      "image": "let-me-finish.png",
+      "description": "explain and defend why this [redacted] is something you would [redacted]",
+      "category": "improv",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": "Naughty Pack"
     }
   ]
 }
