@@ -121,7 +121,7 @@ export default function WheelPage() {
         let newFilteredOutGames = [... new Set(filteredOutGames), ...relevantFilteredGames];
         let shownGames = finalGameSet.filter(x => !newFilteredOutGames.includes(x));
         if (shownGames.length <= minWheelSlices) {
-          window.alert('If this is Kat: Stop that. Behave.\nFor anyone else: You\'re gonna make the wheel too small. It can\'t spin like that.');
+          window.alert('You\'re gonna make the wheel too small. It can\'t spin like that.');
           target.checked = true;
         }
         else {
