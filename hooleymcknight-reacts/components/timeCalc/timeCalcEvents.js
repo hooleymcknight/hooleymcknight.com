@@ -1,6 +1,9 @@
 const wordMonth = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ]
 
 const offsetZones = {
+  '0': {
+    'ST': 'UTC',
+  },
   '-4': {
     'DT': 'America/New_York',
   },
@@ -100,7 +103,7 @@ const formSubmit = (e) => {
     // we'll put in "ST" in the next line-- it does not matter. it will return the correct DST setting
     const DST = getDST(new Date(`${month} ${day}, ${targetYear} ${time} ${zone}ST`))
 
-    const targetTZ = offsetZones[siteOffset][DST]
+    const targetTZ = offsetZones[siteOffset] ? 'UTC' : offsetZones[siteOffset][DST];
     const liveTime = new Date(`${month} ${day}, ${targetYear} ${time} ${zone}${DST}`).toLocaleString('en-US', { timeZone: targetTZ, month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit' })
 
     const results = form.closest('main').querySelector('p.results')
