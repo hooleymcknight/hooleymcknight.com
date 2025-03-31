@@ -138,7 +138,7 @@
       "MySQL", "NoSQL", "MongoDB", "Oracle SQL"
     ],
     "CRO": [
-      "GA4", "Convert", "Dynamic Yield", "Google Optimize", "Optimizely", "VWO", "AB Tasty", "Monetate", "Adobe Target"
+      "GA4", "Convert", "Dynamic Yield", "Optimizely", "VWO", "AB Tasty", "Monetate", "Adobe Target"
     ],
     "VCS": [
       "Git", "GitHub", "Bitbucket"
