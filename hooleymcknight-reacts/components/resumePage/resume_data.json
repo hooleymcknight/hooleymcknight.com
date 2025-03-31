@@ -1,26 +1,28 @@
 {
   "Work Experience": [
     {
+        "job title": "Development Lead, Technology",
+        "company": "Fusion 92",
+        "location": "Tacoma, Washington",
+        "start date": "February 2025",
+        "end date": "present",
+        "impact": [
+          "Improves team effectiveness and morale by recording and analyzing data regarding workflow processes, then creating and executing improvement plans",
+          "Increases team output by reviewing tasks, determining level of effort, and delegating to appropriate team members",
+          "Eliminates time wasted by developing tools to automate work processes",
+          "Ensures accurate data by running audits on all areas of the CRO testing process for all clients"
+        ]
+      },
+    {
       "job title": "Front End Developer",
       "company": "Fusion 92",
       "location": "Tacoma, Washington",
       "start date": "September 2023",
-      "end date": "present",
+      "end date": "February 2025",
       "impact": [
-        "Makes sites more user-friendly for both clients and their customers by making updates in WordPress (PHP, SASS, JavaScript) and other platforms (Vue, Nuxt)",
-        "Develops functional and accessible email campaigns for various clients",
-        "Assists with the migration process from an external platform to an in-house one for hundreds of sites"
-      ]
-    },
-    {
-      "job title": "Nighttime Cleaner",
-      "company": "Edgeworks Climbing + Fitness",
-      "location": "Tacoma, Washington",
-      "start date": "June 2023",
-      "end date": "present",
-      "impact": [
-        "Improve customer satisfaction by maintaining the climbing gym and keeping all spaces clean and organized",
-        "Maintain safety standards throughout the facility by disinfecting bathroom spaces, workout equipment, and more"
+        "Made sites more user-friendly for both clients and their customers by making updates in WordPress (PHP, SASS, JavaScript) and other platforms (Vue, Nuxt)",
+        "Developed functional and accessible email campaigns for various clients",
+        "Assisted with the migration process from an external platform to an in-house one for hundreds of sites"
       ]
     },
     {
@@ -124,19 +126,19 @@
   ],
   "Skills": {
     "JavaScript": [
-      "NodeJS", "ReactJS", "jQuery", "NextJS", "ExpressJS", "React Native", "Typescript"
+      "NodeJS", "ReactJS", "jQuery", "NextJS", "ExpressJS", "React Native", "Typescript", "VueJS"
     ],
     "Front-end": [
       "HTML", "CSS", "Sass", "REST API", "AJAX"
     ],
     "CMS": [
-      "WordPress", "Shopify Liquid", "Shopify 2.0", "Shopify App Development", "Checkout Checkout UI Extensions", "Recharge", "Magento"
+      "Salesforce", "WordPress", "Shopify Liquid", "Shopify 2.0", "Shopify App Development", "Checkout Checkout UI Extensions", "Recharge", "Magento"
     ],
     "Database": [
       "MySQL", "NoSQL", "MongoDB", "Oracle SQL"
     ],
     "CRO": [
-      "Google Analytics (UA)", "GA4", "Convert", "Dynamic Yield", "Google Optimize", "Optimizely", "VWO", "AB Tasty", "Monetate", "Adobe Target"
+      "GA4", "Convert", "Dynamic Yield", "Google Optimize", "Optimizely", "VWO", "AB Tasty", "Monetate", "Adobe Target"
     ],
     "VCS": [
       "Git", "GitHub", "Bitbucket"
