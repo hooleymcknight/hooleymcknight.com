@@ -10,6 +10,8 @@ const Wheel = (props) => {
   if (sliceCount !== gamesData.length) setSliceCount(gamesData.length);
   if (data !== gamesData) setData(gamesData);
 
+  const imagePath = props.page === 'tabletop-games' ? 'https://hooleymcknight.com/tabletop-games/tiles/' : 'https://hooleymcknight.com/jackbox-wheel/jackbox-tiles/';
+
   useEffect(() => {
     const setUpSlices = (sliceCount) => {
       const screenWidth = window.innerWidth;
@@ -66,7 +68,7 @@ const Wheel = (props) => {
           {gamesData.map((x, index) => 
             <div key={index} className="game-slice" slice-degrees={x.rotation}
               style={{
-                backgroundImage: `url(https://hooleymcknight.com/jackbox-wheel/jackbox-tiles/${x.image})`,
+                backgroundImage: `url(${imagePath}${x.image})`,
                 transform: `rotate(${x.rotation}deg)`,
                 top: `calc(50% - calc(${x.sliceHeight}px / 2))`,
                 height: `${x.sliceHeight}px`

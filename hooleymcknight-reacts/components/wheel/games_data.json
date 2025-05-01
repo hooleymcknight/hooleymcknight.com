@@ -499,6 +499,36 @@
       "min_players": 4,
       "max_players": 8,
       "pack": 10
+    },
+    {
+      "title": "Fakin' It All Night Long",
+      "image": "fakin-it-all-night-long.png",
+      "description": "Fakin' It but more long-distance-friendly and obviously NSFW",
+      "category": "bluffing",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": "Naughty Pack"
+    },
+    {
+      "title": "Dirty Drawful",
+      "image": "dirty-drawful.png",
+      "description": "Drawful but NSFW. Not animated",
+      "category": "drawing",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": "Naughty Pack"
+    },
+    {
+      "title": "Let Me Finish",
+      "image": "let-me-finish.png",
+      "description": "explain and defend why this [redacted] is something you would [redacted]",
+      "category": "improv",
+      "playStyle": "competitive",
+      "min_players": 3,
+      "max_players": 8,
+      "pack": "Naughty Pack"
     }
   ]
 }

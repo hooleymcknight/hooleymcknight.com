@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter, faInstagram, faTwitch, faYoutube, faDiscord, faSpotify } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faInstagram, faTwitch, faYoutube, faDiscord, faSpotify, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { useEffect } from 'react'
 
 const medias = {
@@ -9,6 +9,7 @@ const medias = {
   "Twitter": faTwitter,
   "YouTube": faYoutube,
   "Discord": faDiscord,
+  "LinkedIn": faLinkedin,
   "Spotify": faSpotify
 }
 

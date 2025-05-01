@@ -1,26 +1,28 @@
 {
   "Work Experience": [
     {
+        "job title": "Development Lead, Technology",
+        "company": "Fusion 92",
+        "location": "Tacoma, Washington",
+        "start date": "February 2025",
+        "end date": "present",
+        "impact": [
+          "Improves team effectiveness and morale by recording and analyzing data regarding workflow processes, then creating and executing improvement plans",
+          "Increases team output by reviewing tasks, determining level of effort, and delegating to appropriate team members",
+          "Eliminates time wasted by developing tools to automate work processes",
+          "Ensures accurate data by running audits on all areas of the CRO testing process for all clients"
+        ]
+      },
+    {
       "job title": "Front End Developer",
       "company": "Fusion 92",
       "location": "Tacoma, Washington",
       "start date": "September 2023",
-      "end date": "present",
+      "end date": "February 2025",
       "impact": [
-        "Makes sites more user-friendly for both clients and their customers by making updates in WordPress (PHP, SASS, JavaScript) and other platforms (Vue, Nuxt)",
-        "Develops functional and accessible email campaigns for various clients",
-        "Assists with the migration process from an external platform to an in-house one for hundreds of sites"
-      ]
-    },
-    {
-      "job title": "Nighttime Cleaner",
-      "company": "Edgeworks Climbing + Fitness",
-      "location": "Tacoma, Washington",
-      "start date": "June 2023",
-      "end date": "present",
-      "impact": [
-        "Improve customer satisfaction by maintaining the climbing gym and keeping all spaces clean and organized",
-        "Maintain safety standards throughout the facility by disinfecting bathroom spaces, workout equipment, and more"
+        "Made sites more user-friendly for both clients and their customers by making updates in WordPress (PHP, SASS, JavaScript) and other platforms (Vue, Nuxt)",
+        "Developed functional and accessible email campaigns for various clients",
+        "Assisted with the migration process from an external platform to an in-house one for hundreds of sites"
       ]
     },
     {
@@ -41,7 +43,7 @@
       "start date": "May 2023",
       "end date": "October 2023",
       "impact": [
-        "Developed an entirely new version of the site (tryautobrush.com) based on the Dawn theme in Shopify",
+        "Developed the new Shopify 2.0 site for AutoBrush (<a href='https://tryautobrush.com' alt='AutoBrush website' target='_blank'>tryautobrush.com</a>) using Dawn theme",
         "Customized client's Shopify checkout by building checkout extensibility apps",
         "Supported A/B testing and related analytics development"
       ]
@@ -89,9 +91,9 @@
       "start date": "September 2015",
       "end date": "August 2020",
       "impact": [
+        "Started non-profit 501c3 and lead staff of over 20 people until its dissolution in 2020",
         "Managed all technology for the online community (website front-end & back-end)",
         "Increased engagement in Discord servers by building Discord chat bots to manage role distribution, host an interactive text-based adventure game, and post awesome memes",
-        "Exemplified core principles of the Discord Partner Program by managing a unique, kind, and active non-profit organization",
         "Engaged community of over 170 members by building and maintaining organization's website"
       ]
     },
@@ -124,19 +126,19 @@
   ],
   "Skills": {
     "JavaScript": [
-      "NodeJS", "ReactJS", "jQuery", "NextJS", "ExpressJS", "React Native", "Typescript"
+      "NodeJS", "ReactJS", "jQuery", "NextJS", "ExpressJS", "React Native", "Typescript", "VueJS"
     ],
     "Front-end": [
       "HTML", "CSS", "Sass", "REST API", "AJAX"
     ],
     "CMS": [
-      "WordPress", "Shopify Liquid", "Shopify 2.0", "Shopify App Development", "Checkout Checkout UI Extensions", "Recharge", "Magento"
+      "Salesforce", "WordPress", "Shopify Liquid", "Shopify 2.0", "Shopify App Development", "Checkout Checkout UI Extensions", "Recharge", "Magento"
     ],
     "Database": [
       "MySQL", "NoSQL", "MongoDB", "Oracle SQL"
     ],
     "CRO": [
-      "Google Analytics (UA)", "GA4", "Convert", "Dynamic Yield", "Google Optimize", "Optimizely", "VWO", "AB Tasty", "Monetate", "Adobe Target"
+      "GA4", "Convert", "Dynamic Yield", "Optimizely", "VWO", "AB Tasty", "Monetate", "Adobe Target"
     ],
     "VCS": [
       "Git", "GitHub", "Bitbucket"
@@ -149,6 +151,6 @@
     "<b>Bachelor of Science</b> in Mathematics, <b>University of North Texas,</b> 2015",
     "<b>Associate of Applied Science</b> in Air Traffic Control, <b>Texas State Technical College,</b> 2017",
     "<b>W3schools Certified JavaScript Developer,</b> 2019 (<a href='https://certification.w3schools.com/w3certified.asp?id=10936182' target='_blank' alt='W3schools JS certification'>online link</a>)",
-    "<b>AB Tasty User (Essentials),</b> 2022 (<a href='https://abtasty.360learning.com/api/certification/5641133834076958' target='_blank' alt='AB Tasty Essentials certification'>online link</a>)"
+    "<b>AB Tasty User (Essentials),</b> 2022"
   ]
 }

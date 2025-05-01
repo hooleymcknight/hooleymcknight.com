@@ -163,9 +163,11 @@
     width: 100%;
     top: 0;
     left: 0;
+    display: none;
   }
 
   &[data-declaring="true"] [class="confetti-container"][data-allow-confetti="true"] {
+    display: block;
     background-image: url('https://hooleymcknight.com/jackbox-wheel/confetti.gif');
     background-size: contain;
     background-repeat: repeat-y;
@@ -333,6 +335,7 @@
       font-size: 16px;
       font-weight: bold;
       width: auto;
+      min-width: 60px;
       display: inline-block;
       background: var(--light-purple);
       color: var(--dark-text);
@@ -456,8 +459,11 @@
     &[id="game-pack-set"] [class="filter-dropdown"] {
       max-width: 320px;
 
-      [class="filter-checkbox"] {
+      [class="filter-checkbox"][data-pack-name="number"] {
         width: 20%;
+      }
+      [class="filter-checkbox"][data-pack-name="string"] {
+        width: auto;
       }
     }
     

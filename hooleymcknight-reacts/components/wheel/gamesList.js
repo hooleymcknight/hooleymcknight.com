@@ -26,7 +26,7 @@ const GamesList = (props) => {
     <>
       {packs.map(pack =>
         <div className={props.packClassName} data-description-shown={false} key={pack}>
-          <h2>Party Pack {pack}</h2>
+          <h2>{typeof(pack) === 'number' ? `Party Pack ${pack}` : `${pack}`}</h2>
           <div className={props.className}>
           {gamesData.filter(data => data.pack == pack).map(x =>
             <div

@@ -116,7 +116,7 @@ const Filters = (props) => {
           <label onClick={(e) => toggleDropdown(e)}>Party Packs <FontAwesomeIcon icon={faChevronDown} /></label>
           <div className="filter-dropdown">
             {props.partyPacks.map(x =>  // change this stuff
-              <div key={x} className="filter-checkbox" data-type="pack">
+              <div key={x} className="filter-checkbox" data-type="pack" data-pack-name={typeof(x)}>
                 <input type="checkbox" defaultChecked="true" value={x} onChange={(e) => applyFilter(e)} />
                 <label htmlFor={x} onClick={(e) => toggleCheckbox(e)}>{x}</label>
               </div>

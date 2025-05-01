@@ -29,9 +29,11 @@ const Project = (props) => {
         <div className="project-content">
           <LazyLoadImage src={`https://hooleymcknight.com/images/projects/${data.image}`} alt={props.name} />
           <p className="blurb" dangerouslySetInnerHTML={createMarkup(data.blurb)} onClick={e => copyableHandler(e)} onKeyUp={e => copyableHandler(e)}></p>
-          <Link href={data.link.href} passHref>
-            <a className="project-link" tabIndex="0" target={!data.link.href.startsWith('/') ? "_blank" : ''} alt={data.link.alt}>{data.link.text}</a>
-          </Link>
+          {data.link ? 
+            <Link href={data.link.href} passHref>
+                <a className="project-link" tabIndex="0" target={!data.link.href.startsWith('/') ? "_blank" : ''} alt={data.link.alt}>{data.link.text}</a>
+            </Link>
+          : ""}
         </div>
       </div>
 
