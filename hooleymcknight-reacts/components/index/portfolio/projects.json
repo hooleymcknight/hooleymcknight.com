@@ -2,12 +2,12 @@
     "CRO CLI Code Generator": {
         "subtitle": "CLI Tool",
         "image": "cro-cli.webp",
-        "blurb": "This CLI tool is used to generate A/B testing code based on information given through the CLI. The tool also watches for changes and exports code into a copy-pastable format for the dev tools console."
+        "blurb": "This CLI tool is used to generate A/B testing code based on information given through the CLI. The tool also watches for changes and exports code into a copy-pastable format for the dev tools&nbsp;console."
     },
     "Med Tool": {
         "subtitle": "ReactJS Mini-Project",
         "image": "med-tool.webp",
-        "blurb": "I wanted to create a tool that helped me figure out a good schedule for giving meds to my pets following any surgeries they might have. This page does that, and exports the table as an image.",
+        "blurb": "I wanted to create a tool that helped me figure out a good schedule for giving meds to my pets following any surgeries they might have. This page does that, and exports the table as an&nbsp;image.",
         "link": {
             "href": "https://hooleymcknight.com/med-tool/",
             "alt": "Link to the Med Tool on this site.",
@@ -17,7 +17,7 @@
     "DBD Killer Voting App": {
         "subtitle": "Windows app + Twitch bot",
         "image": "dbd-killer-votes-app.png",
-        "blurb": "This app combines a Twitch chat bot with a Windows desktop app to help a fellow Twitch streamer streamline a giveaway voting system he uses while playing Dead by Daylight.",
+        "blurb": "This app combines a Twitch chat bot with a Windows desktop app to help a fellow Twitch streamer streamline a giveaway voting system he uses while playing Dead by&nbsp;Daylight.",
         "link": {
             "href": "https://github.com/hooleymcknight/dbd-killer-voting",
             "alt": "Link to GitHub repository for DBD Killer Voting App",
@@ -27,7 +27,7 @@
     "Tierator": {
         "subtitle": "Vue.js Website",
         "image": "tierator_v2.gif",
-        "blurb": "This is my first Vue.js project; it's a tier creator. Due to server costs, it is not currently live.",
+        "blurb": "This is my first Vue.js project; it's a tier creator. Due to server costs, it is not currently&nbsp;live.",
         "link": {
             "href": "https://github.com/hooleymcknight/tierator",
             "alt": "Link to GitHub repository for Tierator website",
@@ -37,7 +37,7 @@
     "This Website :)": {
         "subtitle": "NextJS Website",
         "image": "hooleymcknight-site.gif",
-        "blurb": "This is Version 3 of this site, finally fully in ReactJS (specificially NextJS)! This version uses the same design from V2, but offers cleaner code and better functionality.",
+        "blurb": "This is Version 3 of this site, finally fully in ReactJS (specificially NextJS)! This version uses the same design from V2, but offers cleaner code and better&nbsp;functionality.",
         "link": {
             "href": "https://github.com/hooleymcknight/hooleymcknight.com",
             "alt": "Link to GitHub repository for this website",
@@ -47,7 +47,7 @@
     "Fiddlesitters Website": {
         "subtitle": "NextJS Website",
         "image": "fiddlesitters-site.gif",
-        "blurb": "A work-in-progress hub for our Twitch stream team, this website was built entirely using React and NextJS. This is where I've explored connecting a website to a MySQL database to create an interactive game. Due to server costs, it is not currently live.",
+        "blurb": "A work-in-progress hub for a Twitch stream team, this site was built using React & NextJS. This was also a playground for an interactive team game using MySQL. Due to server costs, it is not currently&nbsp;live.",
         "link": {
             "href": "https://github.com/hooleymcknight/fiddlesitters",
             "alt": "Link to GitHub repository for Fiddlesitters website",
@@ -57,7 +57,7 @@
     "Jackbox Spinner Wheel": {
         "subtitle": "HTML/JS/CSS Mini-Project",
         "image": "wheel.gif",
-        "blurb": "My friends and I found that we were often unable to decide on what Jackbox game we wanted to play, so I threw some of our favorites into a wheel we can spin. ReactJS updates are here! You can now add/remove games from the&nbsp;wheel.",
+        "blurb": "My friends and I were often unable to decide which Jackbox game to play, so I threw the games into a wheel we can spin. ReactJS updates are here! You can now add/remove games from the&nbsp;wheel.",
         "link": {
             "href": "/jackbox-wheel",
             "alt": "link to the wheel",
@@ -67,7 +67,7 @@
     "Why Is My Cat So Jacked": {
         "subtitle": "React Native App",
         "image": "wimcsj.gif",
-        "blurb": "This is my first attempt at building a React Native app. I built it over a weekend back in November 2022. Due to server costs, it is not currently live.",
+        "blurb": "This is my first attempt at building a React Native app. I built it over a weekend back in November 2022. Due to server costs, it is not currently&nbsp;live.",
         "link": {
             "href": "https://github.com/hooleymcknight/whyismycatsojacked.com",
             "alt": "Link to GitHub repository for this website",
@@ -77,7 +77,7 @@
     "Time Conversion Calculator": {
         "subtitle": "HTML/JS/CSS Mini-Project",
         "image": "time-conversion.png",
-        "blurb": "At work, a lot of our team found time zones and DST very confusing when scheduling tests to run in A/B testing apps (such as Dynamic Yield). I built a calculator to make scheduling tests easier and remove the trouble of having to think about time&nbsp;zones. The below link also has a TypeScript&nbsp;version.",
+        "blurb": "In CRO, time zones & DST for scheduling A/B tests can be confusing. I built a calculator to do the time zone / DST math for us. The below link contains a TypeScript&nbsp;version.",
         "link": {
             "href": "/time-conversion-calculator",
             "alt": "link to the calculator",
@@ -87,7 +87,7 @@
     "Voyage of the Dead": {
         "subtitle": "Video Game by Gaming Corps",
         "image": "votd.png",
-        "blurb": "This video game (PS4/Xbox One) featured light gun peripherals, which made it an extremely unique development process. As Developer Support, I programmed the Kraken boss fight, lobby fidgets, and other varioius encounters throughout the game, in addition to managing the full QA&nbsp;process.",
+        "blurb": "This video game featured light gun peripherals, which made it an extremely unique development process. As Dev Support, I programmed the Kraken boss fight, lobby fidgets, and other combat encounters, in addition to managing the QA&nbsp;process.",
         "link": {
             "href": "https://news.xbox.com/en-us/2019/08/22/voyage-of-the-dead-is-now-available-for-xbox-one/",
             "alt": "link to article about game release",
@@ -97,7 +97,7 @@
     "American Ninja Warrior Challenge": {
         "subtitle": "Video Game by Gaming Corps",
         "image": "anw.jpg",
-        "blurb": "This video game (PS4/Xbox One/Nintendo Switch) was developed alongside Voyage of the Dead by the same team at Gaming Corps Austin. My role for this project was primarily focused on testing console builds. I occasionally supported other parts of the development and design process, including assisting with set&nbsp;decoration.",
+        "blurb": "My role for this video game project was primarily focused on testing console builds. I occasionally supported other parts of the development and design process, including assisting with set&nbsp;decoration.",
         "link": {
             "href": "https://news.xbox.com/en-us/2019/03/18/american-ninja-warrior-challenge-is-now-available-for-xbox-one/",
             "alt": "link to article about game release",
@@ -105,7 +105,7 @@
         }
     },
     "Guildie Bot": {
-        "subtitle": "First Code Project - Discord Bot",
+        "subtitle": "1st Code Project - Discord Bot",
         "image": "gbot.png",
         "blurb": "Guildie Bot was my vehicle for learning JavaScript and MySQL. Originally designed simply to welcome new members into a Discord server, Guildie Bot grew into a full, text-based adventure game with the support of an AWS&nbsp;database.",
         "link": {
@@ -125,9 +125,9 @@
         }
     },
     "Guild of Geeks Website": {
-        "subtitle": "WordPress Site (Ended in 2020)",
+        "subtitle": "WordPress Site",
         "image": "gog_site.jpg",
-        "blurb": "I originally built this website from scratch before moving it over to WordPress. This site was the main hub of information for my non-profit organization, focusing especially on sharing upcoming events to help the organization grow in the local&nbsp;community.",
+        "blurb": "This site was the main hub of information for my non-profit organization, focusing especially on sharing upcoming events to help the organization grow in the local community. The organization and site ended in&nbsp;2020.",
         "link": {
             "href": "https://bitbucket.org/hooleymcknight/gog-html/src/master/",
             "alt": "Link to Bitbucket repository for Guild of Geeks website",

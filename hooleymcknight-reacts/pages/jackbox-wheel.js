@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 
-import styles from '../styles/Wheel.module.scss';
+import styles from '../styles/projects/Wheel.module.scss';
 import Wheel from '../components/wheel/wheel';
 import GamesList from '../components/wheel/gamesList';
 import WheelTitle from '../components/wheel/wheelTitle';

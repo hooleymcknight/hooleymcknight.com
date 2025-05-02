@@ -1,6 +1,6 @@
 import Project from './project'
-import projectsData from './projects.json'
-import styles from '../../../styles/Portfolio.module.scss'
+import projectsData from '../portfolio/projects.json'
+import styles from '../../../styles/projects/Portfolio.module.scss'
 
 const Portfolio = (props) => {
   return (
@@ -10,6 +10,9 @@ const Portfolio = (props) => {
         {Object.keys(projectsData).map((x, index) =>
           <Project key={x} name={x} data={projectsData[x]} gridId={index} />
         )}
+        {Object.keys(projectsData).length % 3 !== 0 ?
+            <div className={styles.project} data-type="project" data-hidden="true"></div>
+        : ''}
       </div>
     </div>
   )

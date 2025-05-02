@@ -1,18 +1,17 @@
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faIdCard, faCode, faFileAlt, faVideo, faImages, faPencil, faGamepad, faDiceD20 } from '@fortawesome/free-solid-svg-icons';
+import { faIdCard, faCode, faFileAlt, faPencil, faGamepad, faDiceD20 } from '@fortawesome/free-solid-svg-icons';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const icons = {
   "Summary": faIdCard,
   "Portfolio": faCode,
   "Résumé": faFileAlt,
-  "Blog": faPencil,
-  // "Videos": faVideo,
-  // "Photos": faImages
+  // "Blog": faPencil,
+  "Reviews": faPencil,
   "Jackbox Wheel": faGamepad,
   // "Kenku Kenku": faDiceD20,
-}
+};
 
 const SubnavItem = (props) => {
   const [scrollingSection, setScrollingSection] = useState('');
@@ -30,13 +29,13 @@ const SubnavItem = (props) => {
   useEffect(() => {
     // scroll to section on the homepage
     if (scrollingSection.length) {
-      let sectionElement = document.querySelector(scrollingSection)
-      let scroll_speed = 800
+      let sectionElement = document.querySelector(scrollingSection);
+      let scroll_speed = 800;
       if (window.innerWidth < 1080 && window.innerWidth > 500) {
-          scroll_speed = window.innerWidth
+          scroll_speed = window.innerWidth;
       }
-      window.scrollTo(0, sectionElement.offsetTop)
-      setScrollingSection('')
+      window.scrollTo(0, sectionElement.offsetTop);
+      setScrollingSection('');
     }
   }, [scrollingSection])
 
@@ -59,7 +58,7 @@ const SubnavItem = (props) => {
           </a>
       }
     </li>
-  )
+  );
 }
 
-export default SubnavItem
+export default SubnavItem;

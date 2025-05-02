@@ -21,7 +21,7 @@ const SummaryCard = (props) => {
             </ul>
         </div>
         <div className="contact-info">
-            <p><b>Email:  </b><Link href="mailto:hooleymcknight.codes@gmail.com?subject=Hello Holly!&body=I'd love to connect with you..."><a tabIndex="0" alt="Holly's email">hooleymcknight.codes@gmail.com</a></Link></p>
+            <p><b>Email:  </b><Link href="mailto:hollyphillips.dev@gmail.com?subject=Hello Holly!&body=I'd love to connect with you..."><a tabIndex="0" alt="Holly's email">hollyphillips.dev@gmail.com</a></Link></p>
             <p><b>Phone:  </b><Link href="tel:+19364251225"><a tabIndex="0" alt="Holly's cell phone number">(936) 425-1225</a></Link></p>
         </div>
       </div>

@@ -81,6 +81,10 @@ html[data-scroll-locked="true"] {
   overflow: hidden;
 }
 
+h1, h2, h3, h4, h5 {
+    letter-spacing: 0.05em;
+}
+
 a {
   color: inherit;
   text-decoration: none;
