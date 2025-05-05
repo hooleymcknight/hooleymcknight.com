@@ -64,7 +64,7 @@ body {
   margin: 0;
   width: 100%;
   position: relative;
-  font-family: Titillium Web;
+  font-family: Poppins;
   transition: background-color 0.2s linear, color 0.2s linear;
 
   background: var(--primary-background);
@@ -72,7 +72,7 @@ body {
 }
 
 button {
-  font-family: Titillium Web;
+  font-family: Montserrat;
   cursor: pointer;
 }
 
@@ -82,7 +82,7 @@ html[data-scroll-locked="true"] {
 }
 
 h1, h2, h3, h4, h5 {
-    letter-spacing: 0.05em;
+    font-family: Montserrat;
 }
 
 a {
@@ -102,7 +102,7 @@ a {
 nav#main-nav {
   position: fixed;
   top: 0;
-  z-index: 5;
+  z-index: 32;
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -115,24 +115,30 @@ nav#main-nav {
     display: flex;
     align-items: center;
     font-weight: 900;
-    font-size: 20px;
-    line-height: 1;
+    font-size: 30px;
+    line-height: 1.2;
 
     &:hover {
       color: var(--light-purple);
     }
   }
 
-  @media (max-width: 389px) {
+  @media (max-width: 492px) {
     padding: 16px 10px;
 
     a {
-      font-size: 18px;
+      font-size: 25px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    a {
+        font-size: 21px;
     }
   }
 
   @media (max-width: 346px) {
-    padding: 7px 10px;
+    padding: 10px;
   }
 
   ul {
@@ -157,7 +163,19 @@ nav#main-nav {
 }
 
 main {
-  padding-top: 50px;
+  padding-top: 65px;
+
+  @media (max-width: 492px) {
+    padding-top: 62px;
+  }
+
+  @media (max-width: 492px) {
+    padding-top: 56px;
+  }
+
+  @media (max-width: 363px) {
+    padding-top: 82px;
+  }
 }
 
 /* theme toggler */ 

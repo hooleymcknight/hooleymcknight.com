@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faIdCard, faCode, faFileAlt, faPencil, faGamepad, faDiceD20 } from '@fortawesome/free-solid-svg-icons';
+import { faIdCard, faCode, faFileAlt, faPencil, faGamepad, faDiceD20, faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const icons = {
   "Summary": faIdCard,
   "Portfolio": faCode,
   "Résumé": faFileAlt,
-  // "Blog": faPencil,
+  "Blog": faBookOpen,
   "Reviews": faPencil,
   "Jackbox Wheel": faGamepad,
   // "Kenku Kenku": faDiceD20,
@@ -44,14 +44,22 @@ const SubnavItem = (props) => {
       {props.link.includes('#')
         ?
           <button type="button" alt={props.name} tabIndex="0" section={props.link} onClick={(e) => { subnavClickHandler(e) }}>
-            <span className="desktop-only">{props.name}</span>
+            <span>{props.name}</span>
             <span className="mobile-only">
               <FontAwesomeIcon icon={icons[props.name]} />
             </span>
           </button>
         : 
           <a href={props.link} alt={props.name} tabIndex="0">
-            <span className="desktop-only">{props.name}</span>
+            
+            {props.name == 'Jackbox Wheel' ?
+                <>
+                    <span className="desktop-only">Jackbox Wheel</span>
+                    <span className="mobile-only">Wheel</span>
+                </>
+            :
+                <span>{props.name}</span>
+            }
             <span className="mobile-only">
               <FontAwesomeIcon icon={icons[props.name]} />
             </span>

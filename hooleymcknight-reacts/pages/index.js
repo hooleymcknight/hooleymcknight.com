@@ -7,7 +7,7 @@ import SummaryCard from '../components/index/profileSummary';
 import Portfolio from '../components/index/portfolio/portfolio';
 import ResumeSection from '../components/index/resumeSection';
 import Reviews from '../components/index/reviews/reviews';
-// import BlogHome from '../components/blog/blogHome';
+import BlogHome from '../components/blog/blogHome';
 
 export default function Home() {
     return (
@@ -19,14 +19,15 @@ export default function Home() {
                 <meta name="og:title" content="Holly's resume, code portfolio, and some fun other things" />
             </Head>
 
-            <div className={styles['index-hero']}></div>
+            <div className={styles['index-hero']}>
+                <SummaryCard className={styles['summary-section']} />
+            </div>
 
             <Subnav className={styles.subnav} />
-            <SummaryCard className={styles['summary-section']} />
             <Portfolio />
             <ResumeSection className={styles.resume} />
-            {/* <BlogHome className={styles.blog} page='index' /> */}
             <Reviews />
+            <BlogHome className={styles.blog} page='index' />
 
         </Layout>
     )
