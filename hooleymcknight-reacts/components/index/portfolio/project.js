@@ -27,10 +27,6 @@ const Project = (props) => {
         }
     }
 
-    // const closeProject = (e) => {
-    //     const proj = e.target.closest('[data-type="project"]');
-    // }
-
     return (
         <div className={styles.project} data-type="project" data-title={props.name} tabIndex="0">
             <div className="static-project">
