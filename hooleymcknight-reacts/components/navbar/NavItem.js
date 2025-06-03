@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTwitter, faInstagram, faTwitch, faYoutube, faDiscord, faSpotify, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter, faInstagram, faTwitch, faYoutube, faDiscord, faSpotify, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { useEffect } from 'react'
 
 const medias = {
@@ -10,7 +10,8 @@ const medias = {
   "YouTube": faYoutube,
   "Discord": faDiscord,
   "LinkedIn": faLinkedin,
-  "Spotify": faSpotify
+  "Spotify": faSpotify,
+  "GitHub": faGithub
 }
 
 const NavItem = (props) => {

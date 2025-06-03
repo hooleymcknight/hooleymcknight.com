@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '../../styles/Blog.module.scss'
+import styles from '../../styles/pages/Blog.module.scss'
 import postList from './postList.json'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 

@@ -1,18 +1,17 @@
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faIdCard, faCode, faFileAlt, faVideo, faImages, faPencil, faGamepad, faDiceD20 } from '@fortawesome/free-solid-svg-icons';
+import { faIdCard, faCode, faFileAlt, faPencil, faGamepad, faDiceD20, faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const icons = {
   "Summary": faIdCard,
   "Portfolio": faCode,
   "Résumé": faFileAlt,
-  "Blog": faPencil,
-  // "Videos": faVideo,
-  // "Photos": faImages
+  "Blog": faBookOpen,
+  "Reviews": faPencil,
   "Jackbox Wheel": faGamepad,
   // "Kenku Kenku": faDiceD20,
-}
+};
 
 const SubnavItem = (props) => {
   const [scrollingSection, setScrollingSection] = useState('');
@@ -30,13 +29,13 @@ const SubnavItem = (props) => {
   useEffect(() => {
     // scroll to section on the homepage
     if (scrollingSection.length) {
-      let sectionElement = document.querySelector(scrollingSection)
-      let scroll_speed = 800
+      let sectionElement = document.querySelector(scrollingSection);
+      let scroll_speed = 800;
       if (window.innerWidth < 1080 && window.innerWidth > 500) {
-          scroll_speed = window.innerWidth
+          scroll_speed = window.innerWidth;
       }
-      window.scrollTo(0, sectionElement.offsetTop)
-      setScrollingSection('')
+      window.scrollTo(0, sectionElement.offsetTop);
+      setScrollingSection('');
     }
   }, [scrollingSection])
 
@@ -45,21 +44,29 @@ const SubnavItem = (props) => {
       {props.link.includes('#')
         ?
           <button type="button" alt={props.name} tabIndex="0" section={props.link} onClick={(e) => { subnavClickHandler(e) }}>
-            <span className="desktop-only">{props.name}</span>
+            <span>{props.name}</span>
             <span className="mobile-only">
               <FontAwesomeIcon icon={icons[props.name]} />
             </span>
           </button>
         : 
           <a href={props.link} alt={props.name} tabIndex="0">
-            <span className="desktop-only">{props.name}</span>
+            
+            {props.name == 'Jackbox Wheel' ?
+                <>
+                    <span className="desktop-only">Jackbox Wheel</span>
+                    <span className="mobile-only">Wheel</span>
+                </>
+            :
+                <span>{props.name}</span>
+            }
             <span className="mobile-only">
               <FontAwesomeIcon icon={icons[props.name]} />
             </span>
           </a>
       }
     </li>
-  )
+  );
 }
 
-export default SubnavItem
+export default SubnavItem;

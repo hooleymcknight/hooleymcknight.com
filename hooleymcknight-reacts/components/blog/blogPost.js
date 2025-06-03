@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Head from 'next/head'
 import Layout, { siteTitle } from '../../components/layout'
-import styles from '../../styles/Blog.module.scss'
+import styles from '../../styles/pages/Blog.module.scss'
 
 const createMarkup = (input) => {
   return { __html: input}

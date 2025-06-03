@@ -7,13 +7,15 @@ const Navbar = () => {
   return (
     <nav id="main-nav">
       <Link href="/">
-        <a tabIndex="0">Hooley McKnight</a>
+        {/* <a tabIndex="0">Hooley McKnight</a> */}
+        <a tabIndex="0">Holly M. Phillips</a>
       </Link>
 
       <ul id="menu" role="menubar" className="social-media-links">
         <NavItem link="https://twitch.tv/hooleymcknight" name="Twitch" />
-        <NavItem link="https://instagram.com/hooleymcknight" name="Instagram" />
+        {/* <NavItem link="https://instagram.com/hooleymcknight" name="Instagram" /> */}
         <NavItem link="https://youtube.com/c/hooleymcknight" name="YouTube" />
+        <NavItem link="https://www.github.com/hooleymcknight/" name="GitHub" />
         {/* <NavItem link="https://twitter.com/hooleymcknight" name="Twitter" /> */}
         {/* <NavItem link="https://discord.gg/8MYDjz5" name="Discord" /> */}
         <NavItem link="https://www.linkedin.com/in/hooleymcknight/" name="LinkedIn" />

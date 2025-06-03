@@ -1,44 +1,72 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTimes } from '@fortawesome/free-solid-svg-icons'
-import { toggleProject, closeProject, focusHandler, blurHandler, copyableHandler } from './projectTileEvents'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import styles from '../../../styles/projects/Portfolio.module.scss'
 
-import Hexagon from './hexagon'
-import ProjectClickables from './clickables'
+// import { toggleProject, focusHandler, blurHandler } from '../portfolio/projectTileEvents'
 
 const createMarkup = (input) => {
-  return { __html: input}
+    return { __html: input}
 }
 
 const Project = (props) => {
-  const data = props.data
+    const data = props.data;
 
-  return (
-    <div className="project" data-title={props.name} tabIndex="0" onClick={e => toggleProject(e)} onKeyUp={e => toggleProject(e)} onMouseOver={e => focusHandler(e)} onMouseOut={e => blurHandler(e)}>
-      <Hexagon />
-      <button type="button" className="close-x" aria-label="minimize project details" onClick={e => closeProject(e)}>
-        <FontAwesomeIcon icon={faTimes} />
-      </button>
-      <ProjectClickables />
+    const expandProject = (e) => {
+        const proj = e.target.closest('[data-type="project"]');
+        if (proj.dataset.active == 'true') {
+            proj.dataset.active = 'false';
+        }
+        else {
+            const otherActiveProject = e.target.closest('.projects-section').querySelector('[data-type="project"][data-active="true"]');
+            if (otherActiveProject) {
+                otherActiveProject.dataset.active = 'false';
+            }
+            proj.dataset.active = 'true';
+        }
+    }
 
-      <div className="project-inner">
-        <h3>{props.name}</h3>
-        <h5>{data.subtitle}</h5>
+    return (
+        <div className={styles.project} data-type="project" data-title={props.name} tabIndex="0">
+            <div className="static-project">
+                <div className="hex-base" onClick={(e) => expandProject(e)}>
+                    <div className="hex-inner"></div>
 
-        <div className="project-content">
-          <LazyLoadImage src={`https://hooleymcknight.com/images/projects/${data.image}`} alt={props.name} />
-          <p className="blurb" dangerouslySetInnerHTML={createMarkup(data.blurb)} onClick={e => copyableHandler(e)} onKeyUp={e => copyableHandler(e)}></p>
-          {data.link ? 
-            <Link href={data.link.href} passHref>
-                <a className="project-link" tabIndex="0" target={!data.link.href.startsWith('/') ? "_blank" : ''} alt={data.link.alt}>{data.link.text}</a>
-            </Link>
-          : ""}
+                    <div className="project-inner">
+                        <h3>{props.name}</h3>
+                        <h5>{data.subtitle}</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div className="dynamic-project">
+                <button type="button" className="close-x" aria-label="minimize project details" onClick={e => expandProject(e)}>
+                    <FontAwesomeIcon icon={faTimes} />
+                </button>
+                <div className="box-shadow-circle"></div>
+                <div className="hex-base" onClick={(e) => expandProject(e)}>
+                    <div className="hex-inner"></div>
+                    
+
+                    <div className="project-inner">
+                        <h3>{props.name}</h3>
+                        <h5>{data.subtitle}</h5>
+
+                        <div className="project-content">
+                            <LazyLoadImage src={`https://hooleymcknight.com/images/projects/${data.image}`} alt={props.name} />
+                            <p className="blurb" dangerouslySetInnerHTML={createMarkup(data.blurb)}></p>
+                            {data.link ? 
+                                <Link href={data.link.href} passHref>
+                                    <a className="project-link" tabIndex="0" target={!data.link.href.startsWith('/') ? "_blank" : ''} alt={data.link.alt}>{data.link.text}</a>
+                                </Link>
+                            : ""}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-    </div>
-  )
+    );
 }
 
-export default Project
+export default Project;

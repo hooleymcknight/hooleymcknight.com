@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from '../styles/Resume.module.scss';
+import styles from '../styles/pages/Resume.module.scss';
 import Layout, { siteTitle } from '../components/layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons';

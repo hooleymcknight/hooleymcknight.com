@@ -1,0 +1,344 @@
+/* hero section */ 
+.index-hero {
+  background-image: url('https://hooleymcknight.com/images/lax_hero.jpg');
+  background-position: 50% 60%;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+
+  @media (min-width: 1501px) {
+    height: 700px;
+  }
+}
+
+/* subnav bar */ 
+.subnav {
+  position: sticky;
+  top: 66px;
+  z-index: 31;
+  border-top: 3px solid var(--light-bg);
+  box-shadow: 0 1px 7px 2px var(--light-bg);
+  background-color: var(--dark-purple);
+  padding: 5px 10%;
+
+  @media (max-width: 1024px) {
+    padding: 5px;
+  }
+
+  @media (max-width: 500px) {
+    width: 100vw;
+    overflow-x: scroll;
+  }
+
+  @media (max-width: 492px) {
+    top: 61px;
+  }
+
+  @media (max-width: 420px) {
+    top: 56px;
+  }
+
+  @media (max-width: 363px) {
+    top: 81px;
+  }
+  @media (max-width: 346px) {
+    top: 69px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+
+    li {
+        button, a {
+            background: none;
+            border: none;
+            padding: 5px 10px;
+            display: block;
+            color: #fff;
+            font-size: 20px;
+            height: 100%;
+      
+            &:hover {
+                color: var(--light-purple);
+            }
+        }
+      
+        span {
+            font-weight: bold;
+            line-height: 1;
+        }
+      
+        img {
+            max-width: 16px;
+        }
+
+        @media (max-width: 767px) {
+            button, a {
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                gap: 5px;
+                text-align: center;
+            }
+        }
+    }
+    
+  }
+}
+
+/* summary section */
+.summary-section {
+  padding-top: 100px;
+  position: relative;
+  height: 100%;
+
+  @media (min-width: 1800px) {
+    max-width: 1800px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  
+  [class="summary-inner"] {
+    margin: 0 auto 0 0;
+    background: var(--alt-purple);
+    border: 4px solid var(--primary-purple);
+    border-radius: 8px;
+    display: grid;
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 10px;
+    max-width: 95%;
+    grid-template-columns: 0.8fr auto;
+    grid-template-areas:
+      "summaryProfile summaryTitles"
+      "contactInfo contactInfo";
+    position: absolute;
+    top: 50%;
+    left: 80px;
+    transform: translateY(-50%);
+
+    @media (max-width: 1500px) {
+        grid-template-columns: auto;
+        grid-template-areas:
+            "name"
+            "summaryProfile"
+            "summaryTitles"
+            "contactInfo";
+
+        h1 {
+            grid-area: name;
+            text-align: center;
+            font-size: 26px;
+            margin-top: 4px;
+            margin-bottom: 10px;
+    
+            &[class="mobile-only"] {
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width: 1230px) {
+        grid-template-areas:
+            "name name"
+            "summaryProfile summaryTitles"
+            "contactInfo contactInfo";
+        left: 40px;
+    }
+
+    @media (max-width: 767px) {
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @media (max-width: 700px) {
+        grid-template-areas:
+            "name"
+            "summaryProfile"
+            "summaryTitles"
+            "contactInfo";
+    }
+  }
+
+  [class="summary-profile"] {
+    grid-area: summaryProfile;
+    min-width: 185px;
+    max-width: 300px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+
+    img {
+      border-radius: 8px;
+      width: 100%;
+      max-width: 20vh; /* I don't like this but if it ain't broke don't fix it. */
+
+      @media (max-width: 1230px) {
+        max-width: 120px;
+      }
+
+      @media (max-width: 550px) {
+        max-width: 150px;
+      }
+    }
+
+    h1 {
+        @media (max-width: 1500px) {
+            font-size: 26px;
+            margin-top: 4px;
+            margin-bottom: 10px;
+
+            &[class="mobile-only"] {
+                display: block;
+            }
+        }
+    }
+
+    @media (max-width: 1500px) {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    @media (max-width: 1230px) {
+        min-width: unset;
+    }
+  }
+
+  [class="summary-titles"] {
+    grid-area: summaryTitles;
+    padding: 10px;
+    width: fit-content;
+    width: -moz-fit-content;
+
+    h1 {
+      margin: 0;
+      padding-right: 40px;
+    }
+
+    ul {
+      list-style: none;
+      width: fit-content;
+      width: -moz-fit-content;
+
+      svg {
+        margin-left: -20px;
+        margin-right: 12px;
+      }
+
+      @media (max-width: 1500px) {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    @media (max-width: 1500px) {
+      width: 100%;
+
+      ul {
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      h1 {
+        padding-right: 0;
+
+        &[class="desktop-only"] {
+            display: none !important;
+        }
+      }
+    }
+
+    @media (max-width: 1230px) {
+        padding: 0;
+        display: flex;
+        align-items: center;
+
+        ul {
+            width: fit-content;
+            width: -moz-fit-content;
+            padding: 0 10px 0 30px;
+        }
+    }
+
+    @media (max-width: 700px) {
+        padding: 8px 10px 0;
+    }
+  }
+
+  [class="contact-info"] {
+    grid-area: contactInfo;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: 10px auto;
+
+    @media (max-width: 767px) {
+      margin-top: 4px;
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0 0 5px 0;
+      font-size: 18px;
+
+      b {
+        margin-right: 5px;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 1230px) {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+/*
+    code portfolio section css is in:
+    ./styles/Portfolio.module.scss
+*/ 
+
+/* resume section */ 
+.resume {
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  padding-top: 100px;
+  margin: 0 auto;
+  text-align: center;
+
+  a {
+    margin: 0 auto 10px;
+    max-width: 200px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+    }
+  }
+}
+
+/*
+    blog section css is in:
+    ./styles/Blog.module.scss
+*/ 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import styles from '../styles/MedTool.module.scss';
+import styles from '../styles/projects/MedTool.module.scss';
 import domtoimage from 'dom-to-image';
 
 const times = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];

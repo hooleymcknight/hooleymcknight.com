@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Navbar from '../components/navbar/navbar';
 import ThemeToggle from '../components/themeToggle';
 
-export const siteTitle = 'Holly Phillips';
+export const siteTitle = 'Holly M. Phillips';
 
 const navExcludedPages = ['links', 'coding-hour', 'donation-links', 'emergency-vets'];
 

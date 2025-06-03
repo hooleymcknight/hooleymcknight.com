@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import styles from '../styles/Links.module.scss';
+import styles from '../styles/pages/Links.module.scss';
 import LinksList from '../components/links/LinksList';
 
 export default function Links() {

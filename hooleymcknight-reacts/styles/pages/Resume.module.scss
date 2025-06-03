@@ -1,0 +1,125 @@
+.resume {
+  width: 95%;
+  max-width: 800px;
+  margin: auto;
+  padding-bottom: 60px;
+  color: var(--primary-text);
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      color: var(--primary-purple);
+    }
+  }
+
+  /* intro section */ 
+  [class="intro-section"] {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    [class="intro-text"] {
+      h2 {
+        margin: 0 auto 5px;
+      }
+  
+      a {
+        display: block;
+      }
+    }
+    [class="intro-image"] img {
+      width: 150px;
+    }
+  }
+
+  /* work experience */ 
+  [class="work-experience"] {
+
+    [class="work-entry"] {
+      margin: 15px 0 15px 15px;
+
+      p {
+        margin: 0;
+      }
+
+      ul {
+        margin-top: 5px;
+
+        &[class="sublist"] {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+
+  /* skill section */ 
+  [class="skills-section"] {
+    h3 {
+      margin: 30px auto 5px;
+    }
+
+    [class="skill-line"] {
+      display: flex;
+      margin-left: 15px;
+
+      [class="skill-header"] {
+        width: 140px;
+        max-width: 140px;
+        flex-grow: 1;
+        flex-shrink: 0;
+        margin: 1em 0 0;
+      }
+
+      [class="skills"] {
+        flex-grow: 0;
+        flex-shrink: 1;
+      }
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  /* education & certifications */ 
+  [class="education-certifications"] {
+    margin: 30px auto 5px;
+
+    p {
+      margin: 0 0 5px 15px;
+    }
+  }
+  
+}
+
+
+/* floating download */ 
+.floatingDownload {
+  position: fixed;
+  top: 100px;
+  right: 60px;
+  width: 190px;
+  text-align: center;
+  background: #bebebe;
+  padding: 5px 10px;
+  border-radius: 30px;
+  box-shadow: 2px 2px 5px 0px rgb(0 0 0 / 60%);
+  text-decoration: none;
+  color: #000 !important;
+
+  svg {
+    margin-right: 6px;
+  }
+
+  @media (max-width: 1023px) {
+    bottom: 16px;
+    top: auto;
+    left: calc(50% - 85px);
+    right: auto;
+  }
+
+  @media (max-width: 500px) {
+    left: 20px;
+  }
+}
