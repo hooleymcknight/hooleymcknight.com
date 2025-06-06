@@ -14,7 +14,7 @@ const ResumeSection = (props) => {
         </a>
       </Link>
 
-      <a href="/HollyPhillips_Resume.pdf" download tabIndex="0">
+      <a href="/HollyMPhillips_Resume.pdf" download tabIndex="0">
         <span>Download PDF Here</span>
         <FontAwesomeIcon icon={faFileDownload} />
       </a>

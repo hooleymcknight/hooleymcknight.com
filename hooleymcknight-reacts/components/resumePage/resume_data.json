@@ -117,13 +117,13 @@
       "NodeJS", "ReactJS", "jQuery", "NextJS", "ExpressJS", "React Native", "Typescript", "VueJS"
     ],
     "Front-end": [
-      "HTML", "CSS", "Sass", "REST API", "AJAX"
+      "HTML", "CSS", "Sass", "REST API", "AJAX", "Tailwind CSS", "WCAG", "Gulp"
     ],
     "CMS": [
-      "Salesforce", "WordPress", "Shopify Liquid", "Shopify 2.0", "Shopify App Development", "Checkout UI Extensions", "Recharge", "Magento"
+      "Salesforce", "WordPress", "Shopify Liquid", "Shopify 2.0", "Shopify App Development", "Shopify Checkout UI Extensions", "Recharge", "Contentful", "Magento"
     ],
     "Database": [
-      "MySQL", "NoSQL", "MongoDB", "Oracle SQL"
+      "MySQL", "NoSQL", "MongoDB", "Oracle SQL", "PostgreSQL"
     ],
     "CRO": [
       "GA4", "Convert", "Dynamic Yield", "Optimizely", "VWO", "AB Tasty", "Monetate", "Adobe Target"

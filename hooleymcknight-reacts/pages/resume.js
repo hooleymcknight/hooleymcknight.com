@@ -17,9 +17,9 @@ export default function Resume() {
 
       <ResumeContent className={styles.resume} />
 
-      <a href="../HollyPhillips_Resume.pdf" download className={styles.floatingDownload}>
+      <a href="../HollyMPhillips_Resume.pdf" download className={styles.floatingDownload}>
         <FontAwesomeIcon icon={faFileDownload} />
-        Download PDF here
+        Download PDF&nbsp;here
       </a>
 
     </Layout>
