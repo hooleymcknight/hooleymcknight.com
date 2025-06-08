@@ -11,7 +11,7 @@ const IntroSection = () => {
       </div>
 
       <div className="intro-image">
-        <img src="https://hooleymcknight.com/images/brick_wall.jpg" alt="Holly wearing a Pokemon t-shirt standing in front of a fence with an open smile" />
+        <img src="https://hooleymcknight.com/images/brick_wall.jpg" alt="Holly standing in front of a brick wall with an open smile" />
       </div>
     </div>
   )
