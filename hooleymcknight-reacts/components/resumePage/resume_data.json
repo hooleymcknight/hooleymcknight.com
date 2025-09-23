@@ -123,7 +123,7 @@
       "Salesforce", "WordPress", "Shopify Liquid", "Shopify 2.0", "Shopify App Development", "Shopify Checkout UI Extensions", "Recharge", "Contentful", "Magento"
     ],
     "Database": [
-      "MySQL", "NoSQL", "MongoDB", "Oracle SQL", "PostgreSQL"
+      "MySQL", "Prisma", "NoSQL", "MongoDB", "Oracle SQL", "PostgreSQL", "MariaDB"
     ],
     "CRO": [
       "GA4", "Convert", "Dynamic Yield", "Optimizely", "VWO", "AB Tasty", "Monetate", "Adobe Target"
@@ -131,8 +131,11 @@
     "VCS": [
       "Git", "GitHub", "Bitbucket"
     ],
+    "Infrastructure": [
+        "Amazon Web Services (AWS)", "Jenkins", "Docker"
+    ],
     "Other": [
-      "Amazon Web Services (AWS)", "GraphQL", "Nginx", "Python", "C#", "C++", "Java", "PHP", "Apache", "Jenkins", "Docker", "Jest", "G Suite", "Microsoft Office", "Windows 10", "Linux", "Mac", "Asana", "Trello", "ClickUp", "JIRA", "Monday", "Basecamp", "Airtable", "NPM"
+      "JWTs", "GraphQL", "Nginx", "Python", "C#", "C++", "Java", "PHP", "Apache", "Jest", "Cypress", "G Suite", "Microsoft Office", "Windows 10", "Linux", "Mac", "Asana", "Trello", "ClickUp", "JIRA", "Monday", "Basecamp", "Airtable", "NPM"
     ]
   },
   "Education & Certifications": [

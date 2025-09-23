@@ -1,0 +1,21 @@
+import Head from 'next/head';
+import styles from '../styles/pages/CaseStudies.module.scss';
+import Layout, { siteTitle } from '../components/layout';
+// import ResumeContent from '../components/resumePage/resumeContent';
+import CaseStudiesList from '../components/caseStudies/caseStudiesList';
+
+export default function CaseStudies() {
+  return (
+    <Layout page='case-studies'>
+      <Head>
+        <title>{`${siteTitle} || Case Studies`}</title>
+        <meta name="description" content="Holly's case studies from CRO work." />
+        <meta property="og:image" content={`https://hooleymcknight.com/images/lax_hero_preview.jpg`} />
+        <meta name="og:title" content="Holly's case studies from CRO work." />
+      </Head>
+
+      <CaseStudiesList className={styles['case-studies']} />
+
+    </Layout>
+  );
+}
